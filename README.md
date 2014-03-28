@@ -1,7 +1,7 @@
 webshop
 =======
 
-A crazy, not seriously webshop implementation to get familiar with JSF and usable web surfaces.
+A crazy, not serious webshop implementation to get familiar with JSF and usable web surfaces.
 
 ## Filesystem
 + __jsf__ (all JSF files from lessons with A. Bosch)
