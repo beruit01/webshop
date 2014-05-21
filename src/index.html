@@ -17,8 +17,29 @@
 	</head>
 	<body>
 
+		<!-- logo (large screens only) -->
+		<a href="#" class="logo visible-lg visible-md visible-sm"></a>
+
+		<!-- infobox (large screens only) -->
+		<div class="infobox visible-lg visible-md visible-sm">
+			
+			<!-- shopping cart btn -->
+			<button type="button" class="btn btn-default">
+				<i class="fa fa-shopping-cart fa-lg"></i>Warenkorb
+			</button>
+
+			<!-- login cart btn -->
+			<button type="button" class="btn btn-default">
+				<i class="fa fa-child fa-lg"></i>Login
+			</button>
+
+			<a href="#reg" title="neues Benutzerkonto anlegen">
+				<strong>Neu hier?</strong> Jetzt registrieren!
+			</a>
+		</div>
+
 		<!-- navi -->
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 		    
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -26,7 +47,7 @@
 				<button type="button" class="navbar-toggle navbar-left" data-toggle="collapse" data-target="#collapse-menu">
 					<i class="fa fa-bars fa-lg"></i>
 				</button>
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand visible-xs" href="#">
 					<img src="images/logo.png" height="40">
 				</a>
 
@@ -56,8 +77,8 @@
 		  </div>
 		</nav>
 
-		<!-- login banner -->
-		<div class="alert alert-warning alert-dismissable loginBanner">
+		<!-- login banner (small screens only) -->
+		<div class="loginBanner alert alert-warning alert-dismissable visible-xs">
 			
 			<a href="#login">
 				<div class="login">
@@ -72,6 +93,19 @@
 			<div class="clearfix"></div>
 		</div>
 
+		<!-- search (large screens only) -->
+		<div class="search visible-lg visible-md visible-sm">
+			<input type="text" class="form-control" placeholder="Search" id="searchbox">
+        	<button type="button" class="btn btn-default" id="searchBtnMain">
+        		<i class="fa fa-search fa-lg"></i>
+        	</button>
+		</div>
+
+		<!-- intro (large screens only) -->
+		<div class="intro visible-lg visible-md visible-sm">
+			<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br><br>
+			Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</span>
+		</div>
 
 		<div class="wrapper">
 
@@ -85,7 +119,7 @@
 							
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy01.jpg" height="100%">
+									<img src="images/services/dummy01.jpg">
 								</div>
 								<p class="title">Wie lösche ich ein Feuer</p>
 								<p class="price">1,79 €</p>
@@ -93,7 +127,7 @@
 
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy02.jpg" height="100%">
+									<img src="images/services/dummy02.jpg">
 								</div>
 								<p class="title">Gedichte schreiben</p>
 								<p class="price">GRATIS</p>
@@ -101,10 +135,26 @@
 
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy03.jpg" height="100%">
+									<img src="images/services/dummy03.jpg">
 								</div>
 								<p class="title">Traumdeutung</p>
 								<p class="price">4,99 €</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy13.jpg">
+								</div>
+								<p class="title">Urban Music</p>
+								<p class="price">GRATIS €</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy14.jpg">
+								</div>
+								<p class="title">Geschichte der U-Bahnen Frankfurts</p>
+								<p class="price">GRATIS €</p>
 							</a>
 
 						</div>
@@ -114,7 +164,7 @@
 							
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy04.jpg" height="100%">
+									<img src="images/services/dummy04.jpg">
 								</div>
 								<p class="title">Yoga Anfängerkurs</p>
 								<p class="price">0,79 €</p>
@@ -122,7 +172,7 @@
 
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy05.jpg" height="100%">
+									<img src="images/services/dummy05.jpg">
 								</div>
 								<p class="title">Reisebericht Ägypten</p>
 								<p class="price">GRATIS</p>
@@ -130,17 +180,35 @@
 
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy06.jpg" height="100%">
+									<img src="images/services/dummy06.jpg">
 								</div>
 								<p class="title">Wie funktioniert Ballonfahren?</p>
 								<p class="price">GRATIS</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy12.jpg">
+								</div>
+								<p class="title">Wir brauchen mehr zivilen Ungehorsam!</p>
+								<p class="price">GRATIS</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy11.jpg">
+								</div>
+								<p class="title">Lesung meiner neusten Gedichte</p>
+								<p class="price">3,00 €</p>
 							</a>
 
 						</div>
 					</div>
 					<div class="item">
 						<div class="page">
-							<button class="btn btn-default">mehr</button>
+							<button class="moreBtn btn btn-default">
+								<i class="fa fa-plus"></i> Mehr aus dieser Rubrik
+							</button>
 						</div>
 					</div>
 				</div>
@@ -163,7 +231,7 @@
 							
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy06.jpg" height="100%">
+									<img src="images/services/dummy06.jpg">
 								</div>
 								<p class="title">Wie funktioniert Ballonfahren?</p>
 								<p class="price">GRATIS</p>
@@ -171,7 +239,7 @@
 
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy04.jpg" height="100%">
+									<img src="images/services/dummy04.jpg">
 								</div>
 								<p class="title">Yoga Anfängerkurs</p>
 								<p class="price">0,79 €</p>
@@ -179,10 +247,26 @@
 
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy05.jpg" height="100%">
+									<img src="images/services/dummy05.jpg">
 								</div>
 								<p class="title">Reisebericht Ägypten</p>
 								<p class="price">GRATIS</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy10.jpg">
+								</div>
+								<p class="title">Fotographie - Blumen & Pflanzen</p>
+								<p class="price">10,00 €</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy09.jpg">
+								</div>
+								<p class="title">Mein Jahr auf der Alm. Ein Erfahrungsbericht.</p>
+								<p class="price">GRATIS €</p>
 							</a>
 
 						</div>
@@ -192,7 +276,7 @@
 							
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy02.jpg" height="100%">
+									<img src="images/services/dummy02.jpg">
 								</div>
 								<p class="title">Gedichte schreiben</p>
 								<p class="price">GRATIS</p>
@@ -200,7 +284,7 @@
 
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy01.jpg" height="100%">
+									<img src="images/services/dummy01.jpg">
 								</div>
 								<p class="title">Wie lösche ich ein Feuer</p>
 								<p class="price">1,79 €</p>
@@ -208,17 +292,35 @@
 
 							<a href="#view" class="prevItem">
 								<div class="image">
-									<img src="images/services/dummy03.jpg" height="100%">
+									<img src="images/services/dummy03.jpg">
 								</div>
 								<p class="title">Traumdeutung</p>
 								<p class="price">4,99 €</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy08.jpg">
+								</div>
+								<p class="title">Wie der Atomausstieg gelingen kann!</p>
+								<p class="price">1,99 €</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy07.jpg">
+								</div>
+								<p class="title">Fotographie - Oldtimer</p>
+								<p class="price">10,00 €</p>
 							</a>
 
 						</div>
 					</div>
 					<div class="item">
 						<div class="page">
-							<button class="btn btn-default">mehr</button>
+							<button class="moreBtn btn btn-default">
+								<i class="fa fa-plus"></i> Mehr aus dieser Rubrik
+							</button>
 						</div>
 					</div>
 				</div>
