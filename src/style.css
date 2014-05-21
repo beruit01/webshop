@@ -1,2 +1,102 @@
 html, body { height: 100%; margin: 0; padding: 0;}
 
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+/*
+-------------------- overwrite general bootstrap --------------- */
+.btn, button {
+	border-radius: 0px !important;
+}
+
+/*
+-------------------- navi --------------- */
+.wrapper {
+	padding: 0 3%;
+}
+
+/*
+-------------------- navi --------------- */
+.navbar {
+	margin-bottom: 0px !important;
+}
+.navbar .navbar-toggle {
+	float: left !important;
+	margin-right: 0px !important;
+	margin-left: 15px !important;
+}
+.navbar .navbar-brand {
+	padding: 8px 15px 5px 15px !important;
+}
+.navbar .searchBtn,
+.navbar .shoppingCartBtn {
+	float: right !important;
+	margin-right: 15px !important;
+	margin-left: 0px !important;
+}
+
+/*
+-------------------- login banner --------------- */
+.loginBanner {
+	border-radius: 0px !important;
+	margin: 3px 0 3px 0 !important;
+}
+.loginBanner .login {
+	width: 90%;
+	float: left;
+}
+.loginBanner .exit {
+	width: 10%;
+	float: left;
+}
+
+/*
+-------------------- preview --------------- */
+.preview {
+	height: 150px;
+	width: 100%;
+	border: 1px solid #eeeeee;
+}
+.carousel-control {
+	width: 10% !important;
+	color: black !important;
+	text-shadow: none !important;
+	opacity: 1 !important;
+	background: #f8f8f8 !important;
+
+	border: 1px solid #eeeeee;
+	margin: 3px;
+}
+.carousel-control i {
+	margin-top: 60px;
+}
+.carousel-control:active {
+	padding-top: 2px !important;
+}
+.carousel-inner .page {
+	width: 75%;
+	height: 150px;
+	margin: auto;
+	padding: 3px 0px;
+}
+.carousel-inner .prevItem {
+	width: 33%;
+	height: 100%;
+	padding: 0 3px 0 3px;
+	float: left;
+}
+.carousel-inner .prevItem .image {
+	width: 100%;
+	height: 90px;
+	text-align:center;
+	overflow: hidden;
+	background-color: #eeeeee;
+}
+.carousel-inner .prevItem .title {
+	font-size: 0.9em;
+	height: 25px;
+}
+
+

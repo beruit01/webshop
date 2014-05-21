@@ -7,18 +7,232 @@
 		<title>Shadoo - Share your knowledge!</title>
 
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
 		<!-- styles -->
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 
 	</head>
 	<body>
 
-		<h1>Hello World, this is Shadoo <span class="label label-warning">Awesome</span></h1>
+		<!-- navi -->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+		    
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+				<button type="button" class="navbar-toggle navbar-left" data-toggle="collapse" data-target="#collapse-menu">
+					<i class="fa fa-bars fa-lg"></i>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="images/logo.png" height="40">
+				</a>
 
-		<h3>That's sooo cool!</h3>
+				<button type="button" class="navbar-toggle navbar-right searchBtn">
+					<i class="fa fa-search fa-lg"></i>
+				</button>
 
+				<button type="button" class="navbar-toggle navbar-left shoppingCartBtn">
+					<i class="fa fa-shopping-cart fa-lg"></i>
+				</button>
+
+		    </div>
+
+		    <!-- navi content for toggling -->
+		    <div class="collapse navbar-collapse" id="collapse-menu">
+
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Konto</a></li>
+					<li><a href="#">Merkliste</a></li>
+					<li><a href="#">Service anbieten</a></li>
+					<li><a href="#">Themenbereiche</a></li>
+					<li><a href="#">Vorschläge</a></li>
+				</ul>
+
+		    </div>
+		  </div>
+		</nav>
+
+		<!-- login banner -->
+		<div class="alert alert-warning alert-dismissable loginBanner">
+			
+			<a href="#login">
+				<div class="login">
+					<strong>Hallo!</strong> Melde dich jetzt an.
+				</div>
+			</a>
+
+			<button type="button" class="close exit" data-dismiss="alert" aria-hidden="true">
+				<i class="fa fa-times"></i>
+			</button>
+			
+			<div class="clearfix"></div>
+		</div>
+
+
+		<div class="wrapper">
+
+			<!-- preview -->
+			<h3>Neu</h3>
+			<div id="carouselNeu" class="carousel slide preview" data-interval="false" data-wrap="false">
+				
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="page">
+							
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy01.jpg" height="100%">
+								</div>
+								<p class="title">Wie lösche ich ein Feuer</p>
+								<p class="price">1,79 €</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy02.jpg" height="100%">
+								</div>
+								<p class="title">Gedichte schreiben</p>
+								<p class="price">GRATIS</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy03.jpg" height="100%">
+								</div>
+								<p class="title">Traumdeutung</p>
+								<p class="price">4,99 €</p>
+							</a>
+
+						</div>
+					</div>
+					<div class="item">
+						<div class="page">
+							
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy04.jpg" height="100%">
+								</div>
+								<p class="title">Yoga Anfängerkurs</p>
+								<p class="price">0,79 €</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy05.jpg" height="100%">
+								</div>
+								<p class="title">Reisebericht Ägypten</p>
+								<p class="price">GRATIS</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy06.jpg" height="100%">
+								</div>
+								<p class="title">Wie funktioniert Ballonfahren?</p>
+								<p class="price">GRATIS</p>
+							</a>
+
+						</div>
+					</div>
+					<div class="item">
+						<div class="page">
+							<button class="btn btn-default">mehr</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carouselNeu" data-slide="prev">
+					<i class="fa fa-arrow-left fa"></i>
+				</a>
+				<a class="right carousel-control" href="#carouselNeu" data-slide="next">
+					<i class="fa fa-arrow-right fa"></i>
+				</a>
+			</div>
+
+			<h3>Beliebt</h3>
+			<div id="caruselBeliebt" class="carousel slide preview" data-interval="false" data-wrap="false">
+				
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="page">
+							
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy06.jpg" height="100%">
+								</div>
+								<p class="title">Wie funktioniert Ballonfahren?</p>
+								<p class="price">GRATIS</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy04.jpg" height="100%">
+								</div>
+								<p class="title">Yoga Anfängerkurs</p>
+								<p class="price">0,79 €</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy05.jpg" height="100%">
+								</div>
+								<p class="title">Reisebericht Ägypten</p>
+								<p class="price">GRATIS</p>
+							</a>
+
+						</div>
+					</div>
+					<div class="item">
+						<div class="page">
+							
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy02.jpg" height="100%">
+								</div>
+								<p class="title">Gedichte schreiben</p>
+								<p class="price">GRATIS</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy01.jpg" height="100%">
+								</div>
+								<p class="title">Wie lösche ich ein Feuer</p>
+								<p class="price">1,79 €</p>
+							</a>
+
+							<a href="#view" class="prevItem">
+								<div class="image">
+									<img src="images/services/dummy03.jpg" height="100%">
+								</div>
+								<p class="title">Traumdeutung</p>
+								<p class="price">4,99 €</p>
+							</a>
+
+						</div>
+					</div>
+					<div class="item">
+						<div class="page">
+							<button class="btn btn-default">mehr</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#caruselBeliebt" data-slide="prev">
+					<i class="fa fa-arrow-left fa"></i>
+				</a>
+				<a class="right carousel-control" href="#caruselBeliebt" data-slide="next">
+					<i class="fa fa-arrow-right fa"></i>
+				</a>
+			</div>
+
+		</div>
 
 		<!-- scripts -->
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
