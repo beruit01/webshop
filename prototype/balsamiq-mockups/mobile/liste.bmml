@@ -1,0 +1,403 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1078" measuredH="604" mockupW="282" mockupH="573">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="796" y="31" w="-1" h="-1" measuredW="282" measuredH="573" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bgPattern>topOnly</bgPattern>
+        <bgTransparent>true</bgTransparent>
+        <model>IPhone5</model>
+        <orientation>portrait</orientation>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="__group__" x="829" y="136" w="209" h="30" measuredW="209" measuredH="30" zOrder="3" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="0" y="0" w="30" h="30" measuredW="38" measuredH="27" zOrder="0" locked="false" isInGroup="1">
+          <controlProperties>
+            <href>menue%26bm%3Bmenue.bmml%26bm%3Bmenue.bmml%26bm%3Bmenue.bmml</href>
+            <icon>HLinesIcon%7Cxsmall</icon>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2233%2C105%2C63%2C135%22%20href%3D%22menue.bmml%22%20alt%3D%22menue%22%20id%3D%221%22/%3E</map>
+            <markup>true</markup>
+            <menuIcon>false</menuIcon>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="54" y="4" w="66" h="23" measuredW="77" measuredH="79" zOrder="1" locked="false" isInGroup="1">
+          <controlProperties>
+            <markup>true</markup>
+            <text>Logo</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="141" y="0" w="30" h="30" measuredW="38" measuredH="27" zOrder="2" locked="false" isInGroup="1">
+          <controlProperties>
+            <href>Suche%26bm%3BSuche.bmml%26bm%3BSuche.bmml%26bm%3BSuche.bmml</href>
+            <icon>SearchIcon%7Cxsmall</icon>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22174%2C105%2C204%2C135%22%20href%3D%22Suche.bmml%22%20alt%3D%22Suche%22%20id%3D%223%22/%3E</map>
+            <markup>true</markup>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="179" y="0" w="30" h="30" measuredW="46" measuredH="27" zOrder="3" locked="false" isInGroup="1">
+          <controlProperties>
+            <href>warenkorb%26bm%3Bwarenkorb.bmml%26bm%3Bwarenkorb.bmml%26bm%3Bwarenkorb.bmml</href>
+            <icon>CartIcon%7Csmall</icon>
+            <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22212%2C105%2C242%2C135%22%20href%3D%22warenkorb.bmml%22%20alt%3D%22warenkorb%22%20id%3D%224%22/%3E</map>
+            <markup>true</markup>
+            <text/>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="16" controlTypeID="__group__" x="835" y="239" w="98" h="97" measuredW="98" measuredH="97" zOrder="4" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="98" h="97" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="16"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="4" y="57" w="71" h="-1" measuredW="43" measuredH="22" zOrder="1" locked="false" isInGroup="16">
+          <controlProperties>
+            <size>14</size>
+            <text>0%2C79%20%u20AC</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="2" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="2" locked="false" isInGroup="16">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="16" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="3" locked="false" isInGroup="16">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Icon" x="31" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="4" locked="false" isInGroup="16">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Icon" x="45" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="5" locked="false" isInGroup="16">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="59" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="6" locked="false" isInGroup="16">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>6710886</color>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Icon" x="77" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="7" locked="false" isInGroup="16">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <icon>VideoCameraIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="4" y="3" w="86" h="45" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="16">
+          <controlProperties>
+            <backgroundAlpha>1</backgroundAlpha>
+            <borderColor>16777215</borderColor>
+            <size>14</size>
+            <text>C%20Kurs%20f%FCr%20Anf%E4nger</text>
+          </controlProperties>
+        </control>
+        <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="10" y="41" w="49" h="-1" measuredW="63" measuredH="18" zOrder="9" locked="false" isInGroup="16">
+          <controlProperties>
+            <size>10</size>
+            <text>ITExperte123</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="17" controlTypeID="__group__" x="940" y="239" w="98" h="97" measuredW="98" measuredH="97" zOrder="5" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="98" h="97" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="17"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="4" y="57" w="71" h="-1" measuredW="43" measuredH="22" zOrder="1" locked="false" isInGroup="17">
+          <controlProperties>
+            <size>14</size>
+            <text>0%2C79%20%u20AC</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="2" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="2" locked="false" isInGroup="17">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="16" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="3" locked="false" isInGroup="17">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Icon" x="31" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="4" locked="false" isInGroup="17">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Icon" x="45" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="5" locked="false" isInGroup="17">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="59" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="6" locked="false" isInGroup="17">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>6710886</color>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Icon" x="77" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="7" locked="false" isInGroup="17">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <icon>VideoCameraIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="4" y="3" w="86" h="45" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="17">
+          <controlProperties>
+            <backgroundAlpha>1</backgroundAlpha>
+            <borderColor>16777215</borderColor>
+            <size>14</size>
+            <text>C%20Kurs%20f%FCr%20Anf%E4nger</text>
+          </controlProperties>
+        </control>
+        <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="10" y="41" w="49" h="-1" measuredW="63" measuredH="18" zOrder="9" locked="false" isInGroup="17">
+          <controlProperties>
+            <size>10</size>
+            <text>ITExperte123</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="18" controlTypeID="__group__" x="835" y="343" w="98" h="97" measuredW="98" measuredH="97" zOrder="6" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="98" h="97" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="18"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="4" y="57" w="71" h="-1" measuredW="43" measuredH="22" zOrder="1" locked="false" isInGroup="18">
+          <controlProperties>
+            <size>14</size>
+            <text>0%2C79%20%u20AC</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="2" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="2" locked="false" isInGroup="18">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="16" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="3" locked="false" isInGroup="18">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Icon" x="31" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="4" locked="false" isInGroup="18">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Icon" x="45" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="5" locked="false" isInGroup="18">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="59" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="6" locked="false" isInGroup="18">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>6710886</color>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Icon" x="77" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="7" locked="false" isInGroup="18">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <icon>VideoCameraIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="4" y="3" w="86" h="45" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="18">
+          <controlProperties>
+            <backgroundAlpha>1</backgroundAlpha>
+            <borderColor>16777215</borderColor>
+            <size>14</size>
+            <text>C%20Kurs%20f%FCr%20Anf%E4nger</text>
+          </controlProperties>
+        </control>
+        <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="10" y="41" w="49" h="-1" measuredW="63" measuredH="18" zOrder="9" locked="false" isInGroup="18">
+          <controlProperties>
+            <size>10</size>
+            <text>ITExperte123</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="19" controlTypeID="__group__" x="940" y="343" w="98" h="97" measuredW="98" measuredH="97" zOrder="7" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="98" h="97" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="19"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="4" y="57" w="71" h="-1" measuredW="43" measuredH="22" zOrder="1" locked="false" isInGroup="19">
+          <controlProperties>
+            <size>14</size>
+            <text>0%2C79%20%u20AC</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="2" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="2" locked="false" isInGroup="19">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="16" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="3" locked="false" isInGroup="19">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Icon" x="31" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="4" locked="false" isInGroup="19">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Icon" x="45" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="5" locked="false" isInGroup="19">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="59" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="6" locked="false" isInGroup="19">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>6710886</color>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Icon" x="77" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="7" locked="false" isInGroup="19">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <icon>VideoCameraIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="4" y="3" w="86" h="45" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="19">
+          <controlProperties>
+            <backgroundAlpha>1</backgroundAlpha>
+            <borderColor>16777215</borderColor>
+            <size>14</size>
+            <text>C%20Kurs%20f%FCr%20Anf%E4nger</text>
+          </controlProperties>
+        </control>
+        <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="10" y="41" w="49" h="-1" measuredW="63" measuredH="18" zOrder="9" locked="false" isInGroup="19">
+          <controlProperties>
+            <size>10</size>
+            <text>ITExperte123</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="20" controlTypeID="__group__" x="835" y="447" w="98" h="97" measuredW="98" measuredH="97" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="98" h="97" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="20"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="4" y="57" w="71" h="-1" measuredW="43" measuredH="22" zOrder="1" locked="false" isInGroup="20">
+          <controlProperties>
+            <size>14</size>
+            <text>0%2C79%20%u20AC</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="2" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="2" locked="false" isInGroup="20">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="16" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="3" locked="false" isInGroup="20">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Icon" x="31" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="4" locked="false" isInGroup="20">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Icon" x="45" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="5" locked="false" isInGroup="20">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="59" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="6" locked="false" isInGroup="20">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>6710886</color>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Icon" x="77" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="7" locked="false" isInGroup="20">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <icon>VideoCameraIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="4" y="3" w="86" h="45" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="20">
+          <controlProperties>
+            <backgroundAlpha>1</backgroundAlpha>
+            <borderColor>16777215</borderColor>
+            <size>14</size>
+            <text>C%20Kurs%20f%FCr%20Anf%E4nger</text>
+          </controlProperties>
+        </control>
+        <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="10" y="41" w="49" h="-1" measuredW="63" measuredH="18" zOrder="9" locked="false" isInGroup="20">
+          <controlProperties>
+            <size>10</size>
+            <text>ITExperte123</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="21" controlTypeID="__group__" x="940" y="447" w="98" h="97" measuredW="98" measuredH="97" zOrder="1" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="98" h="97" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="21"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="4" y="57" w="71" h="-1" measuredW="43" measuredH="22" zOrder="1" locked="false" isInGroup="21">
+          <controlProperties>
+            <size>14</size>
+            <text>0%2C79%20%u20AC</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="2" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="2" locked="false" isInGroup="21">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Icon" x="16" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="3" locked="false" isInGroup="21">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Icon" x="31" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="4" locked="false" isInGroup="21">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::Icon" x="45" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="5" locked="false" isInGroup="21">
+          <controlProperties>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::Icon" x="59" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="6" locked="false" isInGroup="21">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <color>6710886</color>
+            <icon>StarIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Icon" x="77" y="76" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="7" locked="false" isInGroup="21">
+          <controlProperties>
+            <borderStyle>none</borderStyle>
+            <icon>VideoCameraIcon%7Cxsmall</icon>
+          </controlProperties>
+        </control>
+        <control controlID="8" controlTypeID="com.balsamiq.mockups::TextArea" x="4" y="3" w="86" h="45" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="21">
+          <controlProperties>
+            <backgroundAlpha>1</backgroundAlpha>
+            <borderColor>16777215</borderColor>
+            <size>14</size>
+            <text>C%20Kurs%20f%FCr%20Anf%E4nger</text>
+          </controlProperties>
+        </control>
+        <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="10" y="41" w="49" h="-1" measuredW="63" measuredH="18" zOrder="9" locked="false" isInGroup="21">
+          <controlProperties>
+            <size>10</size>
+            <text>ITExperte123</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::ButtonBar" x="856" y="191" w="-1" h="-1" measuredW="162" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Fav%2C%20Preis%2C%20Datum</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

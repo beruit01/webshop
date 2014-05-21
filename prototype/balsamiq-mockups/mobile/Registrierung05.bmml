@@ -1,0 +1,51 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1100" measuredH="625" mockupW="282" mockupH="573">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="818" y="52" w="-1" h="-1" measuredW="282" measuredH="573" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bgPattern>topOnly</bgPattern>
+        <model>IPhone5</model>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="__group__" x="909" y="161" w="66" h="23" measuredW="66" measuredH="23" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties/>
+      <groupChildrenDescriptors>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="0" y="0" w="66" h="23" measuredW="77" measuredH="79" zOrder="0" locked="false" isInGroup="1">
+          <controlProperties>
+            <markup>true</markup>
+            <text>Logo</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="855" y="495" w="208" h="38" measuredW="86" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+        <href>shadoo%26bm%3Bshadoo.bmml%26bm%3Bshadoo.bmml%26bm%3Bshadoo.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2237%2C443%2C245%2C481%22%20href%3D%22shadoo.bmml%22%20alt%3D%22shadoo%22%20id%3D%222%22/%3E</map>
+        <text>Los%20geht%27s%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Button" x="855" y="442" w="208" h="38" measuredW="96" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13421772</color>
+        <href>Tour01%26bm%3BTour01.bmml%26bm%3BTour01.bmml%26bm%3BTour01.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2237%2C390%2C245%2C428%22%20href%3D%22Tour01.bmml%22%20alt%3D%22Tour01%22%20id%3D%228%22/%3E</map>
+        <text>Tour%20starten</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::TextArea" x="855" y="213" w="208" h="80" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <borderColor>16777215</borderColor>
+        <size>28</size>
+        <text>Herzlich%20Willkommen</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::SubTitle" x="912" y="293" w="-1" h="-1" measuredW="95" measuredH="19" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>%3Cusername%3E</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
