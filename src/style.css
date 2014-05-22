@@ -131,6 +131,10 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	text-align: center;
 	margin-right: 10px;
 }
+.infobox .badge {
+	float: right;
+	background-color: #333333;
+}
 
 /*
 -------------------- preview --------------- */
@@ -219,4 +223,24 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	text-align: left;
 }
 
-
+/*
+---------------- footer ------------ */
+.footer {
+	margin: 40px 0 20px 0;
+	text-align: center;
+}
+.footer a {
+	margin: 0 15px;
+}
+@media screen and (max-width: 786px) {
+	.footer a,
+	.footer span {
+		display: block;
+		width: 100%;
+	}
+	.footer a {
+		background: #eeeeee;
+		margin: 2px 0px;
+		padding: 12px;
+	}
+}
