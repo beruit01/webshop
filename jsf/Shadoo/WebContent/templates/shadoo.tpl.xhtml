@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <h:head>
+    
+    	<title>Shadoo - Share your knowledge!</title>
+
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+
+		<!-- styles -->		
+		<link rel="stylesheet" type="text/css" href="/Shadoo/resources/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/Shadoo/resources/bower_components/fontawesome/css/font-awesome.min.css"/>
+		<h:outputStylesheet library="css" name="style.css"/>
+    
+    </h:head>
+	<h:body>
+	
+		
+		<ui:include src="header.tpl.xhtml"/>
+		
+		<ui:include src="navi.tpl.xhtml"/>
+		
+		<ui:include src="loginBanner.tpl.xhtml"/>
+		<ui:include src="search.tpl.xhtml"/>
+		
+		<!-- content -->
+		<div class="wrapper">
+		
+			<ui:insert name="content"/>
+		
+		</div>
+		
+		<ui:include src="footer.tpl.xhtml"/>
+	
+	
+		<!-- scripts -->
+		<script src="/Shadoo/resources/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="/Shadoo/resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	</h:body>
+</html>

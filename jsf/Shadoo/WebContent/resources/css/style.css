@@ -1,0 +1,246 @@
+html, body { height: 100%; margin: 0; padding: 0;}
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+/*
+-------------------- overwrite general bootstrap --------------- */
+.btn, button,
+.form-control, input {
+	border-radius: 0px !important;
+	outline: none !important;
+}
+.btn:active, button:active {
+	box-shadow: none !important;
+	opacity: 0.5 !important;
+}
+
+/*
+-------------------- general stuff --------------- */
+.logo {
+	width: 40%;
+	height: 160px;
+	background-image: url(images/logo.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+	margin: 10px auto 15px auto;
+}
+@media screen and (min-width: 1000px) {
+	.logo { width: 400px; }
+}
+.intro {
+	font-size: 1.8em;
+	text-align: center;
+	margin: 30px auto 40px auto;
+}
+@media screen and (min-width: 800px) {
+	.intro { width: 800px; }
+}
+.wrapper {
+	padding: 0 3%;
+}
+
+/*
+-------------------- navi --------------- */
+.navbar {
+	margin-bottom: 0px !important;
+	border-radius: 0px !important;
+	border: 0px solid !important;
+	border-bottom: 2px solid #eeeeee !important;
+}
+.navbar .navbar-toggle {
+	float: left !important;
+	margin-right: 0px !important;
+	margin-left: 15px !important;
+}
+.navbar .navbar-brand {
+	padding: 8px 15px 5px 15px !important;
+}
+.navbar .searchBtn,
+.navbar .shoppingCartBtn {
+	float: right !important;
+	margin-right: 15px !important;
+	margin-left: 0px !important;
+}
+@media screen and (max-width: 768px) {
+	body {
+		padding-top: 60px !important;
+	}
+}
+@media screen and (min-width: 768px) {
+	.navbar {
+		position: relative !important;
+	}
+}
+@media screen and (min-width: 800px) {
+	.navbar {
+		width: 800px;
+		margin: auto;
+	}
+}
+
+/*
+-------------------- login banner --------------- */
+.loginBanner {
+	border-radius: 0px !important;
+	margin: 3px 0 3px 0 !important;
+}
+.loginBanner .login {
+	width: 90%;
+	float: left;
+}
+.loginBanner .exit {
+	width: 10%;
+	float: left;
+}
+
+/*
+-------------------- search --------------- */
+.search {
+	width: 400px;
+	height: 30px;
+	margin: 15px auto 10px auto;
+}
+.search #searchbox {
+	float: left;
+	width: 85%;
+}
+.search #searchBtnMain {
+	float: right;
+}
+
+/*
+-------------------- infobox --------------- */
+.infobox {
+	position: absolute;
+	top: 3%;
+	right: 2%;
+	width: 200px;
+	padding: 5px;
+}
+.infobox button {
+	width: 100%;
+	text-align: left;
+	margin-bottom: 5px;
+}
+.infobox button i {
+	width: 30px;
+	text-align: center;
+	margin-right: 10px;
+}
+.infobox .badge {
+	float: right;
+	background-color: #333333;
+}
+
+/*
+-------------------- preview --------------- */
+.preview {
+	height: 150px;
+	width: 100%;
+	border: 1px solid #eeeeee;
+}
+.preview .moreBtn {
+	margin-top: 54px;
+}
+.preview .moreBtn i {
+	margin-right: 10px;
+}
+.carousel-control {
+	width: 10% !important;
+	color: black !important;
+	text-shadow: none !important;
+	opacity: 1 !important;
+	background: #f8f8f8 !important;
+
+	border: 1px solid #eeeeee;
+	margin: 3px;
+}
+.carousel-control i {
+	margin-top: 60px;
+}
+.carousel-control:active {
+	padding-top: 2px !important;
+	background: #e7e7e7 !important;
+}
+.carousel-inner .page {
+	width: 75%;
+	height: 150px;
+	margin: auto;
+	padding: 3px 0px;
+	text-align: center;
+	overflow: hidden;
+}
+.carousel-inner .prevItem {
+	width: 33%;
+	height: 100%;
+	padding: 0 3px 0 3px;
+	float: left;
+	margin-bottom: 5px;
+}
+@media screen and (min-width: 1000px) {
+	.carousel-inner .prevItem { width: 20%;}
+}
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+	.carousel-inner .prevItem { width: 25%;}
+}
+@media screen and (min-width: 650px) and (max-width: 800px) {
+	.carousel-inner .prevItem { width: 33%;}
+}
+@media screen and (max-width: 650px) {
+	.carousel-inner .prevItem { width: 50%;}
+}
+.carousel-inner .prevItem .image {
+	width: 100%;
+	height: 90px;
+	text-align:center;
+	overflow: hidden;
+	background-color: #eeeeee;
+}
+.carousel-inner .prevItem .image img {
+	width: 100%;
+	min-height: 90px;
+}
+.carousel-inner .prevItem .title {
+	font-size: 0.85em;
+	height: 30px;
+	line-height: 1.2;
+	padding-top: 3px;
+	text-align: left;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+@media screen and (max-width: 700px) {
+	.carousel-inner .prevItem .title {
+		font-size: 0.7em;
+		line-height: 1.1;
+	};
+}
+.carousel-inner .prevItem .price {
+	text-align: left;
+}
+
+/*
+---------------- footer ------------ */
+.footer {
+	margin: 40px 0 20px 0;
+	text-align: center;
+}
+.footer a {
+	margin: 0 15px;
+}
+@media screen and (max-width: 786px) {
+	.footer a,
+	.footer span {
+		display: block;
+		width: 100%;
+	}
+	.footer a {
+		background: #eeeeee;
+		margin: 2px 0px;
+		padding: 12px;
+	}
+}
