@@ -58,7 +58,7 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	margin-left: 0px !important;
 	width:36px !important;
 	height:36px !important;
-		background-size: 24px 24px !important;
+	background-size: 24px 24px !important;
 	background-position: center center;
 	background-repeat: no-repeat;
 	border-width: 0;
@@ -178,6 +178,33 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	height: 150px;
 	width: 100%;
 	border: 1px solid #eeeeee;
+}
+.btn-group.fav-new-btns {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.btn-favourites {
+	width: 60px !important;
+	height: 36px !important;
+	background-image: url(images/icons/grau/heart-black.png);
+	float: left !important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	background-size: 24px 24px !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.btn-newest {
+	width:60px !important;
+	height:36px !important;
+	background-image: url(images/icons/grau/calendar.png);
+	float: left !important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	background-size: 24px 24px !important;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 .preview .moreBtn {
 	margin-top: 54px;
