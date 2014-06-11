@@ -261,14 +261,24 @@ html,body {
 }
 .custom-nav li:nth-child(6)
 {
-	width: 28% !important;
+	width: 7% !important;
+	margin: 3px auto 0 auto !important;
+
+} 
+.custom-nav li:nth-child(7)
+{
+	width: 7% !important;
+	margin: 3px auto 0 auto !important;
+	padding-left: 10px !important;
+
+} 
+.custom-nav .custom-icon {
 	
-}
-.custom-nav .custom-input {
 	
-	font-size: 16px !important;
-	padding: 23px 0 21px 0 !important;
+	padding: 14px 0 0px 0 !important;
 }
+
+
 
 
 .custom-nav a {
