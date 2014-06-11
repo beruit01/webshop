@@ -419,10 +419,12 @@ margin: 3px auto 0 auto !important;
 	margin-right: auto;
 	text-align: center;
 }
+.test input[value="Red"],
 .btn-favourites {
 	width: 60px !important;
 	height: 36px !important;
 	background-image: url(images/icons/grau/heart-black.png);
+	background-color: #fffaf4;
 	float: left !important;
 	margin-right: 0px !important;
 	margin-left: 0px !important;
@@ -430,16 +432,30 @@ margin: 3px auto 0 auto !important;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+.btn-favourites.active {
+	background-image: url(images/icons/weiss/icons-07.png);
+	background-color: #444444;
+}
 .btn-newest {
 	width:60px !important;
 	height:36px !important;
 	background-image: url(images/icons/grau/calendar.png);
+	background-color: #fffaf4;
 	float: left !important;
 	margin-right: 0px !important;
 	margin-left: 0px !important;
 	background-size: 24px 24px !important;
 	background-position: center center;
 	background-repeat: no-repeat;
+}
+
+.btn-newest.active {
+	background-image: url(images/icons/weiss/calendar-white.png);
+	background-color: #444444;
+}
+.hideme {
+	display:none;
+    visibility:hidden;
 }
 
 .preview .moreBtn {
