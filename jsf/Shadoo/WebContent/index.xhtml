@@ -1,18 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
-      
-      
-      <ui:composition template="templates/shadoo.tpl.xhtml">
-      	<ui:define name="content">
-      		
-      		<div class="text-center">
-      			<div class="btn-group fav-new-btns" data-toggle="buttons">
-      				<h:form>
-      				
-      					<!-- 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<ui:composition template="templates/shadoo.tpl.xhtml">
+	<ui:define name="content">
+
+		<div class="text-center">
+			<div class="btn-group fav-new-btns" data-toggle="buttons">
+				<h:form>
+
+					<!-- 
   						<h:commandLink class="btn btn-default btn-favourites">
 							<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
 							
@@ -22,321 +22,53 @@
 							
 						</h:commandLink>
 						 -->
-						
-						<h:selectOneRadio value="Red">
-						
+
+					<h:selectOneRadio value="Red">
+
 						<h:commandButton class="btn btn-default btn-favourites">
 							<f:selectItem itemValue="Red" itemLabel="" />
-							
-  						</h:commandButton>
+
+						</h:commandButton>
 						<h:commandButton class="btn btn-default btn-newest">
 							<f:selectItem itemValue="Blue" itemLabel="" />
-							
-						</h:commandButton>
-						</h:selectOneRadio>
-					
-					</h:form>	
-  				
-				</div>
-      		</div>
-      		
-      		
-  <div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="option1"/> Option 1
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="option2"/> Option 2
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="option3"/> Option 3
-  </label>
-</div>
 
-      		
-      		
- 
-      		<h:form>
-      		<h:selectOneRadio value="Red">
-   	<f:selectItem itemValue="Red" itemLabel="Color1 - Red" />
-   	<f:selectItem itemValue="Green" itemLabel="Color1 - Green" />
-   	<f:selectItem itemValue="Blue" itemLabel="Color1 - Blue" />
-</h:selectOneRadio>
-      		</h:form>
-      		
-      		
-      		
-      		
-      		
-      		<h:dataTable var="current" value="#{listControllerBean.favouriteProducts}">
-		<f:facet name="header">
-			<h:outputText value="hallo" />
-		</f:facet>
-		<h:column>
-			<h:outputText value="#{current.productName}" />
-		</h:column>
-		<h:column>
-			<h:outputText value="#{current.imageUrl}" />
-		</h:column>
-		<h:column>
-			<h:outputText value="#{current.rating}" />
-		</h:column>
-	</h:dataTable>
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-      		
-			<!-- intro (large screens only) -->
-			<!-- <div class="intro visible-lg visible-md visible-sm">
-				<span>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br/><br/>
-				Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-				</span>
+						</h:commandButton>
+					</h:selectOneRadio>
+
+				</h:form>
+
 			</div>
-			-->
-			
-			<!-- preview -->
-			<!-- <h3>Neu</h3>
-			<div id="carouselNeu" class="carousel slide preview" data-interval="false" data-wrap="false">
-				
-				<div class="carousel-inner">
-					<div class="item active">
-						<div class="page">
-							
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy01.jpg"/>
-								</div>
-								<p class="title">Wie lösche ich ein Feuer</p>
-								<p class="price">1,79 €</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy02.jpg"/>
-								</div>
-								<p class="title">Gedichte schreiben</p>
-								<p class="price">GRATIS</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy03.jpg"/>
-								</div>
-								<p class="title">Traumdeutung</p>
-								<p class="price">4,99 €</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy13.jpg"/>
-								</div>
-								<p class="title">Urban Music</p>
-								<p class="price">GRATIS €</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy14.jpg"/>
-								</div>
-								<p class="title">Geschichte der U-Bahnen Frankfurts</p>
-								<p class="price">GRATIS €</p>
-							</a>
-			
-						</div>
+		</div>
+
+		
+			<ui:repeat var="current"
+				value="#{listControllerBean.exampleProducts}">
+
+				<div class="sd-item">
+
+					<div class="sd-pic">
+						<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
+						<h:graphicImage class="sd-picBorder"
+							value="resources/images/picBorder.svg" />
 					</div>
-					<div class="item">
-						<div class="page">
-							
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy04.jpg"/>
-								</div>
-								<p class="title">Yoga Anfängerkurs</p>
-								<p class="price">0,79 €</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy05.jpg"/>
-								</div>
-								<p class="title">Reisebericht Ägypten</p>
-								<p class="price">GRATIS</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy06.jpg"/>
-								</div>
-								<p class="title">Wie funktioniert Ballonfahren?</p>
-								<p class="price">GRATIS</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy12.jpg"/>
-								</div>
-								<p class="title">Wir brauchen mehr zivilen Ungehorsam!</p>
-								<p class="price">GRATIS</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy11.jpg"/>
-								</div>
-								<p class="title">Lesung meiner neusten Gedichte</p>
-								<p class="price">3,00 €</p>
-							</a>
-			
-						</div>
+					<div class="sd-rating clearfix">
+						<div class="heart10"></div>
+						<div class="heart10"></div>
+						<div class="heart10"></div>
+						<div class="heart05"></div>
+						<div class="heart00"></div>
 					</div>
-					<div class="item">
-						<div class="page">
-							<button class="moreBtn btn btn-default">
-								<i class="fa fa-plus"></i> Mehr aus dieser Rubrik
-							</button>
-						</div>
+					<div class="sd-title">
+						<h:outputText value="#{current.productName}" />
 					</div>
 				</div>
-				-->
-				<!-- Controls -->
-				<!-- <a class="left carousel-control" href="#carouselNeu" data-slide="prev">
-					<i class="fa fa-arrow-left fa"></i>
-				</a>
-				<a class="right carousel-control" href="#carouselNeu" data-slide="next">
-					<i class="fa fa-arrow-right fa"></i>
-				</a>
-			</div>
-			
-			<h3>Beliebt</h3>
-			<div id="caruselBeliebt" class="carousel slide preview" data-interval="false" data-wrap="false">
-				
-				<div class="carousel-inner">
-					<div class="item active">
-						<div class="page">
-							
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy06.jpg"/>
-								</div>
-								<p class="title">Wie funktioniert Ballonfahren?</p>
-								<p class="price">GRATIS</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy04.jpg"/>
-								</div>
-								<p class="title">Yoga Anfängerkurs</p>
-								<p class="price">0,79 €</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy05.jpg"/>
-								</div>
-								<p class="title">Reisebericht Ägypten</p>
-								<p class="price">GRATIS</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy10.jpg"/>
-								</div>
-								<p class="title">Fotographie - Blumen &AMP; Pflanzen</p>
-								<p class="price">10,00 €</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy09.jpg"/>
-								</div>
-								<p class="title">Mein Jahr auf der Alm. Ein Erfahrungsbericht.</p>
-								<p class="price">GRATIS €</p>
-							</a>
-			
-						</div>
-					</div>
-					<div class="item">
-						<div class="page">
-							
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy02.jpg"/>
-								</div>
-								<p class="title">Gedichte schreiben</p>
-								<p class="price">GRATIS</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy01.jpg"/>
-								</div>
-								<p class="title">Wie lösche ich ein Feuer</p>
-								<p class="price">1,79 €</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy03.jpg"/>
-								</div>
-								<p class="title">Traumdeutung</p>
-								<p class="price">4,99 €</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy08.jpg"/>
-								</div>
-								<p class="title">Wie der Atomausstieg gelingen kann!</p>
-								<p class="price">1,99 €</p>
-							</a>
-			
-							<a href="#view" class="prevItem">
-								<div class="image">
-									<img src="/Shadoo/resources/images/services/dummy07.jpg"/>
-								</div>
-								<p class="title">Fotographie - Oldtimer</p>
-								<p class="price">10,00 €</p>
-							</a>
-			
-						</div>
-					</div>
-					<div class="item">
-						<div class="page">
-							<button class="moreBtn btn btn-default">
-								<i class="fa fa-plus"></i> Mehr aus dieser Rubrik
-							</button>
-						</div>
-					</div>
-				</div>
-				-->
-				<!-- Controls -->
-				<!-- <a class="left carousel-control" href="#caruselBeliebt" data-slide="prev">
-					<i class="fa fa-arrow-left fa"></i>
-				</a>
-				<a class="right carousel-control" href="#caruselBeliebt" data-slide="next">
-					<i class="fa fa-arrow-right fa"></i>
-				</a>
-			</div>
-      		-->
-      	</ui:define>
-      </ui:composition>
-      
+
+			</ui:repeat>
+
+
+
+
+	</ui:define>
+</ui:composition>
+
 </html>
