@@ -184,6 +184,7 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	margin-right: auto;
 	text-align: center;
 }
+.test input[value="Red"],
 .btn-favourites {
 	width: 60px !important;
 	height: 36px !important;
@@ -215,6 +216,10 @@ html, body { height: 100%; margin: 0; padding: 0;}
 .btn-newest.active {
 	background-image: url(images/icons/weiss/calendar-white.png);
 	background-color: #444444;
+}
+.hideme {
+	display:none;
+    visibility:hidden;
 }
 .preview .moreBtn {
 	margin-top: 54px;
