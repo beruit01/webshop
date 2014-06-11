@@ -12,26 +12,23 @@
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle navbar-left navbarBtn"
-			data-toggle="collapse" data-target="#collapse-menu">
-		
-		</button>
-		<a class="navbar-brand visible-xs" href="#"> <img
-			src="images/logo.png" height="40" />
-		</a> 
+			data-toggle="collapse" data-target="#collapse-menu"></button>
+
+
 		<!-- 
 		<button type="button" class="navbar-toggle navbar-right searchBtn">
 			<i class="fa fa-search fa-lg"></i>
 		</button>
 		 -->
-		 
-		 
+
+
 		<h:form>
 			<h:commandLink class="navbar-toggle navbar-left heartBoxBtn"
 				action="heartbox">
 
 			</h:commandLink>
 		</h:form>
-		
+
 		<h:form>
 			<h:commandLink class="navbar-toggle navbar-right searchBtn"
 				action="search">
@@ -43,18 +40,38 @@
 	</div>
 
 	<!-- navi content for toggling -->
+
+	<!-- desktop view -->
+	<div class="nav custom-nav">
+		<ul class="nav navbar-nav visible-sm visible-md visible-lg ">
+			<li class="active"><a href="#">Themen</a></li>
+			<li><a href="#">Anbieten</a></li>
+			<li><a href="#">Konto</a></li>
+			<li><h:graphicImage value="/resources/images/heart.png"
+					height="40" id="Navbarlogo"></h:graphicImage> 
+					<span class="navbarlogotext">Shadoo</span></li>
+			<li><a href="#">Service anbieten</a></li>
+			<li><a class="" href="#">Konto</a></li>
+			<li><a href="#">Login/Registrieren</a></li>
+		</ul>
+	</div>
+
+	<!--  /desktop view -->
+
 	<div class="collapse navbar-collapse" id="collapse-menu">
 
-		<ul class="nav navbar-nav">
+
+		<!-- mobile view -->
+		<ul class="nav navbar-nav visible-xs">
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="#">Konto</a></li>
-			<li><a href="#">Merkliste</a></li>
 			<li><a href="#">Service anbieten</a></li>
 			<li><a href="#">Themenbereiche</a></li>
 			<li><a href="#">Vorschläge</a></li>
 		</ul>
-
+		<!-- /mobile view -->
 	</div>
+
 </div>
 </nav>
 

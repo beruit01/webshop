@@ -1,21 +1,108 @@
-html, body { height: 100%; margin: 0; padding: 0;}
+html,body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #FFEFDA;
+	font-family: fira_sans, Helvetica;
+}
 
 /* apply a natural box layout model to all elements */
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
- }
+*,*:before,*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 /*
 -------------------- overwrite general bootstrap --------------- */
-.btn, button,
-.form-control, input {
+.btn,button,.form-control,input {
 	border-radius: 0px !important;
 	outline: none !important;
 }
-.btn:active, button:active {
+
+.btn:active,button:active {
 	box-shadow: none !important;
 	opacity: 0.5 !important;
 }
+
+/*
+-------------------- font stuff -----------------------*/
+
+/* fira sans font */
+@font-face {
+	font-family: 'fira_sans';
+	src: url('firafont/firasansot-bold-webfont.eot');
+	src: url('firafont/firasansot-bold-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('firafont/firasansot-bold-webfont.woff') format('woff'),
+		url('firafont/firasansot-bold-webfont.ttf') format('truetype'),
+		url('firafont/firasansot-bold-webfont.svg#fira_sans_otbold')
+		format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'fira_sans';
+	src: url('firafont/firasansot-light-webfont.eot');
+	src: url('firafont/firasansot-light-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('firafont/firasansot-light-webfont.woff') format('woff'),
+		url('firafont/firasansot-light-webfont.ttf') format('truetype'),
+		url('firafont/firasansot-light-webfont.svg#fira_sans_otlight')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+/*
+-------------------- heartbeat stuff --------------- */
+
+
+.heartbeat {
+	margin-bottom: 20px;
+    display:block;
+    -webkit-animation: heartbeat 1.3s ease infinite;
+       -moz-animation: heartbeat 1.3s ease infinite;
+         -o-animation: heartbeat 1.3s ease infinite;
+            animation: heartbeat 1.3s ease infinite;
+}
+
+
+/* heartbeat animation */
+@-webkit-keyframes heartbeat {
+	0% { -webkit-transform: scale(1); }
+	14% { -webkit-transform: scale(1.01); }
+	28% { -webkit-transform: scale(1); }
+	42% { -webkit-transform: scale(1.01); }
+	70% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes heartbeat {
+  	0% { -moz-transform: scale(1); }
+	14% { -moz-transform: scale(1.01); }
+	28% { -moz-transform: scale(1); }
+	42% { -moz-transform: scale(1.01); }
+	70% { -moz-transform: scale(1); }
+}
+@-o-keyframes heartbeat {
+  	0% { -o-transform: scale(1); }
+	14% { -o-transform: scale(1.01); }
+	28% { -o-transform: scale(1); }
+	42% { -o-transform: scale(1.01); }
+	70% { -o-transform: scale(1); }
+}
+@keyframes heartbeat {
+	0% { transform: scale(1); }
+	14% { transform: scale(1.01); }
+	28% { transform: scale(1); }
+	42% { transform: scale(1.01); }
+	70% { transform: scale(1); }
+}
+
+
 
 /*
 -------------------- general stuff --------------- */
@@ -28,37 +115,83 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	background-position: center center;
 	margin: 10px auto 15px auto;
 }
+
 @media screen and (min-width: 1000px) {
-	.logo { width: 400px; }
+	.logo {
+		width: 400px;
+	}
 }
+
 .intro {
 	font-size: 1.8em;
 	text-align: center;
 	margin: 30px auto 40px auto;
 }
+
 @media screen and (min-width: 800px) {
-	.intro { width: 800px; }
+	.intro {
+		/*width: 800px;*/
+		
+	}
 }
+
 .wrapper {
 	padding: 0 3%;
 }
 
 /*
 -------------------- navi --------------- */
+.custom-nav {
+	width: 100% !important;
+}
+
+.custom-nav ul {
+	height: 60px;
+	width: 80%;
+	margin: 0 10% 0 10%;
+}
+
+.custom-nav li {
+	width: 14% !important;
+	text-align: center !important;
+	height: 100% !important;
+	
+}
+
+.custom-nav a {
+	height: 100% !important;
+	font-size: 16px !important;
+	padding: 23px 0 21px 0 !important;
+}
+.navbarlogotext {
+	font-size: 12px !important;
+	font-weight: bold;
+	text-align: center !important;
+
+	
+}
+
+.custom-nav #Navbarlogo{
+
+	display: block;
+margin: 3px auto 0 auto !important;
+	
+}
+
 .navbar {
 	margin-bottom: 0px !important;
 	border-radius: 0px !important;
 	border: 0px solid !important;
-	border-bottom: 2px solid #eeeeee !important;
-	
+	background-color: rgba(255, 255, 255, 0.9);
 }
+
 .navbar .navbar-toggle {
 	float: left !important;
 	margin-right: 0px !important;
 	margin-left: 0px !important;
-	width:36px !important;
-	height:36px !important;
-		background-size: 24px 24px !important;
+	width: 36px !important;
+	height: 36px !important;
+	background-size: 24px 24px !important;
 	background-position: center center;
 	background-repeat: no-repeat;
 	border-width: 0;
@@ -67,9 +200,7 @@ html, body { height: 100%; margin: 0; padding: 0;}
 .navbar .navbarBtn {
 	background-image: url(images/icons/grau/menu.png);
 	margin-left: 7px !important;
-	
 }
-
 
 .navbar .navbar-brand {
 	padding: 8px 15px 5px 15px !important;
@@ -81,23 +212,18 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	margin-left: 0px !important;
 }
 
-
 .navbar .searchBtn {
 	float: right !important;
 	/*margin-right: 15px !important;
-	margin-left: 0px !important;*/	
-
+	margin-left: 0px !important;*/
 	background-image: url(images/icons/grau/search.png);
 }
 
-
-
 .navbar .heartBoxBtn {
 	float: right !important;
-	
-	margin-right: 7px !important;	
-
+	margin-right: 7px !important;
 	background-image: url(images/icons/grau/heartbox.png);
+	opacity: 1.0 !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -105,14 +231,16 @@ html, body { height: 100%; margin: 0; padding: 0;}
 		padding-top: 60px !important;
 	}
 }
+
 @media screen and (min-width: 768px) {
 	.navbar {
 		position: relative !important;
 	}
 }
+
 @media screen and (min-width: 800px) {
 	.navbar {
-		width: 800px;
+		/*width: 800px;*/
 		margin: auto;
 	}
 }
@@ -123,10 +251,12 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	border-radius: 0px !important;
 	margin: 3px 0 3px 0 !important;
 }
+
 .loginBanner .login {
 	width: 90%;
 	float: left;
 }
+
 .loginBanner .exit {
 	width: 10%;
 	float: left;
@@ -139,10 +269,12 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	height: 30px;
 	margin: 15px auto 10px auto;
 }
+
 .search #searchbox {
 	float: left;
 	width: 85%;
 }
+
 .search #searchBtnMain {
 	float: right;
 }
@@ -156,17 +288,19 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	width: 200px;
 	padding: 5px;
 }
-.infobox button,
-.infobox .btn {
+
+.infobox button,.infobox .btn {
 	width: 100%;
 	text-align: left;
 	margin-bottom: 5px;
 }
+
 .infobox button i {
 	width: 30px;
 	text-align: center;
 	margin-right: 10px;
 }
+
 .infobox .badge {
 	float: right;
 	background-color: #333333;
@@ -179,29 +313,34 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	width: 100%;
 	border: 1px solid #eeeeee;
 }
+
 .preview .moreBtn {
 	margin-top: 54px;
 }
+
 .preview .moreBtn i {
 	margin-right: 10px;
 }
+
 .carousel-control {
 	width: 10% !important;
 	color: black !important;
 	text-shadow: none !important;
 	opacity: 1 !important;
 	background: #f8f8f8 !important;
-
 	border: 1px solid #eeeeee;
 	margin: 3px;
 }
+
 .carousel-control i {
 	margin-top: 60px;
 }
+
 .carousel-control:active {
 	padding-top: 2px !important;
 	background: #e7e7e7 !important;
 }
+
 .carousel-inner .page {
 	width: 75%;
 	height: 150px;
@@ -210,6 +349,7 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	text-align: center;
 	overflow: hidden;
 }
+
 .carousel-inner .prevItem {
 	width: 33%;
 	height: 100%;
@@ -217,29 +357,44 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	float: left;
 	margin-bottom: 5px;
 }
+
 @media screen and (min-width: 1000px) {
-	.carousel-inner .prevItem { width: 20%;}
+	.carousel-inner .prevItem {
+		width: 20%;
+	}
 }
+
 @media screen and (min-width: 800px) and (max-width: 1000px) {
-	.carousel-inner .prevItem { width: 25%;}
+	.carousel-inner .prevItem {
+		width: 25%;
+	}
 }
+
 @media screen and (min-width: 650px) and (max-width: 800px) {
-	.carousel-inner .prevItem { width: 33%;}
+	.carousel-inner .prevItem {
+		width: 33%;
+	}
 }
+
 @media screen and (max-width: 650px) {
-	.carousel-inner .prevItem { width: 50%;}
+	.carousel-inner .prevItem {
+		width: 50%;
+	}
 }
+
 .carousel-inner .prevItem .image {
 	width: 100%;
 	height: 90px;
-	text-align:center;
+	text-align: center;
 	overflow: hidden;
 	background-color: #eeeeee;
 }
+
 .carousel-inner .prevItem .image img {
 	width: 100%;
 	min-height: 90px;
 }
+
 .carousel-inner .prevItem .title {
 	font-size: 0.85em;
 	height: 30px;
@@ -249,12 +404,15 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	overflow: hidden;
 	margin-bottom: 5px;
 }
+
 @media screen and (max-width: 700px) {
 	.carousel-inner .prevItem .title {
 		font-size: 0.7em;
 		line-height: 1.1;
-	};
+	}
+	;
 }
+
 .carousel-inner .prevItem .price {
 	text-align: left;
 }
@@ -265,12 +423,13 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	margin: 40px 0 20px 0;
 	text-align: center;
 }
+
 .footer a {
 	margin: 0 15px;
 }
+
 @media screen and (max-width: 786px) {
-	.footer a,
-	.footer span {
+	.footer a,.footer span {
 		display: block;
 		width: 100%;
 	}
