@@ -8,16 +8,111 @@
       <ui:composition template="templates/shadoo.tpl.xhtml">
       	<ui:define name="content">
       		
+      		<div class="text-center">
+      			<div class="btn-group fav-new-btns" data-toggle="buttons">
+      				<h:form>
+      				
+      					<!-- 
+  						<h:commandLink class="btn btn-default btn-favourites">
+							<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+							
+  						</h:commandLink>
+						<h:commandLink class="btn btn-default btn-newest">
+						<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
+							
+						</h:commandLink>
+						 -->
+						
+						<h:selectOneRadio value="Red">
+						
+						<h:commandButton class="btn btn-default btn-favourites">
+							<f:selectItem itemValue="Red" itemLabel="" />
+							
+  						</h:commandButton>
+						<h:commandButton class="btn btn-default btn-newest">
+							<f:selectItem itemValue="Blue" itemLabel="" />
+							
+						</h:commandButton>
+						</h:selectOneRadio>
+					
+					</h:form>	
+  				
+				</div>
+      		</div>
+      		
+      		
+  <div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option1"/> Option 1
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option2"/> Option 2
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option3"/> Option 3
+  </label>
+</div>
+
+      		
+      		
+ 
+      		<h:form>
+      		<h:selectOneRadio value="Red">
+   	<f:selectItem itemValue="Red" itemLabel="Color1 - Red" />
+   	<f:selectItem itemValue="Green" itemLabel="Color1 - Green" />
+   	<f:selectItem itemValue="Blue" itemLabel="Color1 - Blue" />
+</h:selectOneRadio>
+      		</h:form>
+      		
+      		
+      		
+      		
+      		
+      		<h:dataTable var="current" value="#{listControllerBean.favouriteProducts}">
+		<f:facet name="header">
+			<h:outputText value="hallo" />
+		</f:facet>
+		<h:column>
+			<h:outputText value="#{current.productName}" />
+		</h:column>
+		<h:column>
+			<h:outputText value="#{current.imageUrl}" />
+		</h:column>
+		<h:column>
+			<h:outputText value="#{current.rating}" />
+		</h:column>
+	</h:dataTable>
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
 			<!-- intro (large screens only) -->
-			<div class="intro visible-lg visible-md visible-sm">
+			<!-- <div class="intro visible-lg visible-md visible-sm">
 				<span>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br/><br/>
 				Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
 				</span>
 			</div>
+			-->
 			
 			<!-- preview -->
-			<h3>Neu</h3>
+			<!-- <h3>Neu</h3>
 			<div id="carouselNeu" class="carousel slide preview" data-interval="false" data-wrap="false">
 				
 				<div class="carousel-inner">
@@ -119,9 +214,9 @@
 						</div>
 					</div>
 				</div>
-			
+				-->
 				<!-- Controls -->
-				<a class="left carousel-control" href="#carouselNeu" data-slide="prev">
+				<!-- <a class="left carousel-control" href="#carouselNeu" data-slide="prev">
 					<i class="fa fa-arrow-left fa"></i>
 				</a>
 				<a class="right carousel-control" href="#carouselNeu" data-slide="next">
@@ -231,16 +326,16 @@
 						</div>
 					</div>
 				</div>
-			
+				-->
 				<!-- Controls -->
-				<a class="left carousel-control" href="#caruselBeliebt" data-slide="prev">
+				<!-- <a class="left carousel-control" href="#caruselBeliebt" data-slide="prev">
 					<i class="fa fa-arrow-left fa"></i>
 				</a>
 				<a class="right carousel-control" href="#caruselBeliebt" data-slide="next">
 					<i class="fa fa-arrow-right fa"></i>
 				</a>
 			</div>
-      		
+      		-->
       	</ui:define>
       </ui:composition>
       
