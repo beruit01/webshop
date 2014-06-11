@@ -11,20 +11,28 @@
 	<div class="infobox visible-lg visible-md visible-sm">
 		
 		<!-- shopping cart btn -->
-		<button type="button" class="btn btn-default">
-			<i class="fa fa-shopping-cart fa-lg"></i>
-			Warenkorb
-			<span class="badge">42</span>
-		</button>
+		<h:form>
+			<h:commandLink class="btn btn-default" value="Heartbox" action="heartbox">
+				<i class="fa fa-shopping-cart fa-lg"></i>
+				<!-- Warenkorb -->
+				<span class="badge">42</span>
+			</h:commandLink>
 	
-		<!-- login cart btn -->
-		<button type="button" class="btn btn-default">
-			<i class="fa fa-child fa-lg"></i>Login
-		</button>
+			<!-- login cart btn -->
+			<!-- <button type="button" class="btn btn-default">
+				<i class="fa fa-child fa-lg"></i>Login
+			</button> -->
 	
-		<a href="#reg" title="neues Benutzerkonto anlegen">
-			<strong>Neu hier?</strong> Jetzt registrieren!
-		</a>
+			<h:commandLink class="btn btn-default" value="Login">
+				<i class="fa fa-child fa-lg"></i>
+			</h:commandLink>
+		
+			<h:commandLink>
+				<!-- <a href="#reg" title="neues Benutzerkonto anlegen"> -->
+				<strong>Neu hier?</strong> Jetzt registrieren!
+				<!-- </a> -->
+			</h:commandLink>
+		</h:form>
 	</div>
 		
 </html>
