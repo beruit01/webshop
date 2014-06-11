@@ -23,47 +23,42 @@
 						</h:commandLink>
 						 -->
 
-					<h:selectOneRadio value="Red">
+					<label class="btn btn-default btn-favourites"> <input
+						type="radio" name="options" id="option1" class="hideme" />
+					</label>
+					<label class="btn btn-default btn-newest"> <input
+						type="radio" name="options" id="option2" class="hideme" />
+					</label>
 
-						<h:commandButton class="btn btn-default btn-favourites">
-							<f:selectItem itemValue="Red" itemLabel="" />
-
-						</h:commandButton>
-						<h:commandButton class="btn btn-default btn-newest">
-							<f:selectItem itemValue="Blue" itemLabel="" />
-
-						</h:commandButton>
-					</h:selectOneRadio>
 
 				</h:form>
 
 			</div>
 		</div>
 
-		
-			<ui:repeat var="current"
-				value="#{listControllerBean.exampleProducts}">
 
-				<div class="sd-item">
+		<ui:repeat var="current" value="#{listControllerBean.exampleProducts}">
 
-					<div class="sd-pic">
-						<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
-						<h:graphicImage class="sd-picBorder"
-							value="resources/images/picBorder.svg" />
-					</div>
-					<div class="sd-rating clearfix">
-						<div class="heart10"></div>
-						<div class="heart10"></div>
-						<div class="heart10"></div>
-						<div class="heart05"></div>
-						<div class="heart00"></div>
-					</div>
-					<div class="sd-title">
-						<h:outputText value="#{current.productName}" />
-					</div>
+			<div class="sd-item">
+
+				<div class="sd-pic">
+					<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
+					<h:graphicImage class="sd-picBorder"
+						value="resources/images/picBorder.svg" />
 				</div>
+				<div class="sd-rating clearfix">
+					<div class="heart10"></div>
+					<div class="heart10"></div>
+					<div class="heart10"></div>
+					<div class="heart05"></div>
+					<div class="heart00"></div>
+				</div>
+				<div class="sd-title">
+					<h:outputText value="#{current.productName}" />
+				</div>
+			</div>
 
-			</ui:repeat>
+		</ui:repeat>
 
 
 

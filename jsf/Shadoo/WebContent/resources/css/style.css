@@ -259,8 +259,16 @@ html,body {
 	height: 100% !important;
 	
 }
-
-
+.custom-nav li:nth-child(6)
+{
+	width: 28% !important;
+	
+}
+.custom-nav .custom-input {
+	
+	font-size: 16px !important;
+	padding: 23px 0 21px 0 !important;
+}
 
 
 .custom-nav a {
