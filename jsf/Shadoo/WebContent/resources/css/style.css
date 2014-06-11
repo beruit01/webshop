@@ -50,21 +50,56 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	border-radius: 0px !important;
 	border: 0px solid !important;
 	border-bottom: 2px solid #eeeeee !important;
+	
 }
 .navbar .navbar-toggle {
 	float: left !important;
 	margin-right: 0px !important;
-	margin-left: 15px !important;
+	margin-left: 0px !important;
+	width:36px !important;
+	height:36px !important;
+		background-size: 24px 24px !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-width: 0;
 }
+
+.navbar .navbarBtn {
+	background-image: url(images/icons/grau/menu.png);
+	margin-left: 7px !important;
+	
+}
+
+
 .navbar .navbar-brand {
 	padding: 8px 15px 5px 15px !important;
 }
-.navbar .searchBtn,
+
 .navbar .shoppingCartBtn {
 	float: right !important;
 	margin-right: 15px !important;
 	margin-left: 0px !important;
 }
+
+
+.navbar .searchBtn {
+	float: right !important;
+	/*margin-right: 15px !important;
+	margin-left: 0px !important;*/	
+
+	background-image: url(images/icons/grau/search.png);
+}
+
+
+
+.navbar .heartBoxBtn {
+	float: right !important;
+	
+	margin-right: 7px !important;	
+
+	background-image: url(images/icons/grau/heartbox.png);
+}
+
 @media screen and (max-width: 768px) {
 	body {
 		padding-top: 60px !important;
@@ -82,7 +117,7 @@ html, body { height: 100%; margin: 0; padding: 0;}
 	}
 }
 
-/*
+/*                                                                                                                                                                                                                                                       
 -------------------- login banner --------------- */
 .loginBanner {
 	border-radius: 0px !important;
