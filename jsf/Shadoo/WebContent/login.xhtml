@@ -12,18 +12,7 @@
 					<h:form>
 					
 					
-					<div class="anmeldung">
-						
-						<h1>Anmeldung</h1>
-				  
-						<h:inputText class="form-control" type="text" value="" placeholder="Benutzername" id="anm_email"/>
-						<h:inputSecret class="form-control" type="password" placeholder="Passwort" value="" id="anm_pw"/>
-						
-						<h:form>
-							<h:commandButton type="button" class="btn btn-default" value="Login" id="anm_button"/>
-						</h:form>
-						
-					</div>
+					
 					
 					<!-- 
 					<div class="anmeldung">
@@ -36,103 +25,57 @@
 					</div>
 					-->
 				
+					
 					<div class="registrierung">
 						<h1>Registrierung</h1>
-				  
-				  		<!-- 
-						<form id="passwordForm" method="post" class="form-horizontal"
-							data-bv-message="This value is not valid"
-							data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
-							data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
-							data-bv-feedbackicons-validating="glyphicon glyphicon-refresh"
-							data-bv-submitbuttons='button[type="button"]'>
-							 -->
+				  		
+						<h:form id="passwordForm">
 							
 							<div class="form-group">
-								<!--<label class="col-lg-3 control-label">E-Mail</label>-->
 								<div class="col-lg-12">
-									<h:inputText class="form-control" name="email" type="email" placeholder="E-Mail" id="reg_email"
-										
-										data-bv-emailaddress="true"
-										data-bv-emailaddress-message="The input is not a valid email address"
-										
-										data-bv-notempty="true"
-										data-bv-notempty-message="The E-Mail is required and cannot be empty." />
-										
+									<h:inputText class="form-control" required="true" name="email" type="email" placeholder="E-Mail" id="reg_email" validatorMessage="Die eingegebene E-Mail Adresse ist nicht gültig!">
+										<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"/>
+										<f:ajax execute="@this" render="reg_email_msg" event="keyup" />
+									</h:inputText>
+									<h:message for="reg_email" id="reg_email_msg"/>
 								</div>
 								
-								<!--<label class="col-lg-3 control-label">Benutzername</label>-->
 								<div class="col-lg-12">
-									<h:inputText type="text" class="form-control" name="username" placeholder="Benutzername" id="reg_user"
-									
-										data-bv-message="The username is not valid"
-				
-										data-bv-notempty="true"
-										data-bv-notempty-message="The username is required and cannot be empty"
-				
-										data-bv-regexp="true"
-										data-bv-regexp-regexp="[a-zA-Z0-9_\.]+"
-										data-bv-regexp-message="The username can only consist of alphabetical, number, dot and underscore"
-				
-										data-bv-stringlength="true"
-										data-bv-stringlength-min="6"
-										data-bv-stringlength-max="30"
-										data-bv-stringlength-message="The username must be more than 6 and less than 30 characters long"
-				
-										data-bv-different="true"
-										data-bv-different-field="password"
-										data-bv-different-message="The username and password cannot be the same as each other" />
-										
+									<h:inputText type="text" class="form-control" name="username" placeholder="Benutzername" id="reg_user" validatorMessage="Der eingegebene Benutzername muss zwischen 6 und 30 Zeichen haben!">
+										<f:validateLength minimum="6" maximum="30"/>
+										<f:ajax execute="@this" render="reg_username_msg" event="keyup" />
+									</h:inputText>
+									<h:message for="reg_user" id="reg_username_msg"/>
 								</div>
 							</div>
 							
 							<div class="form-group">
-								<!--<label class="col-lg-3 control-label">Passwort</label>-->
 								<div class="col-lg-12">
-									<h:inputSecret type="password" class="form-control" name="password" placeholder="Passwort" id="reg_pw"
-										
-										data-bv-notempty="true"
-										data-bv-notempty-message="The password is required and cannot be empty."
-				
-										data-bv-stringlength="true"
-										data-bv-stringlength-min="6"
-										data-bv-stringlength-message="The password must be more than 6 characters long."
-										
-										data-bv-identical="true"
-										data-bv-identical-field="confirmPassword"
-										data-bv-identical-message="The password and its confirm are not the same."
-				
-										/>
+									<h:inputSecret type="password" class="form-control" name="password" placeholder="Passwort" id="reg_pw" validatorMessage="Das eingegebene Passwort muss mindestens 6 Zeichen haben!">
+										<f:validateLength minimum="6"/>
+										<f:ajax execute="@this" render="reg_pw_msg" event="keyup" />
+									</h:inputSecret>
+									<h:message for="reg_pw" id="reg_pw_msg"/>
 								</div>
 								
-								<!--<label class="col-lg-3 control-label">Passwort bestätigen</label>-->
 								<div class="col-lg-12">
-									<h:inputSecret type="password" class="form-control" name="confirmPassword" placeholder="Passwort bestätigen" id="reg_conf_pw"
-									
-										data-bv-notempty="true"
-										data-bv-notempty-message="The confirm password is required and cannot be empty."
-				
-										data-bv-stringlength="true"
-										data-bv-stringlength-min="6"
-										data-bv-stringlength-message="The password must be more than 6 characters long."
-										
-										data-bv-identical="true"
-										data-bv-identical-field="password"
-										data-bv-identical-message="The password and its confirm are not the same."
-										
-										/>
+									<h:inputSecret type="password" class="form-control" name="confirmPassword" placeholder="Passwort bestätigen" id="reg_conf_pw" validatorMessage="Das eingegebene Passwort muss mindestens 6 Zeichen haben!">
+										<f:validateLength minimum="6"/>
+										<f:ajax execute="@this" render="reg_conf_pw_msg" event="keyup" />
+									</h:inputSecret>
+									<h:message for="reg_conf_pw" id="reg_conf_pw_msg"/>
 								</div>
 							</div>
 				
 							<div class="form-group">
 								<div class="col-lg-12">
 									<h:form>
-										<h:commandButton type="button" class="btn btn-default" value="Registrieren" id="reg_button"/>
+										<h:commandButton class="btn btn-default" value="Registrieren" id="reg_button" action="index"/>
 									</h:form>
 								</div>
 							</div>
 						
-						<!-- </form> -->
+						</h:form>
 						
 						<span id="reg_failed"></span>
 						
@@ -141,27 +84,28 @@
 					
 					
 					
+					
+					<div class="anmeldung">
+						
+						<h1>Anmeldung</h1>
+				  
+						<h:inputText class="form-control" type="text" value="" placeholder="Benutzername" id="anm_email"/>
+						<h:inputSecret class="form-control" type="password" placeholder="Passwort" value="" id="anm_pw"/>
+						
+						<h:form>
+							<h:commandButton class="btn btn-default" value="Login" id="anm_button"/>
+						</h:form>
+						
+					</div>
+					
+					
+					
 				</h:form>		
 					
-					
-					
 				</div>
-			
-			
-			<!-- 
-				<link rel="stylesheet" href="./path/to/dist/css/bootstrapValidator.min.css"/>
-				<script type="text/javascript" src="./path/to/dist/js/bootstrapValidator.js"></script>
-			
-				<script>
-					$(document).ready(function() {
-						$('#passwordForm').bootstrapValidator();
-					});
-				</script>
- -->
-			
-			
 				
-      		
+				
+
       	</ui:define>
       </ui:composition>
       

@@ -20,14 +20,14 @@ public class Controller {
 	private String labelFavClass = "btn btn-default btn-favourites";
 	private String labelNewClass = "btn btn-default btn-newest";
 	
-	public void test() {
+	public String test() {
 		System.out.println("Hallooooooooooooooooooooooooooooooooooooooooooooooooo");
 		
 //		UIViewRoot viewRoot = FacesContext.getCurrentInstance().getViewRoot();
 //		UIComponent component = viewRoot.findComponent("test");
 //		System.out.println(component.getClass());
 		
-//		return "";
+		return "";
 	}
 	
 	public String getLabelFavClass() {
