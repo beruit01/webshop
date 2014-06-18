@@ -43,22 +43,53 @@
 
 	<!-- desktop view -->
 	<div class="nav custom-nav">
-		<ul class="nav navbar-nav visible-sm visible-md visible-lg ">
-			<li></li>
-			<li><a href="#">Themen</a></li>
-			<li><a href="#">Anbieten</a></li>
-			<li><h:graphicImage value="/resources/images/heart.png"
-					height="40" id="Navbarlogo"></h:graphicImage> <span
-				class="navbarlogotext">Shadoo</span></li>
-			<li><a href="#"> Login</a></li>
-			<li><a href="#" class="custom-icon"> <h:graphicImage
-						value="/resources/images/icons/grau/search.png" height="30"></h:graphicImage>
-			</a></li>
-				<li><a href="#" class="custom-icon"> <h:graphicImage
-						value="/resources/images/icons/grau/heartbox.png" height="30"></h:graphicImage>
-			</a></li>
-			<li></li>
-		</ul>
+	
+		<h:form>
+		
+			<ul class="nav navbar-nav visible-sm visible-md visible-lg ">
+				
+				<li></li>
+				
+				<li>
+					<h:commandLink action="subject_areas">
+						<h:outputText value="Themen"/>
+					</h:commandLink>
+				</li>
+				
+				<li>
+					<h:commandLink action="share">
+						<h:outputText value="Anbieten"/>
+					</h:commandLink>
+				</li>
+				
+				<li>
+					<h:commandLink action="index" styleClass="logoBox">
+						<h:graphicImage value="/resources/images/heart.png" height="40" class="navbarlogo"/>
+						<span class="navbarlogotext">Shadoo</span>				
+					</h:commandLink>
+				</li>
+				
+				<li>
+					<h:commandLink action="login">
+						<h:outputText value="Login"/>
+					</h:commandLink>
+				</li>
+				<li>
+					<h:commandLink action="search" styleClass="custom-icon">
+						<h:graphicImage value="/resources/images/icons/grau/search.png" height="30"/>
+					</h:commandLink>
+				</li>
+				
+				<li>
+					<h:commandLink action="heartbox" styleClass="custom-icon">
+						<h:graphicImage value="/resources/images/icons/grau/heartbox.png" height="30"/>
+					</h:commandLink>
+				</li>
+				
+				<li></li>
+			</ul>
+		
+		</h:form>
 	</div>
 
 	<!--  /desktop view -->
