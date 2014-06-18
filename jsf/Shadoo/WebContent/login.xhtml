@@ -8,24 +8,23 @@
       	<ui:define name="content">
       		
 				<div class="wrapperLogin">
-					
-					<h:form>
-					
-					
-					
-					
-					<!-- 
+
 					<div class="anmeldung">
+						
 						<h1>Anmeldung</h1>
 				  
-						<input class="form-control" type="text" value="" placeholder="Benutzername" id="anm_email"/>
-						<input class="form-control" type="password" placeholder="Passwort" value="" id="anm_pw"/>
-						<input type="button" class="btn btn-primary" value="Login" id="anm_button"/>
-						<span id="login_failed"></span>
+				  		<h:form>
+				  		
+							<h:inputText class="form-control" type="text" value="" placeholder="Benutzername" id="anm_email"/>
+							<h:inputSecret class="form-control" type="password" placeholder="Passwort" value="" id="anm_pw"/>
+							
+							<h:commandButton class="btn btn-default" value="Login" id="anm_button"/>
+							
+						</h:form>
+						
 					</div>
-					-->
-				
-					
+
+
 					<div class="registrierung">
 						<h1>Registrierung</h1>
 				  		
@@ -83,24 +82,8 @@
 					</div>
 					
 					
-					
-					
-					<div class="anmeldung">
-						
-						<h1>Anmeldung</h1>
-				  
-						<h:inputText class="form-control" type="text" value="" placeholder="Benutzername" id="anm_email"/>
-						<h:inputSecret class="form-control" type="password" placeholder="Passwort" value="" id="anm_pw"/>
-						
-						<h:form>
-							<h:commandButton class="btn btn-default" value="Login" id="anm_button"/>
-						</h:form>
-						
-					</div>
-					
-					
-					
-				</h:form>		
+					<!-- clearfix  -->
+					<div style="clear:left"></div>	
 					
 				</div>
 				

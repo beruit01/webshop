@@ -8,7 +8,78 @@
       <ui:composition template="templates/shadoo.tpl.xhtml">
       	<ui:define name="content">
       		
-			Search_Dummy
+			<h:form>
+				
+				
+				<!-- search box -->
+				<h:inputText value="#{listControllerBean.searchFilter}" class="searchBox" id="searchBoxId">
+					<f:ajax render="out" event="keyup" listener="#{listControllerBean.searchHandler()}" />
+				</h:inputText>
+				
+				
+				<!-- search result -->
+				<h:panelGroup id="out">
+					<ui:repeat var="current" value="#{listControllerBean.getSearchProducts()}">
+	
+						<div class="sd-item">
+			
+							<div class="sd-pic">
+								<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
+								<h:graphicImage class="sd-picBorder"
+									value="resources/images/picBorder.svg" />
+							</div>
+							<div class="sd-rating clearfix">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<div class="sd-title">
+								<h:outputText value="#{current.productName}" />
+							</div>
+						</div>
+			
+					</ui:repeat>
+					
+					
+					
+					<!-- no items found message -->
+					<h:panelGroup rendered="#{listControllerBean.itemsFoundContainingSearchFilter() != true}">
+					    <div class="noSearchResult">
+					    	
+					    	<h1>Sorry, leider konnten wir keine passenden Angebote für Dich finden.</h1>
+					    						    	
+					    	<h3>
+					    		Möchtest du
+						    	<h:commandLink action="share">
+						    		jetzt ein Angebot für 
+						    		<i><h:outputText value="#{listControllerBean.searchFilter}"/></i>
+						    		anbieten?
+						    	</h:commandLink>
+					    	</h3>
+					    	
+					    </div>
+					</h:panelGroup>
+					
+				</h:panelGroup>
+		
+				<!-- clearfix -->
+				<div style="clear:both"></div>
+				
+			</h:form>
+			
+			<script>
+				$( document ).ready(function() {
+					
+					// set placeholder text of search bar
+					$(".searchBox").attr("placeholder","tippe um zu suchen..");
+					
+					// set focus on search bar
+					$(".searchBox" ).focus();
+					
+				});
+			</script>
       		
       	</ui:define>
       </ui:composition>
