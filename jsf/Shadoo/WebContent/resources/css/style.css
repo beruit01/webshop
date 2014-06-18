@@ -626,12 +626,12 @@ html,body {
 
 
 /* own stuff */
-.wrapper{
-	width: 50%;
-	margin: 5% 25% 5% 25%;
+.wrapperLogin{
+	width: 70%;
+	margin: 5% 15% 5% 15%;
 	position: relative;
 }
-.wrapper:after {
+.wrapperLogin:after {
 	clear: both;
 }
 
@@ -660,10 +660,10 @@ html,body {
 }*/
 
 @media screen and (max-width: 900px) {
-	.wrapper { width: 90%; margin: 5% }
+	.wrapperLogin { width: 90%; margin: 5% }
 }
 @media screen and (max-width: 500px) {
-	.wrapper { width: 100%; margin: 0 }
+	.wrapperLogin { width: 100%; margin: 0 }
 	.registrierung,
 	.anmeldung { position: relative; width: 100%; padding: 5%; }
 	.registrierung { border-left: 0px solid transparent; }
