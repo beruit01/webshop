@@ -6,51 +6,63 @@
 
 
 <!-- navi -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-<div class="container-fluid">
 
-	<!-- Brand and toggle get grouped for better mobile display -->
+<!-- mobile -->
+<nav class="mobile-nav visible-xs navbar navbar-default" role="navigation">
+
 	<div class="navbar-header">
-		<button type="button" class="navbar-toggle navbar-left navbarBtn"
-			data-toggle="collapse" data-target="#collapse-menu"></button>
-
-
-		<!-- 
-		<button type="button" class="navbar-toggle navbar-right searchBtn">
-			<i class="fa fa-search fa-lg"></i>
-		</button>
-		 -->
-
-
-		<h:form>
-			<h:commandLink class="navbar-toggle navbar-left heartBoxBtn"
-				action="heartbox">
-
-			</h:commandLink>
-		</h:form>
-
-		<h:form>
-			<h:commandLink class="navbar-toggle navbar-right searchBtn"
-				action="search">
-			</h:commandLink>
-		</h:form>
-
-
-
-	</div>
-
-	<!-- navi content for toggling -->
-
-	<!-- desktop view -->
-	<div class="nav custom-nav">
-	
-		<h:form>
-		
-			<ul class="nav navbar-nav visible-sm visible-md visible-lg ">
+    	
+    	<h:form>
+    	
+    		<ul class="nav-row">
+    	
+		    	<li class="nav-col">
+		    	
+		    		<!-- menue icon -->
+			    	<button type="button" class="navbar-toggle navbar-left" data-toggle="collapse" 
+			    		data-target="#mobile-menu" title="Menü anzeigen">
+						<h:graphicImage value="/resources/images/icons/grau/menu.png" height="30"/>
+					</button>
+		    	
+		    	</li>
+		    	
+		    	
+		    	<li class="nav-col logoBox">
+		    	
+		    		<h:commandLink action="index">
+						<h:graphicImage value="/resources/images/heart.png" height="30" class="navbarlogo"/>
+						<span class="navbarlogotext">Shadoo</span>				
+					</h:commandLink>
+		    	
+		    	</li>
+		    	
+		    	
+		    	<li class="nav-col">
+		    	
+		    		<h:commandLink action="heartbox" styleClass="custom-icon" title="gehe zu Deiner HeartBox">
+						<h:graphicImage value="/resources/images/icons/grau/heartbox.png" height="30"/>
+					</h:commandLink>
 				
-				<li></li>
-				
-				<li>
+					<h:commandLink action="search" styleClass="custom-icon" title="Suche jetzt nach Angeboten">
+						<h:graphicImage value="/resources/images/icons/grau/search.png" height="30"/>
+					</h:commandLink>
+		    	
+		    	</li>
+
+    		</ul>
+    		
+    	</h:form>
+   
+   	</div>
+
+    
+    <div class="collapse navbar-collapse" id="mobile-menu">
+      
+      	<!-- menu links -->
+      	<h:form>
+	    	<ul class="nav navbar-nav">
+	      	
+		      	<li>
 					<h:commandLink action="subject_areas">
 						<h:outputText value="Themen"/>
 					</h:commandLink>
@@ -63,52 +75,70 @@
 				</li>
 				
 				<li>
-					<h:commandLink action="index" styleClass="logoBox">
-						<h:graphicImage value="/resources/images/heart.png" height="40" class="navbarlogo"/>
-						<span class="navbarlogotext">Shadoo</span>				
-					</h:commandLink>
-				</li>
-				
-				<li>
 					<h:commandLink action="login">
 						<h:outputText value="Login"/>
 					</h:commandLink>
-				</li>
-				<li>
-					<h:commandLink action="search" styleClass="custom-icon">
-						<h:graphicImage value="/resources/images/icons/grau/search.png" height="30"/>
-					</h:commandLink>
-				</li>
-				
-				<li>
-					<h:commandLink action="heartbox" styleClass="custom-icon">
-						<h:graphicImage value="/resources/images/icons/grau/heartbox.png" height="30"/>
-					</h:commandLink>
-				</li>
-				
-				<li></li>
-			</ul>
-		
-		</h:form>
-	</div>
-
-	<!--  /desktop view -->
-
-	<div class="collapse navbar-collapse" id="collapse-menu">
-
-
-		<!-- mobile view -->
-		<ul class="nav navbar-nav visible-xs">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Konto</a></li>
-			<li><a href="#">Service anbieten</a></li>
-			<li><a href="#">Themenbereiche</a></li>
-			<li><a href="#">Vorschläge</a></li>
-		</ul>
-		<!-- /mobile view -->
-	</div>
-
-</div>
+				</li>    	
+	      	
+	    	</ul>
+    	</h:form>
+      
+    </div>
+	    
 </nav>
+
+
+<!-- desktop -->
+<div class="desktop-nav hidden-xs">
+
+	<h:form>
+	
+		<ul class="nav navbar-nav">
+			
+			<li class="noHighlight"></li>
+			
+			<li class="#{naviController.getCurrentPage('subject_areas')}">
+				<h:commandLink action="subject_areas">
+					<h:outputText value="Themen"/>
+				</h:commandLink>
+			</li>
+			
+			<li class="#{naviController.getCurrentPage('share')}">
+				<h:commandLink action="share">
+					<h:outputText value="Anbieten"/>
+				</h:commandLink>
+			</li>
+			
+			<li class="noHighlight">
+				<h:commandLink action="index" styleClass="logoBox">
+					<h:graphicImage value="/resources/images/heart.png" height="40" class="navbarlogo"/>
+					<span class="navbarlogotext">Shadoo</span>				
+				</h:commandLink>
+			</li>
+			
+			<li class="#{naviController.getCurrentPage('login')}">
+				<h:commandLink action="login">
+					<h:outputText value="Login"/>
+				</h:commandLink>
+			</li>
+			<li class="#{naviController.getCurrentPage('search')}">
+				<h:commandLink action="search" styleClass="custom-icon" title="Suche jetzt nach Angeboten">
+					<h:graphicImage value="/resources/images/icons/grau/search.png" height="30"/>
+				</h:commandLink>
+			</li>
+			
+			<li class="#{naviController.getCurrentPage('heartbox')}">
+				<h:commandLink action="heartbox" styleClass="custom-icon" title="gehe zu Deiner HeartBox">
+					<h:graphicImage value="/resources/images/icons/grau/heartbox.png" height="30"/>
+				</h:commandLink>
+			</li>
+			
+			<li class="noHighlight"></li>
+		</ul>
+	
+	</h:form>
+</div>
+<!--  /desktop view -->
+
 
 </html>
