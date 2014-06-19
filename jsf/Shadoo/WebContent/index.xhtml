@@ -8,6 +8,10 @@
 <ui:composition template="templates/shadoo.tpl.xhtml">
 	<ui:define name="content">
 
+		<h:form>
+						<h:commandButton value="test" action="#{controller.test}"/>
+					</h:form>
+		
 		<div class="text-center">
 			<div class="btn-group fav-new-btns" data-toggle="buttons">
 				<h:form>
@@ -22,14 +26,20 @@
 							
 						</h:commandLink>
 						 -->
+						 
+					
+		
+						 
+		
+					
+					<h:outputLabel id="test" class="#{controller.labelFavClass}" action="#{controller.test}"> 
+						<input type="radio" name="options" id="option1" class="hideme" />
+						<h:commandLink value="test" action="#{controller.test}"/>
+					</h:outputLabel>
 
-					<label class="btn btn-default btn-favourites"> <input
-						type="radio" name="options" id="option1" class="hideme" />
-					</label>
-					<label class="btn btn-default btn-newest"> <input
-						type="radio" name="options" id="option2" class="hideme" />
-					</label>
-
+					<h:outputLabel class="#{controller.labelNewClass}">
+						<input type="radio" name="options" id="option2" class="hideme" />
+					</h:outputLabel>
 
 				</h:form>
 

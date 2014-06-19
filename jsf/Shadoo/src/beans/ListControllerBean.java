@@ -1,38 +1,30 @@
 package beans;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
-import javax.faces.application.FacesMessage;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.validator.ValidatorException;
-import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
-@RequestScoped
-public class ListControllerBean {
+@ApplicationScoped
+public class ListControllerBean implements Serializable {
 
+	// list with all products
 	private ArrayList<ProductBean> exampleProducts;
-	private ArrayList<ProductBean> newestProducts;
-
-	public ArrayList<ProductBean> getExampleProducts() {
-		return exampleProducts;
-	}
-
-
-	public void setExampleProducts(ArrayList<ProductBean> exampleProducts) {
-		this.exampleProducts = exampleProducts;
-	}
-
-
-
+	// list with all products containing the search filter
+	private ArrayList<ProductBean> searchProducts;
+	
+	private String searchFilter = "";
+	
+	
+	
 	public ListControllerBean()
 	{
 		exampleProducts = new ArrayList<ProductBean>();
+		searchProducts = new ArrayList<ProductBean>();
 		
 		// dummy data
 		exampleProducts.add(new ProductBean("Die schönsten Filter für Instagram","resources/images/examplePics/79H.jpg",2,new Date(1389571200)));
@@ -46,7 +38,59 @@ public class ListControllerBean {
 		exampleProducts.add(new ProductBean("Romantischer Tangotanz","resources/images/examplePics/82H.jpg",3,new Date(1397174400)));
 		exampleProducts.add(new ProductBean("Moderne Kunst und ihre Tücken","resources/images/examplePics/85H.jpg",1.5f,new Date(1398729600)));
 		exampleProducts.add(new ProductBean("Fashion-Accessoires zum Selbermachen","resources/images/examplePics/97H.jpg",4, new Date(1399248000)));
+		
+		searchHandler();
+	}
+	
+	/**
+	 * Add these products to the search products list, which contain the search filter.
+	 */
+	public void searchHandler() {
+		
+		try {
+			
+			searchProducts.clear();
+			
+			for(ProductBean pb: exampleProducts ) {
+				
+				if(pb.getProductName().toLowerCase().contains(searchFilter.toLowerCase())) {
+					searchProducts.add(pb);
+				}
+				
+			}
+			
+		}catch(Exception e) {
+			System.err.println("Error while hanlde search request!");
+		}
+		
+	}
+	
+	/**
+	 * @return True if there is at least one item which contains the search filter. Otherwise return false.
+	 */
+	public boolean itemsFoundContainingSearchFilter() {
+		return searchProducts.size() > 0;
+	}
 
+	
+	// getters and setters
+	public ArrayList<ProductBean> getExampleProducts() {
+		return exampleProducts;
+	}
+	public void setExampleProducts(ArrayList<ProductBean> exampleProducts) {
+		this.exampleProducts = exampleProducts;
+	}
+	public ArrayList<ProductBean> getSearchProducts() {
+		return searchProducts;
+	}
+	public void setSearchProducts(ArrayList<ProductBean> searchProducts) {
+		this.searchProducts = searchProducts;
+	}
+	public String getSearchFilter() {
+		return searchFilter;
+	}
+	public void setSearchFilter(String searchFilter) {
+		this.searchFilter = searchFilter;
 	}
 	
 	

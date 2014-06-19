@@ -4,12 +4,91 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets">
       
-      
       <ui:composition template="templates/shadoo.tpl.xhtml">
       	<ui:define name="content">
       		
-			Login_Dummy
-      		
+				<div class="wrapperLogin">
+
+					<div class="anmeldung">
+						
+						<h1>Anmeldung</h1>
+				  
+				  		<h:form>
+				  		
+							<h:inputText class="form-control" type="text" value="" placeholder="Benutzername" id="anm_email"/>
+							<h:inputSecret class="form-control" type="password" placeholder="Passwort" value="" id="anm_pw"/>
+							
+							<h:commandButton class="btn btn-default" value="Login" id="anm_button"/>
+							
+						</h:form>
+						
+					</div>
+
+
+					<div class="registrierung">
+						<h1>Registrierung</h1>
+				  		
+						<h:form id="passwordForm">
+							
+							<div class="form-group">
+								<div class="col-lg-12">
+									<h:inputText class="form-control" required="true" name="email" type="email" placeholder="E-Mail" id="reg_email" validatorMessage="Die eingegebene E-Mail Adresse ist nicht gültig!">
+										<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"/>
+										<f:ajax execute="@this" render="reg_email_msg" event="keyup" />
+									</h:inputText>
+									<h:message for="reg_email" id="reg_email_msg"/>
+								</div>
+								
+								<div class="col-lg-12">
+									<h:inputText type="text" class="form-control" name="username" placeholder="Benutzername" id="reg_user" validatorMessage="Der eingegebene Benutzername muss zwischen 6 und 30 Zeichen haben!">
+										<f:validateLength minimum="6" maximum="30"/>
+										<f:ajax execute="@this" render="reg_username_msg" event="keyup" />
+									</h:inputText>
+									<h:message for="reg_user" id="reg_username_msg"/>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="col-lg-12">
+									<h:inputSecret type="password" class="form-control" name="password" placeholder="Passwort" id="reg_pw" validatorMessage="Das eingegebene Passwort muss mindestens 6 Zeichen haben!">
+										<f:validateLength minimum="6"/>
+										<f:ajax execute="@this" render="reg_pw_msg" event="keyup" />
+									</h:inputSecret>
+									<h:message for="reg_pw" id="reg_pw_msg"/>
+								</div>
+								
+								<div class="col-lg-12">
+									<h:inputSecret type="password" class="form-control" name="confirmPassword" placeholder="Passwort bestätigen" id="reg_conf_pw" validatorMessage="Das eingegebene Passwort muss mindestens 6 Zeichen haben!">
+										<f:validateLength minimum="6"/>
+										<f:ajax execute="@this" render="reg_conf_pw_msg" event="keyup" />
+									</h:inputSecret>
+									<h:message for="reg_conf_pw" id="reg_conf_pw_msg"/>
+								</div>
+							</div>
+				
+							<div class="form-group">
+								<div class="col-lg-12">
+									<h:form>
+										<h:commandButton class="btn btn-default" value="Registrieren" id="reg_button" action="index"/>
+									</h:form>
+								</div>
+							</div>
+						
+						</h:form>
+						
+						<span id="reg_failed"></span>
+						
+						
+					</div>
+					
+					
+					<!-- clearfix  -->
+					<div style="clear:left"></div>	
+					
+				</div>
+				
+				
+
       	</ui:define>
       </ui:composition>
       
