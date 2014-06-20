@@ -121,14 +121,26 @@ public class ListControllerBean implements Serializable {
 	 */
 	public void searchHandler() {
 		
+		// clear search result
+		searchProducts.clear();
+		
+		// return if search string is empty
+		if( searchFilter.isEmpty() ) {
+			return;
+		}
+		
+		// search without case sensitivity
+		searchFilter = searchFilter.toLowerCase();
+		
 		try {
-			
-			searchProducts.clear();
 			
 			for(ProductBean pb: exampleProducts ) {
 				
-				if( !searchFilter.isEmpty() && pb.getProductName().toLowerCase().contains(searchFilter.toLowerCase())) {
+				if( pb.getProductName().toLowerCase().contains(searchFilter) ||
+					searchInTags(pb.getTags(), searchFilter) ) {
+					
 					searchProducts.add(pb);
+				
 				}
 				
 			}
@@ -136,6 +148,25 @@ public class ListControllerBean implements Serializable {
 		}catch(Exception e) {
 			System.err.println("Error while hanlde search request!");
 		}
+		
+	}
+	
+	private boolean searchInTags(String[] tags, String searchFilter) {
+		
+		boolean found = false;
+		
+		for(String tag: tags) {
+			
+			if( tag.toLowerCase().contains(searchFilter) ) {
+				
+				found = true;
+				break;
+				
+			}
+			
+		}
+		
+		return found;
 		
 	}
 	
