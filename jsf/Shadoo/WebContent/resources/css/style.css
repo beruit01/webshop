@@ -7,6 +7,9 @@ html,body {
 	color: #444;
 	
 }
+body {
+	height: calc( 100% - 60px );
+}
 
 /* apply a natural box layout model to all elements */
 *,*:before,*:after {
@@ -263,12 +266,6 @@ a:hover {
 	margin: 30px auto 40px auto;
 }
 
-@media screen and (min-width: 800px) {
-	.intro {
-		/*width: 800px;*/
-		
-	}
-}
 
 .wrapper {
 	padding: 1% 3%;
@@ -277,6 +274,17 @@ a:hover {
 @media screen and (min-width: 768px) {
 	.wrapper { margin-top: 60px; }
 }
+
+.text-wrapper {
+	width: 71.43%;
+	max-width: 900px;
+	margin: auto;
+	text-align: center;
+}
+@media screen and (max-width: 768px) {
+	.text-wrapper { width: 100%; padding: 0 1%}
+}
+
 
 /*
 -------------------- navi --------------- */
@@ -293,8 +301,12 @@ a:hover {
 
 .desktop-nav ul {
 	height: 60px;
-	width: 80%;
-	margin: 0 10% 0 10%;
+	width: 100%;
+	margin: auto;
+	float: none;
+}
+@media screen and (min-width: 1300px) {
+	.desktop-nav ul { width: 1300px; }
 }
 
 .desktop-nav li {
@@ -405,6 +417,9 @@ a:hover {
 }
 .mobile-nav .logoBox {
 	text-align: center;
+}
+.mobile-nav a:hover {
+	background-color: transparent !important;
 }
 .mobile-nav .nav-row {
 	padding: 0px !important;
