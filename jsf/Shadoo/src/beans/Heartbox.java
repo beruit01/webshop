@@ -21,7 +21,6 @@ public class Heartbox implements Serializable {
 	public Heartbox() {
 		
 		// TODO: Remove this (testing only!).
-		
 		if(!init) {
 			
 			init = true;
@@ -58,7 +57,6 @@ public class Heartbox implements Serializable {
 		
 		for(ProductBean i: items) {
 			if(i.getProductName().equals(productName)) {
-				System.out.println("remove");
 				items.remove(i);
 				break;
 			}

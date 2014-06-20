@@ -109,11 +109,19 @@ a:hover {
 .sd-remove {
 	width: 25px;
 	height: 25px;
-	background-color: #444;
 	position: absolute;
 	top: -3%;
 	right: -3%;
 	z-index: 15;
+	border: 0px solid;
+	background: none;
+	background-image: url(images/icons/grau/sd_cross.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 25px;
+}
+.sd-remove:active {
+	opacity: 0.5;
 }
 .sd-pic {
 	position: relative;
