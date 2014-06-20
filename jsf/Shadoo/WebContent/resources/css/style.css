@@ -496,151 +496,42 @@ a:hover {
 	border: 1px solid #eeeeee;
 }
 
-.btn-group.fav-new-btns {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-.test input[value="Red"],
-.btn-favourites {
-	width: 60px !important;
-	height: 36px !important;
-	background-image: url(images/icons/grau/heart-black.png);
-	background-color: #fffaf4;
-	float: left !important;
-	margin-right: 0px !important;
-	margin-left: 0px !important;
-	background-size: 24px 24px !important;
-	background-position: center center;
-	background-repeat: no-repeat;
-}
-.btn-favourites.active {
-	background-image: url(images/icons/weiss/icons-07.png);
-	background-color: #444444;
-}
-.btn-newest {
-	width:60px !important;
-	height:36px !important;
-	background-image: url(images/icons/grau/calendar.png);
-	background-color: #fffaf4;
-	float: left !important;
-	margin-right: 0px !important;
-	margin-left: 0px !important;
-	background-size: 24px 24px !important;
-	background-position: center center;
-	background-repeat: no-repeat;
-}
-
-.btn-newest.active {
-	background-image: url(images/icons/weiss/calendar-white.png);
-	background-color: #444444;
-}
-.hideme {
-	display:none;
-    visibility:hidden;
-}
-
-.preview .moreBtn {
-	margin-top: 54px;
-}
-
-.preview .moreBtn i {
-	margin-right: 10px;
-}
-
-.carousel-control {
-	width: 10% !important;
-	color: black !important;
-	text-shadow: none !important;
-	opacity: 1 !important;
-	background: #f8f8f8 !important;
-	border: 1px solid #eeeeee;
-	margin: 3px;
-}
-
-.carousel-control i {
-	margin-top: 60px;
-}
-
-.carousel-control:active {
-	padding-top: 2px !important;
-	background: #e7e7e7 !important;
-}
-
-.carousel-inner .page {
-	width: 75%;
-	height: 150px;
+/*
+-------------------- filter --------------- */
+.filter-group {
+	width: 120px;
+	height: 40px;
+	position: relative;
 	margin: auto;
-	padding: 3px 0px;
-	text-align: center;
-	overflow: hidden;
 }
-
-.carousel-inner .prevItem {
-	width: 33%;
-	height: 100%;
-	padding: 0 3px 0 3px;
-	float: left;
-	margin-bottom: 5px;
+.filter-group .active {
+	background-color: #444;
 }
-
-@media screen and (min-width: 1000px) {
-	.carousel-inner .prevItem {
-		width: 20%;
-	}
+.filter-latest,
+.filter-popular {
+	width: 60px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	border: 0px solid;
+	background-color: #fffaf4;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 23px;
 }
-
-@media screen and (min-width: 800px) and (max-width: 1000px) {
-	.carousel-inner .prevItem {
-		width: 25%;
-	}
+.filter-popular {
+	left: 0;
+	background-image: url(images/icons/grau/heart-black.png);
 }
-
-@media screen and (min-width: 650px) and (max-width: 800px) {
-	.carousel-inner .prevItem {
-		width: 33%;
-	}
+.filter-popular.active {
+	background-image: url(images/icons/weiss/heart-white.png);
 }
-
-@media screen and (max-width: 650px) {
-	.carousel-inner .prevItem {
-		width: 50%;
-	}
+.filter-latest {
+	right: 0;
+	background-image: url(images/icons/grau/calendar-black.png);
 }
-
-.carousel-inner .prevItem .image {
-	width: 100%;
-	height: 90px;
-	text-align: center;
-	overflow: hidden;
-	background-color: #eeeeee;
-}
-
-.carousel-inner .prevItem .image img {
-	width: 100%;
-	min-height: 90px;
-}
-
-.carousel-inner .prevItem .title {
-	font-size: 0.85em;
-	height: 30px;
-	line-height: 1.2;
-	padding-top: 3px;
-	text-align: left;
-	overflow: hidden;
-	margin-bottom: 5px;
-}
-
-@media screen and (max-width: 700px) {
-	.carousel-inner .prevItem .title {
-		font-size: 0.7em;
-		line-height: 1.1;
-	}
-	;
-}
-
-.carousel-inner .prevItem .price {
-	text-align: left;
+.filter-latest.active {
+	background-image: url(images/icons/weiss/calendar-white.png);
 }
 
 /*
@@ -653,6 +544,10 @@ a:hover {
 .footer a {
 	margin: 0 15px;
 }
+.footer span {
+	display: block;
+	margin-top: 5px;
+}
 
 @media screen and (max-width: 786px) {
 	.footer a,.footer span {
@@ -660,9 +555,10 @@ a:hover {
 		width: 100%;
 	}
 	.footer a {
-		background: #eeeeee;
+		background: #e5e0db;
 		margin: 2px 0px;
 		padding: 12px;
+		color: #444 !important;
 	}
 }
 

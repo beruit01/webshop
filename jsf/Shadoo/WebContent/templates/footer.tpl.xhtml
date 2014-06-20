@@ -6,13 +6,22 @@
 
 	<!-- footer -->
 	<div class="footer">
-		<small>
-			<a href="#agbs">Unsere AGBs</a>
-			<a href="#agbs">Datenschutzerklärung</a>
-			<a href="#agbs">Impressum</a>
-			<a href="#agbs">Cookie &AMP; Internet-Werbung</a> <br/>
-			<span>&copy; 2014 by Daniel Secker, Marc Schubert, Benjamin Rupp</span>
-		</small>
+		
+		<h:form>
+		
+			<small>
+			
+				<h:commandLink action="agb" value="Unsere AGBs"/>
+				<h:commandLink action="privacyPolicy" value="Datenschutzerklärung"/>
+				<h:commandLink action="imprint" value="Impressum"/>
+				<h:commandLink action="cookies" value="Cookies &amp; Internet-Werbung"/>
+				
+				<span>&copy; 2014 by Daniel Secker, Marc Schubert, Benjamin Rupp</span>
+				
+			</small>
+		
+		</h:form>
+	
 	</div>
 	
 </html>

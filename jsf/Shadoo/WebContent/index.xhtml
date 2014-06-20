@@ -8,43 +8,14 @@
 <ui:composition template="templates/shadoo.tpl.xhtml">
 	<ui:define name="content">
 
-		<h:form>
-						<h:commandButton value="test" action="#{controller.test}"/>
-					</h:form>
-		
-		<div class="text-center">
-			<div class="btn-group fav-new-btns" data-toggle="buttons">
-				<h:form>
-
-					<!-- 
-  						<h:commandLink class="btn btn-default btn-favourites">
-							<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
-							
-  						</h:commandLink>
-						<h:commandLink class="btn btn-default btn-newest">
-						<h:selectBooleanCheckbox></h:selectBooleanCheckbox>
-							
-						</h:commandLink>
-						 -->
-						 
-					
-		
-						 
-		
-					
-					<h:outputLabel id="test" class="#{controller.labelFavClass}" action="#{controller.test}"> 
-						<input type="radio" name="options" id="option1" class="hideme" />
-						<h:commandLink value="test" action="#{controller.test}"/>
-					</h:outputLabel>
-
-					<h:outputLabel class="#{controller.labelNewClass}">
-						<input type="radio" name="options" id="option2" class="hideme" />
-					</h:outputLabel>
-
-				</h:form>
-
-			</div>
-		</div>
+		<h:form class="filter-group">
+			<h:commandButton action="#{listControllerBean.setSortFilter('0')}" styleClass="filter-popular #{listControllerBean.isFilterSelected(0)}">
+				 <f:ajax execute="@form" render="@form" />
+			</h:commandButton>
+			<h:commandButton action="#{listControllerBean.setSortFilter('1')}" styleClass="filter-latest #{listControllerBean.isFilterSelected(1)}">
+				 <f:ajax execute="@form" render="@form" />
+			</h:commandButton>
+		</h:form>
 
 
 		<ui:repeat var="current" value="#{listControllerBean.exampleProducts}">

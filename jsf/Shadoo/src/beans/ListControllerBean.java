@@ -19,6 +19,8 @@ public class ListControllerBean implements Serializable {
 	
 	private String searchFilter = "";
 	
+	public enum Filter { POPULAR, LATEST }
+	private Filter sortFilter = Filter.LATEST;
 	
 	
 	public ListControllerBean()
@@ -74,6 +76,7 @@ public class ListControllerBean implements Serializable {
 		
 	}
 	
+	// search
 	/**
 	 * Add these products to the search products list, which contain the search filter.
 	 */
@@ -111,6 +114,49 @@ public class ListControllerBean implements Serializable {
 		return searchFilter.length() == 0;
 	}
 	
+	
+	// sort
+	/**
+	 * Sort product list with current sort filter.
+	 */
+	private void sortHandler() {
+		
+		// TODO: sort array
+		System.out.println("[ListControllerBean] SORT!");
+	}
+	
+	/**
+	 * Set the current sort filter to the given filter.
+	 * @param filter Ordinal of filter enum.
+	 * @return Empty string for JSF command button.
+	 */
+	public String setSortFilter(String filter) {
+		
+		if(Integer.valueOf(filter) != sortFilter.ordinal() ) {
+			sortFilter = Filter.values()[Integer.valueOf(filter)];
+			sortHandler();
+		}
+		
+		return "";
+	}
+	
+	/**
+	 * Return the CSS active class name if the given filter is equal to the current sort filter. Otherwise return an empty string.
+	 * @param filter Ordinal of filter enum.
+	 * @return The CSS active class name if the given filter is equal to the current sort filter. Otherwise return an empty string.
+	 */
+	public String isFilterSelected(int filter) {
+		
+		if( filter == sortFilter.ordinal() ) {
+			return "active";
+		}else{
+			return "";
+		}
+	}
+	
+	
+	
+	
 	// getters and setters
 	public ArrayList<ProductBean> getExampleProducts() {
 		return exampleProducts;
@@ -129,6 +175,12 @@ public class ListControllerBean implements Serializable {
 	}
 	public void setSearchFilter(String searchFilter) {
 		this.searchFilter = searchFilter;
+	}
+	public Filter getSortFilter() {
+		return sortFilter;
+	}
+	public void setCurrentFilter(Filter sortFilter) {
+		this.sortFilter = sortFilter;
 	}
 	
 	
