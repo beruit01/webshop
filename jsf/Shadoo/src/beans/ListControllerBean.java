@@ -27,9 +27,17 @@ public class ListControllerBean implements Serializable {
 		searchProducts = new ArrayList<ProductBean>();
 		
 		// dummy data
-		exampleProducts.add(new ProductBean("Die schönsten Filter für Instagram","resources/images/examplePics/79H.jpg",2,new Date(1389571200)));
-		exampleProducts.add(new ProductBean("Fahrrad fahren für Hipster","resources/images/examplePics/88H.jpg",3,new Date(1405641600)));
-		exampleProducts.add(new ProductBean("Die besten Stücke für den Posaunenchor","resources/images/examplePics/100H.jpg",4,new Date(1390521600)));
+		exampleProducts.add(new ProductBean("Die schönsten Filter für Instagram","resources/images/examplePics/79H.jpg",2,10, 
+				new String[] {"Foto","Filter","Instagram","Oldschool"},
+				"Wer immer schon wissen wollten wie man sich von der Masse duch kreativen Einsatz von hippen Filtern abheben kann ist hier genau richtig", 
+				new Date(1389571200)));
+		exampleProducts.add(new ProductBean("Fahrrad fahren für Hipster","resources/images/examplePics/88H.jpg",3,500,
+				new String[] {"Sport", "Fahrrad", "Hipster","Alternativ"},
+				"Für alle, die auch beim Fahrradfahren Individualität und Style zeigen wollen.",new Date(1405641600)));
+		exampleProducts.add(new ProductBean("Die besten Stücke für den Posaunenchor","resources/images/examplePics/100H.jpg",4,30,
+				new String[] {"P"}
+				
+		new Date(1390521600)));
 		exampleProducts.add(new ProductBean("Theater für Dummies","resources/images/examplePics/103H.jpg",1,new Date(1391472000)));
 		exampleProducts.add(new ProductBean("Bahnfahren leicht gemacht","resources/images/examplePics/90H.jpg",2.5f,new Date(1394668800)));
 		exampleProducts.add(new ProductBean("Dias in der Neuzeit","resources/images/examplePics/83H.jpg",5,new Date(1395100800)));
