@@ -47,7 +47,6 @@ public class ListControllerBean implements Serializable {
 		exampleProducts.add(new ProductBean("Moderne Kunst und ihre Tücken","resources/images/examplePics/85H.jpg",1.5f,new Date(1398729600)));
 		exampleProducts.add(new ProductBean("Fashion-Accessoires zum Selbermachen","resources/images/examplePics/97H.jpg",4, new Date(1399248000)));
 		
-		searchHandler();
 	}
 	
 	/**
@@ -61,7 +60,7 @@ public class ListControllerBean implements Serializable {
 			
 			for(ProductBean pb: exampleProducts ) {
 				
-				if(pb.getProductName().toLowerCase().contains(searchFilter.toLowerCase())) {
+				if( !searchFilter.isEmpty() && pb.getProductName().toLowerCase().contains(searchFilter.toLowerCase())) {
 					searchProducts.add(pb);
 				}
 				
@@ -80,6 +79,12 @@ public class ListControllerBean implements Serializable {
 		return searchProducts.size() > 0;
 	}
 
+	/**
+	 * @return True if search filter is empty. Otherwise return false.
+	 */
+	public boolean isSearchFilterEmpty() {
+		return searchFilter.length() == 0;
+	}
 	
 	// getters and setters
 	public ArrayList<ProductBean> getExampleProducts() {

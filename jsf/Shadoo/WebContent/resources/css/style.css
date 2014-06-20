@@ -50,6 +50,16 @@ html,body {
 	opacity: 0.5 !important;
 }
 
+a {
+	color: #c0392b !important;
+	text-decoration: none !important;
+}
+a:hover {
+	background-color: #c0392b !important;
+	color: #fffaf4 !important;
+	text-decoration: none !important;
+}
+
 /*
 -------------------- font stuff -----------------------*/
 

@@ -45,18 +45,15 @@
 					
 					
 					<!-- no items found message -->
-					<h:panelGroup rendered="#{listControllerBean.itemsFoundContainingSearchFilter() != true}">
+					<h:panelGroup rendered="#{listControllerBean.isSearchFilterEmpty() != true and listControllerBean.itemsFoundContainingSearchFilter() != true}">
 					    <div class="noSearchResult">
 					    	
 					    	<h1>Sorry, leider konnten wir keine passenden Angebote für Dich finden.</h1>
 					    						    	
 					    	<h3>
-					    		Möchtest du
-						    	<h:commandLink action="share">
-						    		jetzt ein Angebot für 
-						    		<i><h:outputText value="#{listControllerBean.searchFilter}"/></i>
-						    		anbieten?
-						    	</h:commandLink>
+					    		Vielleicht findest Du in unserem 
+						    	<h:commandLink action="share">Themenbereich</h:commandLink>
+						    	etwas passendes.
 					    	</h3>
 					    	
 					    </div>
