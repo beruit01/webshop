@@ -146,7 +146,7 @@ public class ListControllerBean implements Serializable {
 			}
 			
 		}catch(Exception e) {
-			System.err.println("Error while hanlde search request!");
+			System.err.println("Error while handle search request!");
 		}
 		
 	}

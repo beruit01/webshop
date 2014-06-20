@@ -8,7 +8,62 @@
       <ui:composition template="templates/shadoo.tpl.xhtml">
       	<ui:define name="content">
       		
-			Heartbox_Dummy
+			<h1>Deine Heartbox.</h1>
+			<h3>Alle was Dich interessiert. An einem Ort.</h3>
+			<br />
+			
+			<!-- heartbox items -->
+			<h:form>
+				<h:panelGroup id="heartboxItems">
+					<ui:repeat var="current" value="#{heartbox.items}">
+	
+						<div class="sd-item">
+							<h:commandLink action="#{heartbox.removeItem(current.productName)}" styleClass="sd-remove"/>
+							<div class="sd-pic">
+								<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
+								<h:graphicImage class="sd-picBorder"
+									value="resources/images/picBorder.svg" />
+							</div>
+							<div class="sd-rating clearfix">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<div class="sd-title">
+								<h:outputText value="#{current.productName}" />
+							</div>
+						</div>
+			
+					</ui:repeat>
+					
+					
+					
+					<!-- no items found message -->
+					<h:panelGroup rendered="#{heartbox.isEmpty() == true}">
+					    <div class="noSearchResult">
+					    	
+					    	<h2>Du hast noch keine Artikel in deiner Heartbox.</h2>
+					    						    	
+					    	<h3>
+					    		Das kannst Du ändern. Stöber doch mal durch unseren 
+						    	<h:commandLink action="share">Themenbereich</h:commandLink>.
+						    	Dort könnte etwas Passendes für Dich dabei sein.
+					    	</h3>
+					    	
+					    </div>
+					</h:panelGroup>
+					
+				</h:panelGroup>
+		
+				<!-- clearfix -->
+				<div style="clear:both"></div>
+				
+			</h:form>
+			
+			
+			
       		
       	</ui:define>
       </ui:composition>
