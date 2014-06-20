@@ -35,17 +35,42 @@ public class ListControllerBean implements Serializable {
 				new String[] {"Sport", "Fahrrad", "Hipster","Alternativ"},
 				"Für alle, die auch beim Fahrradfahren Individualität und Style zeigen wollen.",new Date(1405641600)));
 		exampleProducts.add(new ProductBean("Die besten Stücke für den Posaunenchor","resources/images/examplePics/100H.jpg",4,30,
-				new String[] {"P"}
+				new String[] {"Musik","Posaune","Musikstück","Bläser"},
+				"Die schönster Stücke für den klassischen 15-stimmigen Posaunenchor wurden hier liebevoll gesammelt und aufbereitet",
+				new Date(1390521600)));
+		exampleProducts.add(new ProductBean("Theater für Dummies","resources/images/examplePics/103H.jpg",1,22,
+				new String[] {"Theater","Kunst","Anfänger","Kurs"},
+				"Wenn du noch nie auf der Bühne standest, aber schon immer mal ausprobieren wolltest, wie es ist in eine ander Rolle zu schlüpfen passt diese Veranstaltung perfekt zu dir",
+				new Date(1391472000)));
+		exampleProducts.add(new ProductBean("Bahnfahren leicht gemacht","resources/images/examplePics/90H.jpg",2.5f,10,
+				new String[] {"Bahn","Mobilität","sparen"},
+				"Sie verstehen immer nur Bahnhof, kommen nie rechtzeitig an und zahlen Unsummen? Mit diesen einfachen Tricks gehören diese Probleme der Vergangenheit an!"
+				,new Date(1394668800)));
+		exampleProducts.add(new ProductBean("Dias in der Neuzeit","resources/images/examplePics/83H.jpg",5,10,
+				new String [] {"Bild","Dia","modern"},
+				"Tausende Dias im Schrank und keine Ahnung wohin damit? In diesem Kurs zeige ich Ihnen wie sie ihre Schätze digitalisieren können",
+				new Date(1395100800)));
+		exampleProducts.add(new ProductBean("10 tolle Tipps für Oldtimer-Fans","resources/images/examplePics/95H.jpg",2,10,
+				new String[] {"Auto","Oldtimer","Tipps","Reparatur","Do-it-yourself"},
+				"Früher war alles besser. Damit Sie auch noch heute die Meisterwerke aus dem 20. Jahrhundert bewundern können, müssen Sie auf einiges achten",
+				new Date(1396915200)));
+		exampleProducts.add(new ProductBean("Lustige Witze für zwischendurch","resources/images/examplePics/78H.jpg",4.5f,15,
+				new String [] {"Humor","Witze","Unterhaltung"},
+				"Stressiges Studium? Mit diesen Witzen wird ihr Tag noch gerettet" ,
+				new Date(1397088000)));
+		exampleProducts.add(new ProductBean("Romantischer Tangotanz","resources/images/examplePics/82H.jpg",3,10,
+				new String[] {"Tanz","Romantik","Tango","Sport"},
+				"Tango für romantische Stunden.",
+				new Date(1397174400)));
+		exampleProducts.add(new ProductBean("Moderne Kunst und ihre Tücken","resources/images/examplePics/85H.jpg",1.5f,3,
+				new String[] {"Kunst","Modern","Interpretation"},
+				"Die avantgardistische Kunst erscheint zunächst als trostlose Metapher von Einfallslosigkeit und Absurdität. Doch dieser Schein trügt...",
 				
-		new Date(1390521600)));
-		exampleProducts.add(new ProductBean("Theater für Dummies","resources/images/examplePics/103H.jpg",1,new Date(1391472000)));
-		exampleProducts.add(new ProductBean("Bahnfahren leicht gemacht","resources/images/examplePics/90H.jpg",2.5f,new Date(1394668800)));
-		exampleProducts.add(new ProductBean("Dias in der Neuzeit","resources/images/examplePics/83H.jpg",5,new Date(1395100800)));
-		exampleProducts.add(new ProductBean("10 tolle Tipps für Oldtimer-Fans","resources/images/examplePics/95H.jpg",2,new Date(1396915200)));
-		exampleProducts.add(new ProductBean("Lustige Witze für zwischendurch","resources/images/examplePics/78H.jpg",4.5f,new Date(1397088000)));
-		exampleProducts.add(new ProductBean("Romantischer Tangotanz","resources/images/examplePics/82H.jpg",3,new Date(1397174400)));
-		exampleProducts.add(new ProductBean("Moderne Kunst und ihre Tücken","resources/images/examplePics/85H.jpg",1.5f,new Date(1398729600)));
-		exampleProducts.add(new ProductBean("Fashion-Accessoires zum Selbermachen","resources/images/examplePics/97H.jpg",4, new Date(1399248000)));
+				new Date(1398729600)));
+		exampleProducts.add(new ProductBean("Fashion-Accessoires zum Selbermachen","resources/images/examplePics/97H.jpg",4,10,
+				new String [] {"Fashion","Mode","Do-it-yourself"},
+				"Modebewusstsein aber schlechte finanzielle Lage? Dass wenig Geld kein Ausschlusskriterium für Stil sein muss zeige ich mit diesen einfachen Mode-Hacks",
+				new Date(1399248000)));
 		
 	}
 	
