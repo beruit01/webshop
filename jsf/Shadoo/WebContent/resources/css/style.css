@@ -340,9 +340,10 @@ a:hover {
 	
 }
 .desktop-nav li:nth-child(6),
-.desktop-nav li:nth-child(7)
+.desktop-nav li:nth-child(7),
+.desktop-nav li:nth-child(8)
 {
-	width: 7% !important;
+	width: 4.7% !important;
 	padding: 3px auto 0 auto !important;
 
 }
@@ -390,7 +391,7 @@ a:hover {
 
 @media screen and (max-width: 768px) {
 	body {
-		padding-top: 60px !important;
+		padding-top: 50px !important;
 	}
 }
 
@@ -501,33 +502,6 @@ a:hover {
 }
 
 /*
--------------------- infobox --------------- */
-.infobox {
-	position: absolute;
-	top: 3%;
-	right: 2%;
-	width: 200px;
-	padding: 5px;
-}
-
-.infobox button,.infobox .btn {
-	width: 100%;
-	text-align: left;
-	margin-bottom: 5px;
-}
-
-.infobox button i {
-	width: 30px;
-	text-align: center;
-	margin-right: 10px;
-}
-
-.infobox .badge {
-	float: right;
-	background-color: #333333;
-}
-
-/*
 -------------------- preview --------------- */
 .preview {
 	height: 150px;
@@ -541,7 +515,7 @@ a:hover {
 	width: 120px;
 	height: 40px;
 	position: relative;
-	margin: auto;
+	margin: 1% auto 1% auto;
 }
 .filter-group .active {
 	background-color: #444;

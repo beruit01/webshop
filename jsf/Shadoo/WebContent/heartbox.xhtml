@@ -21,7 +21,7 @@
 							
 							<h:commandButton action="#{heartbox.removeItem(current.productName)}"
 								title="Entferne diesen Artikel aus Deiner Heartbox." styleClass="sd-remove">
-								<f:ajax execute="@form" render="@form :naviForm" />
+								<f:ajax execute="@form" render="@form :naviForm :mobileNaviForm :mobileSubNaviForm" />
 							</h:commandButton>
 							
 							<div class="sd-pic">

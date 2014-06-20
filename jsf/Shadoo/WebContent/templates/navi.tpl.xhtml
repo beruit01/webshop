@@ -12,7 +12,7 @@
 
 	<div class="navbar-header">
     	
-    	<h:form>
+    	<h:form id="mobileNaviForm">
     	
     		<ul class="nav-row">
     	
@@ -30,6 +30,7 @@
 		    	<li class="nav-col logoBox">
 		    	
 		    		<h:commandLink action="index">
+		    			<f:ajax execute="@form" render=":sdContentArea :footerForm: :mobileSubNaviForm filterForm"/>
 						<h:graphicImage value="/resources/images/heart.png" height="30" class="navbarlogo"/>
 						<span class="navbarlogotext">Shadoo</span>				
 					</h:commandLink>
@@ -40,13 +41,20 @@
 		    	<li class="nav-col">
 		    	
 		    		<h:commandLink action="heartbox" styleClass="custom-icon" title="gehe zu Deiner HeartBox">
+		    			<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileSubNaviForm :heartboxForm"/>
 						<h:graphicImage value="/resources/images/icons/grau/heartbox.png" height="30"/>
 					</h:commandLink>
 				
 					<h:commandLink action="search" styleClass="custom-icon" title="Suche jetzt nach Angeboten">
+						<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileSubNaviForm"/>
 						<h:graphicImage value="/resources/images/icons/grau/search.png" height="30"/>
 					</h:commandLink>
 		    	
+		    		<h:commandLink action="index" styleClass="custom-icon" title="Logge Dich jetzt aus.">
+		    			<f:ajax execute="@form" render=":sdContentArea :footerForm: :mobileSubNaviForm filterForm"/>
+						<h:graphicImage value="/resources/images/icons/grau/sd_logout.png" height="30"/>
+					</h:commandLink>
+					
 		    	</li>
 
     		</ul>
@@ -59,23 +67,26 @@
     <div class="collapse navbar-collapse" id="mobile-menu">
       
       	<!-- menu links -->
-      	<h:form>
+      	<h:form id="mobileSubNaviForm">
 	    	<ul class="nav navbar-nav">
 	      	
 		      	<li>
 					<h:commandLink action="subject_areas">
+						<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileNaviForm"/>
 						<h:outputText value="Themen"/>
 					</h:commandLink>
 				</li>
 				
 				<li>
 					<h:commandLink action="share">
+						<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileNaviForm"/>
 						<h:outputText value="Anbieten"/>
 					</h:commandLink>
 				</li>
 				
 				<li>
 					<h:commandLink action="login">
+						<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileNaviForm"/>
 						<h:outputText value="Login"/>
 					</h:commandLink>
 				</li>    	
@@ -125,6 +136,14 @@
 					<h:outputText value="Login"/>
 				</h:commandLink>
 			</li>
+			
+			<li>
+				<h:commandLink action="index" styleClass="custom-icon" title="Logge Dich jetzt aus.">
+					<f:ajax execute="@form" render=":sdContentArea :footerForm"/>
+					<h:graphicImage value="/resources/images/icons/grau/sd_logout.png" height="30"/>
+				</h:commandLink>
+			</li>
+			
 			<li class="#{naviController.getCurrentPage('search')}">
 				<h:commandLink action="search" styleClass="custom-icon" title="Suche jetzt nach Angeboten">
 					<f:ajax execute="@form" render=":sdContentArea :footerForm"/>
