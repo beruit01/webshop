@@ -99,18 +99,21 @@
 			
 			<li class="#{naviController.getCurrentPage('subject_areas')}">
 				<h:commandLink action="subject_areas">
+					<f:ajax execute="@form" render="sdContentArea"/>
 					<h:outputText value="Themen"/>
 				</h:commandLink>
 			</li>
 			
 			<li class="#{naviController.getCurrentPage('share')}">
 				<h:commandLink action="share">
+				<f:ajax execute="@form" render="sdContentArea"/>
 					<h:outputText value="Anbieten"/>
 				</h:commandLink>
 			</li>
 			
 			<li class="noHighlight">
 				<h:commandLink action="index" styleClass="logoBox">
+					<f:ajax execute="@form" render="sdContentArea"/>
 					<h:graphicImage value="/resources/images/heart.png" height="40" class="navbarlogo"/>
 					<span class="navbarlogotext">Shadoo</span>				
 				</h:commandLink>
@@ -118,17 +121,20 @@
 			
 			<li class="#{naviController.getCurrentPage('login')}">
 				<h:commandLink action="login">
+					<f:ajax execute="@form" render="sdContentArea"/>
 					<h:outputText value="Login"/>
 				</h:commandLink>
 			</li>
 			<li class="#{naviController.getCurrentPage('search')}">
 				<h:commandLink action="search" styleClass="custom-icon" title="Suche jetzt nach Angeboten">
+					<f:ajax execute="@form" render="sdContentArea"/>
 					<h:graphicImage value="/resources/images/icons/grau/search.png" height="30"/>
 				</h:commandLink>
 			</li>
 			
 			<li class="#{naviController.getCurrentPage('heartbox')}">
 				<h:commandLink action="heartbox" styleClass="custom-icon" title="gehe zu Deiner HeartBox">
+					<f:ajax execute="@form" render="sdContentArea"/>
 					<h:graphicImage value="/resources/images/icons/grau/heartbox.png" height="30"/>
 				</h:commandLink>
 			</li>
