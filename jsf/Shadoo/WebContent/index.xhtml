@@ -10,36 +10,38 @@
 
 		<h:form class="filter-group">
 			<h:commandButton action="#{listControllerBean.setSortFilter('0')}" styleClass="filter-popular #{listControllerBean.isFilterSelected(0)}">
-				 <f:ajax execute="@form" render="@form" />
+				 <f:ajax execute="@form" render="@form sortedPreviewItems" />
 			</h:commandButton>
 			<h:commandButton action="#{listControllerBean.setSortFilter('1')}" styleClass="filter-latest #{listControllerBean.isFilterSelected(1)}">
-				 <f:ajax execute="@form" render="@form" />
+				 <f:ajax execute="@form" render="@form sortedPreviewItems" />
 			</h:commandButton>
 		</h:form>
 
 
-		<ui:repeat var="current" value="#{listControllerBean.exampleProducts}">
-
-			<div class="sd-item">
-
-				<div class="sd-pic">
-					<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
-					<h:graphicImage class="sd-picBorder"
-						value="resources/images/picBorder.svg" />
+		<h:panelGroup id="sortedPreviewItems">
+			<ui:repeat var="current" value="#{listControllerBean.exampleProducts}">
+	
+				<div class="sd-item">
+	
+					<div class="sd-pic">
+						<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
+						<h:graphicImage class="sd-picBorder"
+							value="resources/images/picBorder.svg" />
+					</div>
+					<div class="sd-rating clearfix">
+						<div class="heart10"></div>
+						<div class="heart10"></div>
+						<div class="heart10"></div>
+						<div class="heart05"></div>
+						<div class="heart00"></div>
+					</div>
+					<div class="sd-title">
+						<h:outputText value="#{current.productName}" />
+					</div>
 				</div>
-				<div class="sd-rating clearfix">
-					<div class="heart10"></div>
-					<div class="heart10"></div>
-					<div class="heart10"></div>
-					<div class="heart05"></div>
-					<div class="heart00"></div>
-				</div>
-				<div class="sd-title">
-					<h:outputText value="#{current.productName}" />
-				</div>
-			</div>
-
-		</ui:repeat>
+	
+			</ui:repeat>
+		</h:panelGroup>
 
 		<!-- clearfix -->
 		<div style="clear:both"></div>

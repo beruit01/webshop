@@ -2,7 +2,12 @@ package beans;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
@@ -20,7 +25,10 @@ public class ListControllerBean implements Serializable {
 	private String searchFilter = "";
 	
 	public enum Filter { POPULAR, LATEST }
-	private Filter sortFilter = Filter.LATEST;
+	private Filter sortFilter = Filter.POPULAR;
+	private Comparator<ProductBean> compLatest;
+	private Comparator<ProductBean> compPopular;
+	private Map<Filter, Comparator<ProductBean>> compMap = new HashMap<ListControllerBean.Filter, Comparator<ProductBean>>();
 	
 	
 	public ListControllerBean()
@@ -74,6 +82,37 @@ public class ListControllerBean implements Serializable {
 				"Modebewusstsein aber schlechte finanzielle Lage? Dass wenig Geld kein Ausschlusskriterium für Stil sein muss zeige ich mit diesen einfachen Mode-Hacks",
 				new Date(1399248000)));
 		
+		
+		// init sort filter
+		compLatest = new Comparator<ProductBean>() {
+
+			@Override
+			public int compare(ProductBean o1, ProductBean o2) {
+				
+				return o1.getSubmissiondate().compareTo(o2.getSubmissiondate());
+			}
+			
+		};
+		compPopular = new Comparator<ProductBean>() {
+
+			@Override
+			public int compare(ProductBean o1, ProductBean o2) {
+				
+				float change1 = o1.getRating();
+				float change2 = o2.getRating();
+				if (change1 < change2) return -1;
+				if (change1 > change2) return 1;
+				return 0;
+			}
+			
+		};
+		
+		compMap.put(Filter.LATEST, compLatest);
+		compMap.put(Filter.POPULAR, compPopular);
+		
+		sortHandler();
+		
+		
 	}
 	
 	// search
@@ -121,8 +160,14 @@ public class ListControllerBean implements Serializable {
 	 */
 	private void sortHandler() {
 		
-		// TODO: sort array
-		System.out.println("[ListControllerBean] SORT!");
+		try {
+		
+			Collections.sort( exampleProducts, Collections.reverseOrder( compMap.get(sortFilter) ));
+			
+		}catch(Exception e) {
+			System.err.println("Sorting failed. Check if there is a comparator in the comparator map for sort filter " + sortFilter );
+		}
+		
 	}
 	
 	/**
