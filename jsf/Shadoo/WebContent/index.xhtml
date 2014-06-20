@@ -8,12 +8,12 @@
 <ui:composition template="templates/shadoo.tpl.xhtml">
 	<ui:define name="content">
 
-		<h:form class="filter-group">
+		<h:form class="filter-group" id="filterForm">
 			<h:commandButton action="#{listControllerBean.setSortFilter('0')}" styleClass="filter-popular #{listControllerBean.isFilterSelected(0)}">
-				 <f:ajax execute="@form" render="@form sortedPreviewItems" />
+				 <f:ajax execute="@form" render=":filterForm :sortedPreviewItems :naviForm" />
 			</h:commandButton>
 			<h:commandButton action="#{listControllerBean.setSortFilter('1')}" styleClass="filter-latest #{listControllerBean.isFilterSelected(1)}">
-				 <f:ajax execute="@form" render="@form sortedPreviewItems" />
+				 <f:ajax execute="@form" render=":filterForm :sortedPreviewItems :naviForm" />
 			</h:commandButton>
 		</h:form>
 

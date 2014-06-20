@@ -13,7 +13,7 @@
 			<br />
 			
 			<!-- heartbox items -->
-			<h:form>
+			<h:form id="heartboxForm">
 				<h:panelGroup id="heartboxItems">
 					<ui:repeat var="current" value="#{heartbox.items}">
 	
@@ -21,7 +21,7 @@
 							
 							<h:commandButton action="#{heartbox.removeItem(current.productName)}"
 								title="Entferne diesen Artikel aus Deiner Heartbox." styleClass="sd-remove">
-								<f:ajax execute="@form" render="@form" />
+								<f:ajax execute="@form" render="@form :naviForm" />
 							</h:commandButton>
 							
 							<div class="sd-pic">

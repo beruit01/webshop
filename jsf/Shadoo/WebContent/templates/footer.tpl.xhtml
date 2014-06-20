@@ -7,14 +7,22 @@
 	<!-- footer -->
 	<div class="footer">
 		
-		<h:form>
+		<h:form id="footerForm">
 		
 			<small>
 			
-				<h:commandLink action="agb" value="Unsere AGBs"/>
-				<h:commandLink action="privacyPolicy" value="Datenschutzerklärung"/>
-				<h:commandLink action="imprint" value="Impressum"/>
-				<h:commandLink action="cookies" value="Cookies &amp; Internet-Werbung"/>
+				<h:commandLink action="agb" value="Unsere AGBs">
+					<f:ajax execute="footerForm" render=":sdContentArea :naviForm"/>
+				</h:commandLink>
+				<h:commandLink action="privacyPolicy" value="Datenschutzerklärung">
+					<f:ajax execute="footerForm" render=":sdContentArea :naviForm"/>
+				</h:commandLink>
+				<h:commandLink action="imprint" value="Impressum">
+					<f:ajax execute="footerForm" render=":sdContentArea :naviForm"/>
+				</h:commandLink>
+				<h:commandLink action="cookies" value="Cookies &amp; Internet-Werbung">
+					<f:ajax execute="footerForm" render=":sdContentArea :naviForm"/>
+				</h:commandLink>
 				
 				<span>&copy; 2014 by Daniel Secker, Marc Schubert, Benjamin Rupp</span>
 				

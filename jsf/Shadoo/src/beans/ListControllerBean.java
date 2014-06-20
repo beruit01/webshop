@@ -151,6 +151,12 @@ public class ListControllerBean implements Serializable {
 		
 	}
 	
+	/**
+	 * Search for the given search filter in the given tag array.
+	 * @param tags Array with tags.
+	 * @param searchFilter The search filter which should be found.
+	 * @return True if at least one of the tags contains the search filter. Otherwise return false.
+	 */
 	private boolean searchInTags(String[] tags, String searchFilter) {
 		
 		boolean found = false;
