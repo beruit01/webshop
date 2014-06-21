@@ -672,13 +672,13 @@ a:hover {
 .areas-group .char {
 	font-size: 5em;
 	background: none;
-	color: #fffaf4;
+	color: #444;
 }
 .areas-group .top {
 	font-size: 1em;
 	background: none;
 	padding-top: 10px;
-	color: #fffaf4 !important;
+	color: #444 !important;
 }
 .areas-group .top:hover {
 	background: none !important;
