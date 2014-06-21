@@ -8,7 +8,76 @@
       <ui:composition template="templates/shadoo.tpl.xhtml">
       	<ui:define name="content">
       		
-			Subject_Areas_Dummy
+			<div class="text-wrapper">
+			
+				<h1>Themenbereiche</h1>
+				<h3>Hier findest Du die ganze Vielfalt von Shadoo. Nach Themen sortiert.</h3>
+				
+				<!-- overview -->
+					
+				<ul class="areas-overview" id="areasOverviewForm">
+				
+					<ui:repeat var="areaGroup" value="#{subjectAreas.getAreasGroupedByName()}">
+						
+						<a href="#area-#{areaGroup.key}">
+							<li><h:outputText value="#{areaGroup.key}"/></li>
+						</a>
+						
+					</ui:repeat>
+				
+				</ul>
+			
+				<br />
+				
+				
+				<!-- subject areas grouped by first character -->
+				<h:panelGroup>
+				
+					<ui:repeat var="areaGroup" value="#{subjectAreas.getAreasGroupedByName()}">
+						
+						<a class="groupAnchor" name="area-#{areaGroup.key}"/>
+						
+						<div class="areas-group">
+						
+							<div class="char">
+								<h:outputText value="#{areaGroup.key}"/>
+							</div>
+							
+							<ul class="clearfix">
+
+								<ui:repeat var="area" value="#{areaGroup.value}">
+								
+									<li>
+										
+										<!-- subject area -->
+										<h:form id="subjectForm">
+											<h:commandLink value="#{area}" action="subject_areas_detail">
+												<f:param name="s" value="#{area}" />
+											</h:commandLink>									
+										</h:form>
+									
+									</li>
+								
+								</ui:repeat>
+							
+							</ul>
+							
+							
+							<!-- top link -->
+							<a href="#" class="top" title="Zum Seitenanfang">
+
+								<h:graphicImage value="/resources/images/icons/weiss/sd_up.png" height="30"/>
+								<span>TOP</span>
+							
+							</a>
+							
+						</div>
+					
+					</ui:repeat>
+				
+				</h:panelGroup>
+			
+			</div>
       		
       	</ui:define>
       </ui:composition>

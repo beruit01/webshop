@@ -30,7 +30,6 @@
 		    	<li class="nav-col logoBox">
 		    	
 		    		<h:commandLink action="index">
-		    			<f:ajax execute="@form" render=":sdContentArea :footerForm: :mobileSubNaviForm filterForm"/>
 						<h:graphicImage value="/resources/images/heart.png" height="30" class="navbarlogo"/>
 						<span class="navbarlogotext">Shadoo</span>				
 					</h:commandLink>
@@ -41,17 +40,14 @@
 		    	<li class="nav-col">
 		    	
 		    		<h:commandLink action="heartbox" styleClass="custom-icon" title="gehe zu Deiner HeartBox">
-		    			<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileSubNaviForm :heartboxForm"/>
 						<h:graphicImage value="/resources/images/icons/grau/heartbox.png" height="30"/>
 					</h:commandLink>
 				
 					<h:commandLink action="search" styleClass="custom-icon" title="Suche jetzt nach Angeboten">
-						<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileSubNaviForm"/>
 						<h:graphicImage value="/resources/images/icons/grau/search.png" height="30"/>
 					</h:commandLink>
 		    	
 		    		<h:commandLink action="index" styleClass="custom-icon" title="Logge Dich jetzt aus.">
-		    			<f:ajax execute="@form" render=":sdContentArea :footerForm: :mobileSubNaviForm filterForm"/>
 						<h:graphicImage value="/resources/images/icons/grau/sd_logout.png" height="30"/>
 					</h:commandLink>
 					
@@ -72,21 +68,18 @@
 	      	
 		      	<li>
 					<h:commandLink action="subject_areas">
-						<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileNaviForm"/>
 						<h:outputText value="Themen"/>
 					</h:commandLink>
 				</li>
 				
 				<li>
 					<h:commandLink action="share">
-						<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileNaviForm"/>
 						<h:outputText value="Anbieten"/>
 					</h:commandLink>
 				</li>
 				
 				<li>
 					<h:commandLink action="login">
-						<f:ajax execute="@form" render=":sdContentArea :footerForm :mobileNaviForm"/>
 						<h:outputText value="Login"/>
 					</h:commandLink>
 				</li>    	
@@ -110,21 +103,18 @@
 			
 			<li class="#{naviController.getCurrentPage('subject_areas')}">
 				<h:commandLink action="subject_areas">
-					<f:ajax execute="@form" render=":sdContentArea :footerForm"/>
 					<h:outputText value="Themen"/>
 				</h:commandLink>
 			</li>
 			
 			<li class="#{naviController.getCurrentPage('share')}">
 				<h:commandLink action="share">
-				<f:ajax execute="@form" render=":sdContentArea :footerForm"/>
 					<h:outputText value="Anbieten"/>
 				</h:commandLink>
 			</li>
 			
 			<li class="noHighlight">
 				<h:commandLink action="index" styleClass="logoBox">
-					<f:ajax execute="@form" render=":sdContentArea :footerForm :filterForm"/>
 					<h:graphicImage value="/resources/images/heart.png" height="40" class="navbarlogo"/>
 					<span class="navbarlogotext">Shadoo</span>				
 				</h:commandLink>
@@ -132,28 +122,24 @@
 			
 			<li class="#{naviController.getCurrentPage('login')}">
 				<h:commandLink action="login">
-					<f:ajax execute="@form" render="sdContentArea :footerForm :filterForm"/>
 					<h:outputText value="Login"/>
 				</h:commandLink>
 			</li>
 			
 			<li>
 				<h:commandLink action="index" styleClass="custom-icon" title="Logge Dich jetzt aus.">
-					<f:ajax execute="@form" render=":sdContentArea :footerForm"/>
 					<h:graphicImage value="/resources/images/icons/grau/sd_logout.png" height="30"/>
 				</h:commandLink>
 			</li>
 			
 			<li class="#{naviController.getCurrentPage('search')}">
 				<h:commandLink action="search" styleClass="custom-icon" title="Suche jetzt nach Angeboten">
-					<f:ajax execute="@form" render=":sdContentArea :footerForm"/>
 					<h:graphicImage value="/resources/images/icons/grau/search.png" height="30"/>
 				</h:commandLink>
 			</li>
 			
 			<li class="#{naviController.getCurrentPage('heartbox')}">
 				<h:commandLink action="heartbox" styleClass="custom-icon" title="gehe zu Deiner HeartBox">
-					<f:ajax execute="@form" render=":sdContentArea :footerForm :heartboxForm"/>
 					<h:graphicImage value="/resources/images/icons/grau/heartbox.png" height="30"/>
 				</h:commandLink>
 			</li>

@@ -25,7 +25,7 @@ public class NaviController implements Serializable {
 		viewid = (String) viewid.subSequence(0, viewid.length() - 6 );
 		
 		// return highlight class if page name is equal to current page
-		if(pagename.equals(viewid)) {
+		if(viewid.contains(pagename)) {
 			return "highlight";
 		}else{
 			return "";
