@@ -11,6 +11,7 @@ public class Login implements Serializable {
 
 	private String login;
 	private String password;
+	private boolean isLoggedIn = false;
 
 	public String getLogin() {
 		return login;
@@ -26,6 +27,14 @@ public class Login implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public boolean isLoggedIn() {
+		return isLoggedIn;
+	}
+
+	public void setLoggedIn(boolean isLoggedIn) {
+		this.isLoggedIn = isLoggedIn;
 	}
 
 }

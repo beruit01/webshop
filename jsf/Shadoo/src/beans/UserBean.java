@@ -9,6 +9,11 @@ import javax.inject.Named;
 @SessionScoped
 public class UserBean implements Serializable {
 
+//	@javax.persistence.Id
+//    @javax.persistence.GeneratedValue(strategy=GenerationType.AUTO)//, generator="my_runway_seq_gen")
+//	@SequenceGenerator(name="my_runway_seq_gen", sequenceName="MY_RUNWAY_SEQ")
+	private int id;
+	
 	private String userName;
 	private String email;
 	private String password;

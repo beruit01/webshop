@@ -34,8 +34,8 @@
 							
 							<h1>Anmeldung</h1>
 					  
-							<h:inputText class="form-control" type="text" value="#{login.login}" placeholder="Benutzername" id="anm_username" />
-							<h:inputSecret class="form-control" type="password" value="#{login.password}" placeholder="Passwort" id="anm_pw"/>
+							<h:inputText class="form-control username" type="text" value="#{login.login}" id="anm_username" />
+							<h:inputSecret class="form-control pw" type="password" value="#{login.password}" id="anm_pw"/>
 							
 							<!-- <h:message for="anm_pw" id="anm_msg" style="color:#c0392b"/> -->
 							<h:outputText style="color:#c0392b" value="#{loginUIController.loginError}"/>
@@ -58,7 +58,7 @@
 								
 								<div class="form-group">
 									<div class="col-lg-12">
-										<h:inputText class="form-control" required="true" name="email" type="email" value="#{userBean.email}" placeholder="E-Mail" id="reg_email" validatorMessage="Die eingegebene E-Mail Adresse ist nicht gültig!">
+										<h:inputText class="form-control email" name="email" type="email" value="#{userBean.email}" id="reg_email" validatorMessage="Die eingegebene E-Mail Adresse ist nicht gültig!">
 											<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"/>
 											<f:ajax execute="@this" render="reg_email_msg" event="keyup" />
 										</h:inputText>
@@ -66,17 +66,18 @@
 									</div>
 									
 									<div class="col-lg-12">
-										<h:inputText type="text" class="form-control" name="username" value="#{userBean.userName}" placeholder="Benutzername" id="reg_user" validatorMessage="Der eingegebene Benutzername muss zwischen 6 und 30 Zeichen haben!">
-											<f:validateLength minimum="6" maximum="30"/>
-											<f:ajax execute="@this" render="reg_username_msg" event="keyup" />
+										<h:inputText type="text" class="form-control username" name="username" value="#{userBean.userName}" id="reg_user" validatorMessage="Der eingegebene Benutzername muss zwischen 4 und 30 Zeichen haben!">
+											<f:validateLength minimum="4" maximum="30"/>
+											<f:ajax execute="@this" render="reg_username_msg username_already_in_use_msg" event="keyup" listener="#{loginUIController.validateUserName}"/>
 										</h:inputText>
 										<h:message for="reg_user" id="reg_username_msg" style="color:#c0392b"/>
+										<h:outputText id="username_already_in_use_msg" style="color:#c0392b" value="#{loginUIController.registerError}"/>
 									</div>
 								</div>
 								
 								<div class="form-group">
 									<div class="col-lg-12">
-										<h:inputSecret type="password" class="form-control" name="password" value="#{userBean.password}" placeholder="Passwort" id="reg_pw" validatorMessage="Das eingegebene Passwort muss mindestens 6 Zeichen haben!">
+										<h:inputSecret type="password" class="form-control pw" name="password" value="#{userBean.password}" id="reg_pw" validatorMessage="Das eingegebene Passwort muss mindestens 6 Zeichen haben!">
 											<f:validateLength minimum="6"/>
 											<f:ajax execute="@this" render="reg_pw_msg" event="keyup" />
 										</h:inputSecret>
@@ -84,9 +85,9 @@
 									</div>
 									
 									<div class="col-lg-12">
-										<h:inputSecret type="password" class="form-control" name="confirmPassword" value="#{userBean.passwordConfirm}" placeholder="Passwort bestätigen" id="reg_conf_pw" validatorMessage="Das eingegebene Passwort muss mindestens 6 Zeichen haben!">
-											<f:validateLength minimum="6"/>
-											<f:ajax execute="@this" render="reg_conf_pw_msg" event="keyup" />
+										<h:inputSecret type="password" class="form-control pw_conf" name="confirmPassword" value="#{userBean.passwordConfirm}" id="reg_conf_pw" validator="#{loginUIController.passwordValidator}">
+											
+											<f:ajax execute="@this" render="reg_conf_pw_msg" event="keyup"/>
 										</h:inputSecret>
 										<h:message for="reg_conf_pw" id="reg_conf_pw_msg" style="color:#c0392b"/>
 									</div>
@@ -120,6 +121,21 @@
 					
 				</div>
 				
+				
+				<script>
+				$( document ).ready(function() {
+					
+					// set placeholder text of search bar
+					$(".email").attr("placeholder","E-Mail Adresse...");
+					$(".username").attr("placeholder","Benutzername...");
+					$(".pw").attr("placeholder","Passwort...");
+					$(".pw_conf").attr("placeholder","Passwort bestätigen...");
+					
+					// set focus on search bar
+					// $(".searchBox" ).focus();
+					
+				});
+			</script>
 				
 
       	</ui:define>

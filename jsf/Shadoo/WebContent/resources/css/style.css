@@ -649,7 +649,7 @@ a:hover {
 .anmeldung input,
 .registrierung input{
 	display: block;
-	margin-bottom: 5%;
+	margin-top: 5%;
 	width: 100%;
 }
 .wrapperLogin .col-lg-12 {
