@@ -8,6 +8,17 @@
 <ui:composition template="templates/shadoo.tpl.xhtml">
 	<ui:define name="content">
 
+
+		<div class="intro-heart">
+			<img src="resources/images/heart.png" class="heart heartbeat" />
+			<span class="title"><b>Shadoo</b></span>
+			<span class="subtitle">Share your knowledge. With heart.</span>
+			<a href="#content" class="next"></a>
+		</div>
+
+
+
+		<a name="content" class="anchor" id="content"/>
 		<h:form class="filter-group" id="filterForm">
 			<h:commandButton action="#{listControllerBean.setSortFilter('0')}" styleClass="filter-popular #{listControllerBean.isFilterSelected(0)}">
 				 <f:ajax execute="@form" render=":filterForm :sortedPreviewItems" />

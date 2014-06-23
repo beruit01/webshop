@@ -37,6 +37,27 @@
 		
 		<ui:include src="footer.tpl.xhtml"/>
 	
+	
+		<script>
+			$('a[href^="#"]').on('click', function(event) {
+
+			    var target = $( $(this).attr('href') );
+			    
+			    if( target.length ) {
+			        event.preventDefault();
+			        $('html, body').animate({
+			            scrollTop: target.offset().top
+			        }, 1000);
+			    }
+			    
+			    if($(this).attr('href') === '#') {
+			    	event.preventDefault();
+			        $('html, body').animate({
+			            scrollTop: 0
+			        }, 1000);
+			    }
+			});
+		</script>
 		
 	</h:body>
 </html>

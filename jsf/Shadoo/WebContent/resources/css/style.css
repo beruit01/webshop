@@ -227,6 +227,52 @@ a:hover {
             animation: heartbeat 1.3s ease infinite;
 }
 
+.intro-heart {
+	width: 50%;
+	height: calc( 100vh - 60px );
+	padding-top: 5%;
+	margin: auto;
+	text-align: center;
+	font-size: 1em;
+	position: relative;
+}
+@media screen and (max-width: 768px) {
+	.intro-heart { width: 80%; font-size: 0.7em; height: calc( 100vh - 50px ); }
+}
+.intro-heart img {
+	height: 45%;
+	margin: auto;
+}
+.intro-heart .title,
+.intro-heart .subtitle {
+	display: block;
+	line-height: 1;
+	margin-top: 2%;
+}
+.intro-heart .title {
+	font-size: 6em;
+}
+.intro-heart .subtitle {
+	font-size: 2em;
+}
+.intro-heart .next {
+	width: 40px;
+	height: 40px;
+	display: block;
+	position: absolute;
+	bottom: 3%;
+	left: 50%;
+	margin-left: -20px;
+	background-image: url(images/icons/grau/sd_down.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.intro-heart .next:hover {
+	background-color: transparent !important;
+}
+@media screen and (max-width: 768px) {
+	.intro-heart .next { width: 34px; margin-left: -17px; }
+}
 
 /* heartbeat animation */
 @-webkit-keyframes heartbeat {
@@ -309,6 +355,12 @@ a:hover {
 	.text-wrapper { width: 100%; padding: 0 1%}
 }
 
+.anchor {
+	display: block;
+	position: relative;
+	left: 0;
+	top: -60px;
+}
 
 /*
 -------------------- navi --------------- */
@@ -618,12 +670,6 @@ a:hover {
 
 /*
 ------------ subject areas ------ */
-.groupAnchor {
-	display: block;
-	position: relative;
-	left: 0;
-	top: -60px;
-}
 .areas-overview {
 	padding: 0px !important;
 }
