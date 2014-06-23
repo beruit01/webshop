@@ -45,9 +45,9 @@ public class LoginUIController implements Serializable {
 					loginModel.setLoggedIn(true);
 					loginError = "";
 					if(loginModel.getLogin().length() <= 15) {
-						setNavbarLoginCaption(loginModel.getLogin());
+						navbarLoginCaption = loginModel.getLogin();
 					} else {
-						setNavbarLoginCaption(loginModel.getLogin().substring(0, 12) + "...");
+						navbarLoginCaption = loginModel.getLogin().substring(0, 12) + "...";
 					}
 					return "index";
 				}
@@ -81,11 +81,12 @@ public class LoginUIController implements Serializable {
 		ArrayList<UserBean> tmpList = userListBean.getRegisteredUsers();
 		tmpList.add(userBean);
 		userListBean.setRegisteredUsers(tmpList);
+		loginModel.setLoggedIn(true);
 		registerError = "";
 		if(loginModel.getLogin().length() <= 15) {
-			setNavbarLoginCaption(loginModel.getLogin());
+			navbarLoginCaption = loginModel.getLogin();
 		} else {
-			setNavbarLoginCaption(loginModel.getLogin().substring(0, 12) + "...");
+			navbarLoginCaption = loginModel.getLogin().substring(0, 12) + "...";
 		}
 		
 		return "welcome";
