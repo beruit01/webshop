@@ -21,23 +21,23 @@ body {
 /* set placeholder style */
 ::-webkit-input-placeholder {
    font-style: italic;
-   font-size: 0.5em;
-   padding: 0.9em 0 0 0.5em;
+   font-size:1em;
+   padding: 1em 0 0 0.5em;
 }
 :-moz-placeholder { /* Firefox 18- */
    font-style: italic;
-   font-size: 0.5em;
-   padding: 0.9em 0 0 0.5em;
+   font-size: 1em;
+   padding: 1em 0 0 0.5em;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
    font-style: italic;
-   font-size: 0.5em;
-   padding: 0.9em 0 0 0.5em;
+   font-size: 1em;
+   padding: 1em 0 0 0.5em;
 }
 :-ms-input-placeholder {  
    font-style: italic;
-   font-size: 0.5em;
-   padding: 0.9em 0 0 0.5em;
+   font-size: 1em;
+   padding: 1em 0 0 0.5em;
 }
 
 
@@ -661,10 +661,24 @@ a:hover {
 	margin-top: 5%;
 	width: 100%;
 }
+.anmeldung input,
+.registrierung input {
+	height: 3em;
+}
 .wrapperLogin .col-lg-12 {
 	padding-left: 0px !important;
 }
-
+.anmeldung .btn,
+.registrierung .btn {
+	border: 0px solid !important;
+	color: #444 !important;
+	background-color: #e5e0db !important;
+	font-size: 1.2em;
+}
+.anmeldung .btn:hover,
+.registrierung .btn:hover {
+	background-color: rgba(192,57,43, 0.51) !important;
+}
 
 @media screen and (max-width: 900px) {
 	.wrapperLogin { width: 90%; margin: 5% }

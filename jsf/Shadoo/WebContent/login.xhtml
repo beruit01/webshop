@@ -7,7 +7,7 @@
       <ui:composition template="templates/shadoo.tpl.xhtml">
       	<ui:define name="content">
       		
-				<div class="wrapperLogin">
+				<div class="wrapperLogin clearfix">
 					
 		
 					
@@ -125,14 +125,11 @@
 				<script>
 				$( document ).ready(function() {
 					
-					// set placeholder text of search bar
-					$(".email").attr("placeholder","E-Mail Adresse...");
-					$(".username").attr("placeholder","Benutzername...");
-					$(".pw").attr("placeholder","Passwort...");
-					$(".pw_conf").attr("placeholder","Passwort bestätigen...");
-					
-					// set focus on search bar
-					// $(".searchBox" ).focus();
+					// set placeholder text
+					$(".email").attr("placeholder","E-Mail Adresse");
+					$(".username").attr("placeholder","Benutzername");
+					$(".pw").attr("placeholder","Passwort");
+					$(".pw_conf").attr("placeholder","Passwort bestätigen");
 					
 				});
 			</script>
