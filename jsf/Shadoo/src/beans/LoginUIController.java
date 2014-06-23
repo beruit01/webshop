@@ -32,23 +32,8 @@ public class LoginUIController implements Serializable {
 	
 	private String loginError = "";
 	private String registerError = "";
+	private String navbarLoginCaption = "Login";
 	
-	
-	public String getLoginError() {
-		return loginError;
-	}
-
-	public void setLoginError(String loginError) {
-		this.loginError = loginError;
-	}
-	
-	public String getRegisterError() {
-		return registerError;
-	}
-
-	public void setRegisterError(String registerError) {
-		this.registerError = registerError;
-	}
 
 	public String checkPw() {
 		
@@ -59,6 +44,11 @@ public class LoginUIController implements Serializable {
 					&& loginModel.getPassword().equals(curUser.getPassword())) {
 					loginModel.setLoggedIn(true);
 					loginError = "";
+					if(loginModel.getLogin().length() <= 15) {
+						setNavbarLoginCaption(loginModel.getLogin());
+					} else {
+						setNavbarLoginCaption(loginModel.getLogin().substring(0, 12) + "...");
+					}
 					return "index";
 				}
 			}
@@ -92,14 +82,17 @@ public class LoginUIController implements Serializable {
 		tmpList.add(userBean);
 		userListBean.setRegisteredUsers(tmpList);
 		registerError = "";
-		System.out.println("You have registered successfully!");
+		if(loginModel.getLogin().length() <= 15) {
+			setNavbarLoginCaption(loginModel.getLogin());
+		} else {
+			setNavbarLoginCaption(loginModel.getLogin().substring(0, 12) + "...");
+		}
+		
 		return "welcome";
 		
 	}
 	
 	public void validateUserName(AjaxBehaviorEvent ev) {
-		
-		System.out.println("UserName: " + userBean.getUserName());
 		
 		ArrayList<UserBean> userList = userListBean.getRegisteredUsers();
 		for(UserBean curUser : userList) {
@@ -141,10 +134,53 @@ public class LoginUIController implements Serializable {
 			loginModel.setLoggedIn(false);
 			loginModel.setLogin("");
 			loginModel.setPassword("");
+			setNavbarLoginCaption("Login");
 			return "index";
 		}
 		return "";
 		
+	}
+	
+	public String navLogin() {
+		
+		if(loginModel.isLoggedIn()) {
+			return "account";
+		}
+		return "login";
+		
+	}
+	
+	public String getLoggedInClass() {
+		if(loginModel.isLoggedIn()) {
+			return "loggedIn";
+		} else {
+			return "loggedOut";
+		}
+		
+	}
+
+	public String getNavbarLoginCaption() {
+		return navbarLoginCaption;
+	}
+
+	public void setNavbarLoginCaption(String navbarLoginCaption) {
+		this.navbarLoginCaption = navbarLoginCaption;
+	}
+	
+	public String getLoginError() {
+		return loginError;
+	}
+
+	public void setLoginError(String loginError) {
+		this.loginError = loginError;
+	}
+	
+	public String getRegisterError() {
+		return registerError;
+	}
+
+	public void setRegisterError(String registerError) {
+		this.registerError = registerError;
 	}
 
 //	public void validateLogin(FacesContext context, UIComponent component,

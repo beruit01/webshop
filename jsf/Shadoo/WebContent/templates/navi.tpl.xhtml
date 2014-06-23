@@ -75,10 +75,16 @@
 				</li>
 				
 				<li>
-					<h:commandLink action="login">
-						<h:outputText value="Login"/>
+					<h:commandLink action="#{loginUIController.navLogin}">
+						<h:outputText value="#{loginUIController.navbarLoginCaption}"/>
 					</h:commandLink>
-				</li>    	
+				</li>
+				
+				<li class="#{loginUIController.getLoggedInClass()}">
+					<h:commandLink action="#{loginUIController.doLogout}">
+						<h:outputText value="Logout"/>
+					</h:commandLink>
+				</li>
 	      	
 	    	</ul>
     	</h:form>
@@ -111,18 +117,18 @@
 			<li class="noHighlight">
 				<h:commandLink action="index" styleClass="logoBox">
 					<h:graphicImage value="/resources/images/heart.png" height="40" class="navbarlogo"/>
-					<span class="navbarlogotext">Shadoo</span>				
+					<span class="navbarlogotext">Shadoo</span>
 				</h:commandLink>
 			</li>
 			
 			<li class="#{naviController.getCurrentPage('login')}">
-				<h:commandLink action="login">
-					<h:outputText value="Login"/>
+				<h:commandLink action="#{loginUIController.navLogin}">
+					<h:outputText value="#{loginUIController.navbarLoginCaption}"/>
 				</h:commandLink>
 			</li>
 			
-			<li>
-				<h:commandLink action="index" styleClass="custom-icon" title="Logge Dich jetzt aus.">
+			<li class="#{loginUIController.getLoggedInClass()}">
+				<h:commandLink action="#{loginUIController.doLogout}" styleClass="custom-icon" title="Logge Dich jetzt aus.">
 					<h:graphicImage value="/resources/images/icons/grau/sd_logout.png" height="30"/>
 				</h:commandLink>
 			</li>

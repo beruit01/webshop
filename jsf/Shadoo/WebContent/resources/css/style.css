@@ -408,6 +408,12 @@ a:hover {
 	padding: 3px auto 0 auto !important;
 
 }
+.desktop-nav .loggedIn {
+	display: block;
+}
+.desktop-nav .loggedOut {
+	display: none;
+}
 .desktop-nav .highlight {
 	border-bottom: 3px solid #c0392b;
 	font-weight: bold;
@@ -520,6 +526,12 @@ a:hover {
 .mobile-nav a {
 	color: #444 !important;
 	text-decoration: none !important;
+}
+.mobile-nav .loggedIn {
+	display: block;
+}
+.mobile-nav .loggedOut {
+	display: none;
 }
 
 /*                                                                                                                                                                                                                                                       
