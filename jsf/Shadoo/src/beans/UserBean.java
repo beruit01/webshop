@@ -9,21 +9,19 @@ import javax.inject.Named;
 @Named
 @SessionScoped
 public class UserBean implements Serializable {
-
-//	@javax.persistence.Id
-//    @javax.persistence.GeneratedValue(strategy=GenerationType.AUTO)//, generator="my_runway_seq_gen")
-//	@SequenceGenerator(name="my_runway_seq_gen", sequenceName="MY_RUNWAY_SEQ")
-	private int id;
 	
 	private String userName;
 	private String email;
 	private String password;
 	private String passwordConfirm;
 	private String imageUrl = "";
-	private float rating = 0.0f;
+	private float ratingRhetoric = 0.0f;
+	private float ratingMaterials = 0.0f;
+	private float ratingKnowledge = 0.0f;
+	private float ratingCommitment = 0.0f;
 	private int ratingamount = 0;
 	private String description = "";
-	private ArrayList<ProductBean> uploadedProducts = new ArrayList<ProductBean>();
+	private ArrayList<Integer> uploadedProducts;
 	
 
 	public UserBean() {
@@ -37,17 +35,20 @@ public class UserBean implements Serializable {
 		this.passwordConfirm = passwordConfirm;
 	}
 	
-	public UserBean(int id, String userName, String email, String password,
-			String passwordConfirm, String imageUrl, float rating,
-			int ratingamount, String description,
-			ArrayList<ProductBean> uploadedProducts) {
-		this.id = id;
+	public UserBean(String userName, String email, String password,
+			String passwordConfirm, String imageUrl, float ratingRhetoric,
+			float ratingMaterials, float ratingKnowledge,
+			float ratingCommitment, int ratingamount, String description,
+			ArrayList<Integer> uploadedProducts) {
 		this.userName = userName;
 		this.email = email;
 		this.password = password;
 		this.passwordConfirm = passwordConfirm;
 		this.imageUrl = imageUrl;
-		this.rating = rating;
+		this.ratingRhetoric = ratingRhetoric;
+		this.ratingMaterials = ratingMaterials;
+		this.ratingKnowledge = ratingKnowledge;
+		this.ratingCommitment = ratingCommitment;
 		this.ratingamount = ratingamount;
 		this.description = description;
 		this.uploadedProducts = uploadedProducts;
@@ -79,14 +80,6 @@ public class UserBean implements Serializable {
 	public void setPasswordConfirm(String passwordConfirm) {
 		this.passwordConfirm = passwordConfirm;
 	}
-	
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getImageUrl() {
 		return imageUrl;
@@ -96,12 +89,36 @@ public class UserBean implements Serializable {
 		this.imageUrl = imageUrl;
 	}
 
-	public float getRating() {
-		return rating;
+	public float getRatingRhetoric() {
+		return ratingRhetoric;
 	}
 
-	public void setRating(float rating) {
-		this.rating = rating;
+	public void setRatingRhetoric(float ratingRhetoric) {
+		this.ratingRhetoric = ratingRhetoric;
+	}
+
+	public float getRatingMaterials() {
+		return ratingMaterials;
+	}
+
+	public void setRatingMaterials(float ratingMaterials) {
+		this.ratingMaterials = ratingMaterials;
+	}
+
+	public float getRatingKnowledge() {
+		return ratingKnowledge;
+	}
+
+	public void setRatingKnowledge(float ratingKnowledge) {
+		this.ratingKnowledge = ratingKnowledge;
+	}
+
+	public float getRatingCommitment() {
+		return ratingCommitment;
+	}
+
+	public void setRatingCommitment(float ratingCommitment) {
+		this.ratingCommitment = ratingCommitment;
 	}
 
 	public int getRatingamount() {
@@ -120,11 +137,11 @@ public class UserBean implements Serializable {
 		this.description = description;
 	}
 
-	public ArrayList<ProductBean> getUploadedProducts() {
+	public ArrayList<Integer> getUploadedProducts() {
 		return uploadedProducts;
 	}
 
-	public void setUploadedProducts(ArrayList<ProductBean> uploadedProducts) {
+	public void setUploadedProducts(ArrayList<Integer> uploadedProducts) {
 		this.uploadedProducts = uploadedProducts;
 	}
 

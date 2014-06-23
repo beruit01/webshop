@@ -4,12 +4,14 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
 @SessionScoped
 public class ProductBean implements Serializable {
 
+	private int id;
 	private String productName;
 	private String imageUrl;
 	private float rating;
@@ -17,12 +19,17 @@ public class ProductBean implements Serializable {
 	private String [] tags;
 	private String description;
 	private Date submissiondate;
+	private static int nProducts = 0;
 	
+	public ProductBean() {
+		nProducts++;
+		this.id = nProducts;
+	}
 	
-
-
 	public ProductBean(String productName, String imageUrl, float rating, int ratingamount, String [] tags, String description, Date submissiondate)
 	{
+		System.out.println(nProducts++);
+		this.id = nProducts;
 		this.productName = productName;
 		this.imageUrl = imageUrl;
 		this.rating = rating;
@@ -80,6 +87,10 @@ public class ProductBean implements Serializable {
 
 	public void setSubmissiondate(Date submissiondate) {
 		this.submissiondate = submissiondate;
+	}
+
+	public int getId() {
+		return id;
 	}
 	
 }

@@ -27,7 +27,14 @@ public class UserListBean {
 		registeredUsers.add(new UserBean("Hansi","Hansi@gmx.de","123456789","123456789"));
 		registeredUsers.add(new UserBean("GoogleBot","111@gmail.com","BotsAreAwesome","BotsAreAwesome"));
 		registeredUsers.add(new UserBean("WissensNerd314","pi@gmail.com","SuperSecret","SuperSecret"));
-		registeredUsers.add(new UserBean("test","test@gmail.com","test","test"));
+		
+		ArrayList<Integer> tmpList = new ArrayList<Integer>();
+		tmpList.add(1); tmpList.add(5); tmpList.add(6); tmpList.add(7); tmpList.add(9);
+		registeredUsers.add(new UserBean(	"test","test@gmail.com","test","test",
+											"resources/images/userPics/Profilepic.jpg",
+											3.0f,4.0f,5.0f,3.5f,7,
+											"Dies ist eine Testbeschreibung, in der der Benutzer sich selbst vorstellt und eine kurze Übersicht über seine Person gibt.",
+											tmpList));
 		
 	}
 
