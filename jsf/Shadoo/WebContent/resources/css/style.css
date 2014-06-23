@@ -235,6 +235,15 @@ a:hover {
 	text-align: center;
 	font-size: 1em;
 	position: relative;
+	top: 0;
+	left: 0;
+	
+	-webkit-transition: all 1s;
+    transition: all 1s;
+}
+.intro-heart.move {
+	top: calc( -100vh );
+	height: 0;
 }
 @media screen and (max-width: 768px) {
 	.intro-heart { width: 80%; font-size: 0.7em; height: calc( 100vh - 50px ); }

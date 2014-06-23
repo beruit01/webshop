@@ -39,23 +39,72 @@
 	
 	
 		<script>
+		
+			var scrolled = false;
+			var delay = 0;
+			
+			function triggerIntroMove(event) {
+				'use strict';
+				
+				var $introHeart = $('.intro-heart');
+				
+				if( $introHeart.length ) {
+					console.log('hide intro');
+					scrolled = true;
+				
+					event.preventDefault();
+					
+					$('.intro-heart').addClass('move');
+					
+				}
+				
+			}
+			
+			window.onscroll = function(event) {
+				
+				if(!scrolled) {
+				
+					delay++;
+					
+					if( delay >= 10) {
+						triggerIntroMove(event);
+					}
+					
+				}
+				
+			};
+			
+		
 			$('a[href^="#"]').on('click', function(event) {
 
 			    var target = $( $(this).attr('href') );
 			    
-			    if( target.length ) {
+			 	// hide intro
+			    if($(this).attr('href') === '#content') {
+			    	
+			    	event.preventDefault();
+			    	
+			    	$('.intro-heart').addClass('move');
+			    	
+			    }
+			 
+			 	// scroll down
+			    else if( target.length ) {
 			        event.preventDefault();
 			        $('html, body').animate({
 			            scrollTop: target.offset().top
 			        }, 1000);
 			    }
 			    
-			    if($(this).attr('href') === '#') {
+			 	// scroll up
+			    else if($(this).attr('href') === '#') {
 			    	event.preventDefault();
 			        $('html, body').animate({
 			            scrollTop: 0
 			        }, 1000);
 			    }
+			    
+			    
 			});
 		</script>
 		
