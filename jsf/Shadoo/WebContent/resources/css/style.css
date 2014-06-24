@@ -119,6 +119,12 @@ a:hover {
 	margin: 2%;
 	padding: 1%;
 	background-color: #fffaf4;
+	color: #444 !important;
+}
+.sd-item:hover {
+	background-color: #fffaf4 !important;
+	color: #444 !important;
+	
 }
 .sd-remove {
 	width: 25px;
