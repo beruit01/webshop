@@ -1,16 +1,74 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
-      
-      
-      <ui:composition template="templates/shadoo.tpl.xhtml">
-      	<ui:define name="content">
-      		
-			Account_Dummy
-      		
-      	</ui:define>
-      </ui:composition>
-      
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<ui:composition template="templates/shadoo.tpl.xhtml">
+	<ui:define name="content">
+		<div class="sd-product-background sd-product-author-detail clearfix">
+			<!-- Author -->
+
+			<div class="sd-account-rating-container clearfix">
+				<div
+					class="sd-product-author-title-container sd-product-title clearfix">
+					<h:outputText value="#{login.login}"
+						class="sd-product-author-title "></h:outputText>
+				</div>
+
+
+				<div class="sd-pic-container">
+					<div class="sd-pic">
+						<h:graphicImage class="sd-picImg"
+							value="#{userListBean.getUserByUserName(login.login).imageUrl}" />
+						<h:graphicImage class="sd-picBorder"
+							value="resources/images/picBorder.svg" />
+					</div>
+				</div>
+
+				<div class="sd-product-author-info">
+					<div class="clearfix">
+						<div class="sd-rating  sd-product-author-rating-hearts sd-product-rating">
+							<div class="heart10"></div>
+							<div class="heart10"></div>
+							<div class="heart10"></div>
+							<div class="heart05"></div>
+							<div class="heart00"></div>
+						</div>
+						<h:outputText value="Engagement"
+							class="sd-product-author-rating-text"></h:outputText>
+					</div>
+
+
+				</div>
+				<div class="sd-product-author-info sd-product-rating">
+					<div class="clearfix">
+						<div class="sd-product-rating">
+							<div class="heart10"></div>
+							<div class="heart10"></div>
+							<div class="heart10"></div>
+							<div class="heart05"></div>
+							<div class="heart00"></div>
+						</div>
+						<h:outputText value="Engagement"
+							class="sd-product-author-rating-text"></h:outputText>
+					</div>
+
+
+				</div>
+				<div class="sd-product-description-container">
+					<h:outputText class="sd-product-description"
+						value="test              dsfd #{current.description}"></h:outputText>
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+	</ui:define>
+</ui:composition>
+
 </html>
