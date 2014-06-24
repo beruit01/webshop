@@ -696,8 +696,10 @@ padding-right: 1%;
 
 
 /*
--------------------- heartbeat stuff --------------- */
-
+-------------------- account--------------- */
+.sd-account {
+	padding: 3%;
+}
 
 .sd-account-rating-container {
 	float:left;
@@ -705,12 +707,17 @@ padding-right: 1%;
 	padding:3%;
 	
 }
+.sd-account-rating,
 .sd-account-title {
-	width: 50%;
-	float:right;
+	width: 50% !important;
+	float:right !important;
 }
 
 
+
+.account-title-pic-container {
+	
+}
 
 
 /*
