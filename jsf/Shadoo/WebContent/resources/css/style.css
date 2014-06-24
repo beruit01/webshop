@@ -40,6 +40,20 @@ body {
    padding: 0.3em 0 0 0;
 }
 
+.errorMsg {
+	color: #c0392b;
+	text-align: left;
+	font-size: 1.3em;
+	margin: -4% 0 0 2%;
+	display: block;
+}
+@media screen and (max-width: 768px) {
+	.errorMsg { font-size: 1.0em; }
+}
+.errorMsg li {
+	margin-left: 30px;
+}
+
 
 /*
 -------------------- overwrite general bootstrap --------------- */
@@ -1160,7 +1174,8 @@ padding-right: 1%;
 }
 .anmeldung input,
 .registrierung input {
-	height: 3em;
+	height: 2em;
+	font-size: 1.5em;
 }
 .wrapperLogin .col-lg-12 {
 	padding-left: 0px !important;
@@ -1265,9 +1280,12 @@ padding-right: 1%;
 	float: left;
 	margin: 2%;
 	border: 0px solid;
-	padding-top: 3.5em;
+	padding-top: 4em;
 	font-size: 1em;
 	background-color: #fffaf4;
+	background-size: 50px;
+	background-repeat: no-repeat;
+	background-position: center 0.5em;
 }
 .share .media-item:hover {
 	background-color: rgba(192,57,43, 0.51);
@@ -1279,6 +1297,18 @@ padding-right: 1%;
 	background-color: #444;
 	color: #fffaf4;
 }
+.share .media-item.video { background-image: url(images/icons/grau/sd_video.png); }
+.share .media-item.audio { background-image: url(images/icons/grau/sd_audio.png); }
+.share .media-item.script { background-image: url(images/icons/grau/sd_script.png); }
+.share .media-item.slides { background-image: url(images/icons/grau/sd_slides.png); }
+.share .media-item.event { background-image: url(images/icons/grau/sd_calendar.png); }
+
+.share .media-item.highlight.video { background-image: url(images/icons/weiss/sd_video.png); }
+.share .media-item.highlight.audio { background-image: url(images/icons/weiss/sd_audio.png); }
+.share .media-item.highlight.script { background-image: url(images/icons/weiss/sd_script.png); }
+.share .media-item.highlight.slides { background-image: url(images/icons/weiss/sd_slides.png); }
+.share .media-item.highlight.event { background-image: url(images/icons/weiss/sd_calendar.png); }
+
 @media screen and (max-width: 768px) {
 	.share .media-item { width: 29.333333%; }
 }
@@ -1315,4 +1345,8 @@ padding-right: 1%;
 }
 .share .shareImg {
 	font-size: 1em;
+}
+.share .shareSubject {
+	width: 50%;
+	margin: 0 2% 5% 2%;
 }
