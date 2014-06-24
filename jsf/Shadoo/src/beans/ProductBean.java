@@ -1,10 +1,11 @@
 package beans;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import javax.enterprise.context.SessionScoped;
-import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
@@ -18,7 +19,12 @@ public class ProductBean implements Serializable {
 	private int ratingamount;
 	private String [] tags;
 	private String description;
-	private Date submissiondate;
+	private Calendar submissiondate;
+	private UserBean author;
+	private String subject;
+	private String embeddedcode;
+
+
 	private static int nProducts = 0;
 	
 	public ProductBean() {
@@ -26,9 +32,10 @@ public class ProductBean implements Serializable {
 		this.id = nProducts;
 	}
 	
-	public ProductBean(String productName, String imageUrl, float rating, int ratingamount, String [] tags, String description, Date submissiondate)
+	public ProductBean(String productName, String imageUrl, float rating, int ratingamount, String [] tags,
+			String description, Calendar submissiondate, UserBean author, String subject,String embeddedcode)
 	{
-		System.out.println(nProducts++);
+		//System.out.println(nProducts++);
 		this.id = nProducts;
 		this.productName = productName;
 		this.imageUrl = imageUrl;
@@ -37,7 +44,16 @@ public class ProductBean implements Serializable {
 		this.tags = tags;
 		this.description = description;
 		this.submissiondate = submissiondate;
+		this.author = author;
+		this.subject = subject;
+		this.embeddedcode = embeddedcode;
 	}
+	
+	public String getFormatDate() {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yy");			
+		return (sdf.format(submissiondate.getTime()));
+	}
+	
 	
 	public String getProductName() {
 		return productName;
@@ -81,14 +97,29 @@ public class ProductBean implements Serializable {
 		this.description = description;
 	}
 
-	public Date getSubmissiondate() {
+	public Calendar getSubmissiondate() {
 		return submissiondate;
 	}
 
-	public void setSubmissiondate(Date submissiondate) {
+	public void setSubmissiondate(Calendar submissiondate) {
 		this.submissiondate = submissiondate;
 	}
+	
+	public UserBean getAuthor() {
+		return author;
+	}
 
+	public void setAuthor(UserBean author) {
+		this.author = author;
+	}
+
+	public String getCategory() {
+		return subject;
+	}
+
+	public void setCategory(String category) {
+		this.subject = category;
+	}
 	public int getId() {
 		return id;
 	}

@@ -11,23 +11,38 @@ import javax.faces.validator.ValidatorException;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import sun.net.RegisteredDomain;
+
 @Named
 @ApplicationScoped
 public class UserListBean {
 
 	private ArrayList<UserBean> registeredUsers;
-
+	private static ArrayList<UserBean> allUsers = new ArrayList<UserBean>();
 
 	public UserListBean()
 	{
 		registeredUsers = new ArrayList<UserBean>();
 		
 		// dummy data
-		registeredUsers.add(new UserBean("SuperInformatiker1337","Hax@gmail.com","HaxxOr42","HaxxOr42"));
-		registeredUsers.add(new UserBean("Hansi","Hansi@gmx.de","123456789","123456789"));
-		registeredUsers.add(new UserBean("GoogleBot","111@gmail.com","BotsAreAwesome","BotsAreAwesome"));
-		registeredUsers.add(new UserBean("WissensNerd314","pi@gmail.com","SuperSecret","SuperSecret"));
+		ArrayList<Integer> tmpList = new ArrayList<Integer>();
+		tmpList.add(2); tmpList.add(4); tmpList.add(5);
+		registeredUsers.add(new UserBean("Michael Faber","mfarber@gmail.com","123456","123456","resources/images/userPics/michaelfarber.jpg",2.0f,3.0f,4.5f,5f,3,
+				"Ich bin schon seit meiner Kindheit an Technik interessiert. Deshalb begann ich schon früh Websites zu entwerfen und hatte Spaß daran neue Technologien zu erlernen."+
+				"In meinem Studium konnte ich grundlegende Informatikkenntnisse erlenen und kann mein Wissen im Bereich Webdesign vertiefen.", tmpList ));
+		tmpList.clear();
+		tmpList.add(1); tmpList.add(9); tmpList.add(10); tmpList.add(11);tmpList.add(6);
+		registeredUsers.add(new UserBean("Maria Herzog","mariaherzog@gmx.de","123456","123456","resources/images/userPics/mariaherzog.jpg",3.0f,2.5f,4.5f,2.5f,4,
+				"Hey :). Ich bin begeisterte Hobby-Designerin und führt meinen eigenen Blog. Besonders die Farbenlehre und die Bedeutung von Kleidung für den Menschen interessiert mich sehr!",
+				tmpList				
+				));
+		tmpList.clear();
+		tmpList.add(3); tmpList.add(7); tmpList.add(8);
+		registeredUsers.add(new UserBean("Sven Austerlitz","austerlitz.s@gmail.com","123456","123456","resources/images/userPics/svenausterlitz.jpg",4.0f,1.5f,3.0f,5.0f,6,
+				"Zurzeit studiere ich Physik, was mir sehr viel Spaß bereitet. Aber auch außerhalb des Studiums bilde ich mich sehr gerne weiter und teile dieses Wissen mit Allen die es interessiert.",
+				tmpList));
 		
+		/*
 		ArrayList<Integer> tmpList = new ArrayList<Integer>();
 		tmpList.add(1); tmpList.add(5); tmpList.add(6); tmpList.add(7); tmpList.add(9);
 		registeredUsers.add(new UserBean(	"test","test@gmail.com","test","test",
@@ -35,8 +50,20 @@ public class UserListBean {
 											3.0f,4.0f,5.0f,3.5f,7,
 											"Dies ist eine Testbeschreibung, in der der Benutzer sich selbst vorstellt und eine kurze Übersicht über seine Person gibt.",
 											tmpList));
+											*/
+		allUsers = registeredUsers;
 		
 	}
+	
+	public static ArrayList<UserBean> getAllUsers () {
+		
+		return allUsers;
+	}
+	public static void addUsertoAllUsers (UserBean newUser) {
+		
+		allUsers.add(newUser);
+	}
+			
 
 	public ArrayList<UserBean> getRegisteredUsers() {
 		return registeredUsers;

@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<ui:composition template="templates/shadoo.tpl.xhtml">
+	<ui:define name="content">
+
+		<ui:repeat var="current" value="#{listControllerBean.exampleProducts}">
+
+			<div class="sd-item-product">
+
+				<div class="sd-product-background">
+					<div class="sd-product-container clearfix">
+						<div class="sd-product-info-container clearfix">
+							<div class="sd-pic-container sd-product-pic-container ">
+								<div class="sd-product-pic">
+									<h:graphicImage class="sd-picImg sd-product-pic-size"
+										value="#{current.imageUrl}" />
+									<h:graphicImage class="sd-picBorder sd-product-pic-border "
+										value="resources/images/picBorder.svg" />
+								</div>
+							</div>
+							<div class="sd-product-info ">
+								<div class="sd-product-title">
+									<span> <h:outputText value="#{current.productName}" />
+									</span>
+								</div>
+								<div class="sd-product-author">
+									<h:outputText value="von #{current.author.userName}" />
+								</div>
+								<div class="sd-product-date">
+									<h:outputText value="am #{current.getFormatDate()}" />
+								</div>
+								<div class="sd-product-category">
+									<h:outputText value="in Fotografie" />
+								</div>
+
+							</div>
+
+							<div class="sd-product-detail">
+								<div class="sd-product-rating-container">
+
+
+									<!-- Rating -->
+									<div class="sd-product-rating clearfix">
+										<div class="heart10"></div>
+										<div class="heart10"></div>
+										<div class="heart10"></div>
+										<div class="heart05"></div>
+										<div class="heart00"></div>
+									</div>
+
+									<div class="sd-rating-amount">
+										<h:outputText value="#{current.ratingamount} Bewertungen"></h:outputText>
+									</div>
+								</div>
+								<div class="sd-product-tag-container clearfix">
+									<div class="sd-product-tag">
+										<h:outputText value="Foto"></h:outputText>
+									</div>
+									<div class="sd-product-tag">
+										<h:outputText value="Dia"></h:outputText>
+									</div>
+									<div class="sd-product-tag">
+										<h:outputText value="Modern"></h:outputText>
+									</div>
+								</div>
+
+
+								<!-- Buttons  -->
+								<div class="sd-product-button-container clearfix" align="center">
+
+
+									<div align="center">
+										<h:form>
+											<h:commandButton
+												class="sd-product-button sd-product-button-take"
+												value="Nehmen"></h:commandButton>
+										</h:form>
+									</div>
+
+									<div align="center">
+										<h:form>
+											<h:commandButton
+												class="sd-product-button sd-product-button-rate"
+												value="Bewerten"></h:commandButton>
+										</h:form>
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+
+
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="sd-product-description-container">
+						<h:outputText class="sd-product-description"
+							value="#{current.description}"></h:outputText>
+					</div>
+
+
+				</div>
+
+
+				<div class="sd-product-background sd-product-author-detail">
+					<!-- Author -->
+
+					<div class="sd-product-author-title-container clearfix">
+						<h:outputText value="Maria Müller" class="sd-product-author-title"></h:outputText>
+					</div>
+					<div class="sd-pic-container">
+						<div class="sd-pic">
+							<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
+							<h:graphicImage class="sd-picBorder"
+								value="resources/images/picBorder.svg" />
+						</div>
+
+
+					</div>
+
+
+					<div class="sd-product-author-info">
+						<div class="clearfix">
+							<div class="sd-rating  sd-product-author-rating-hearts">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<h:outputText value="Engagement"
+								class="sd-product-author-rating-text"></h:outputText>
+						</div>
+						<div class="clearfix">
+							<div class="sd-rating  sd-product-author-rating-hearts">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<h:outputText value="Engagement"
+								class="sd-product-author-rating-text"></h:outputText>
+						</div>
+						<div class="clearfix">
+							<div class="sd-rating  sd-product-author-rating-hearts">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<h:outputText value="Engagement"
+								class="sd-product-author-rating-text"></h:outputText>
+						</div>
+						<div class="clearfix">
+							<div class="sd-rating  sd-product-author-rating-hearts">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<h:outputText value="Engagement"
+								class="sd-product-author-rating-text"></h:outputText>
+						</div>
+
+
+					</div>
+
+					<!--Author rating -->
+					<div class="sd-product-author-rating"></div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+
+
+		</ui:repeat>
+
+	</ui:define>
+</ui:composition>
+
+</html>

@@ -1,16 +1,15 @@
 package beans;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 @Named
@@ -29,58 +28,60 @@ public class ListControllerBean implements Serializable {
 	private Comparator<ProductBean> compLatest;
 	private Comparator<ProductBean> compPopular;
 	private Map<Filter, Comparator<ProductBean>> compMap = new HashMap<ListControllerBean.Filter, Comparator<ProductBean>>();
-	
+	//SimpleDateFormat test = new SimpleDateFormat()
 	
 	public ListControllerBean()
 	{
 		exampleProducts = new ArrayList<ProductBean>();
 		searchProducts = new ArrayList<ProductBean>();
 		
+		
+
 		// dummy data
-		exampleProducts.add(new ProductBean("Die schönsten Filter für Instagram","resources/images/productPics/small/79H.jpg",2,10, 
+		exampleProducts.add(new ProductBean("Die schönsten Filter für Instagram","resources/images/productPics/big/79H.jpg",2,10, 
 				new String[] {"Foto","Filter","Instagram","Oldschool"},
 				"Wer immer schon wissen wollten wie man sich von der Masse duch kreativen Einsatz von hippen Filtern abheben kann ist hier genau richtig", 
-				new Date(1389571200)));
+				new GregorianCalendar(14,2,13),UserListBean.getAllUsers().get(1),"Fotos",""));
 		exampleProducts.add(new ProductBean("Fahrrad fahren für Hipster","resources/images/productPics/small/88H.jpg",3,500,
 				new String[] {"Sport", "Fahrrad", "Hipster","Alternativ"},
-				"Für alle, die auch beim Fahrradfahren Individualität und Style zeigen wollen.",new Date(1405641600)));
+				"Für alle, die auch beim Fahrradfahren Individualität und Style zeigen wollen.",new GregorianCalendar(13,5,13),
+				UserListBean.getAllUsers().get(0),"Sport",""));
 		exampleProducts.add(new ProductBean("Die besten Stücke für den Posaunenchor","resources/images/productPics/small/100H.jpg",4,30,
 				new String[] {"Musik","Posaune","Musikstück","Bläser"},
 				"Die schönster Stücke für den klassischen 15-stimmigen Posaunenchor wurden hier liebevoll gesammelt und aufbereitet",
-				new Date(1390521600)));
+				new GregorianCalendar(14,5,11),UserListBean.getAllUsers().get(2),"Kunst",""));
 		exampleProducts.add(new ProductBean("Theater für Dummies","resources/images/productPics/small/103H.jpg",1,22,
 				new String[] {"Theater","Kunst","Anfänger","Kurs"},
 				"Wenn du noch nie auf der Bühne standest, aber schon immer mal ausprobieren wolltest, wie es ist in eine ander Rolle zu schlüpfen passt diese Veranstaltung perfekt zu dir",
-				new Date(1391472000)));
+				new GregorianCalendar(14,1,22),UserListBean.getAllUsers().get(0),"Kunst",""));
 		exampleProducts.add(new ProductBean("Bahnfahren leicht gemacht","resources/images/productPics/small/90H.jpg",2.5f,10,
 				new String[] {"Bahn","Mobilität","sparen"},
 				"Sie verstehen immer nur Bahnhof, kommen nie rechtzeitig an und zahlen Unsummen? Mit diesen einfachen Tricks gehören diese Probleme der Vergangenheit an!"
-				,new Date(1394668800)));
+				,new GregorianCalendar(14,6,16),UserListBean.getAllUsers().get(0),"Reisen",""));
 		exampleProducts.add(new ProductBean("Dias in der Neuzeit","resources/images/productPics/small/83H.jpg",5,10,
 				new String [] {"Bild","Dia","modern"},
 				"Tausende Dias im Schrank und keine Ahnung wohin damit? In diesem Kurs zeige ich Ihnen wie sie ihre Schätze digitalisieren können",
-				new Date(1395100800)));
+				new GregorianCalendar(14,1,2),UserListBean.getAllUsers().get(1),"Foto",""));
 		exampleProducts.add(new ProductBean("10 tolle Tipps für Oldtimer-Fans","resources/images/productPics/small/95H.jpg",2,10,
 				new String[] {"Auto","Oldtimer","Tipps","Reparatur","Do-it-yourself"},
 				"Früher war alles besser. Damit Sie auch noch heute die Meisterwerke aus dem 20. Jahrhundert bewundern können, müssen Sie auf einiges achten",
-				new Date(1396915200)));
+				new GregorianCalendar(14,5,19),UserListBean.getAllUsers().get(2),"Auto",""));
 		exampleProducts.add(new ProductBean("Lustige Witze für zwischendurch","resources/images/productPics/small/78H.jpg",4.5f,15,
 				new String [] {"Humor","Witze","Unterhaltung"},
 				"Stressiges Studium? Mit diesen Witzen wird ihr Tag noch gerettet" ,
-				new Date(1397088000)));
+				new GregorianCalendar(14,2,11),UserListBean.getAllUsers().get(2),"Kunst",""));
 		exampleProducts.add(new ProductBean("Romantischer Tangotanz","resources/images/productPics/small/82H.jpg",3,10,
 				new String[] {"Tanz","Romantik","Tango","Sport"},
 				"Tango für romantische Stunden.",
-				new Date(1397174400)));
+				new GregorianCalendar(14,5,26),UserListBean.getAllUsers().get(1),"Tanzen",""));
 		exampleProducts.add(new ProductBean("Moderne Kunst und ihre Tücken","resources/images/productPics/small/85H.jpg",1.5f,3,
 				new String[] {"Kunst","Modern","Interpretation"},
 				"Die avantgardistische Kunst erscheint zunächst als trostlose Metapher von Einfallslosigkeit und Absurdität. Doch dieser Schein trügt...",
-				
-				new Date(1398729600)));
+				new GregorianCalendar(14,4,6),UserListBean.getAllUsers().get(1),"Kunst",""));
 		exampleProducts.add(new ProductBean("Fashion-Accessoires zum Selbermachen","resources/images/productPics/small/97H.jpg",4,10,
 				new String [] {"Fashion","Mode","Do-it-yourself"},
 				"Modebewusstsein aber schlechte finanzielle Lage? Dass wenig Geld kein Ausschlusskriterium für Stil sein muss zeige ich mit diesen einfachen Mode-Hacks",
-				new Date(1399248000)));
+				new GregorianCalendar(14,1,17),UserListBean.getAllUsers().get(1),"Mode",""));
 		
 		
 		// init sort filter
@@ -113,6 +114,11 @@ public class ListControllerBean implements Serializable {
 		sortHandler();
 		
 		
+	}
+	
+	public void addProduct(ProductBean newProduct)
+	{
+		exampleProducts.add(newProduct);
 	}
 	
 	// search
