@@ -8,7 +8,7 @@
 <ui:composition template="templates/shadoo.tpl.xhtml">
 	<ui:define name="content">
 
-		<ui:repeat var="current" value="#{listControllerBean.exampleProducts}">
+		<ui:repeat var="current" value="#{listControllerBean.getProductsById(param['id'])}">
 
 			<div class="sd-item-product">
 

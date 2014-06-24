@@ -35,7 +35,7 @@ public class ProductBean implements Serializable {
 	public ProductBean(String productName, String imageUrl, float rating, int ratingamount, String [] tags,
 			String description, Calendar submissiondate, UserBean author, String subject,String embeddedcode)
 	{
-		//System.out.println(nProducts++);
+		nProducts++;
 		this.id = nProducts;
 		this.productName = productName;
 		this.imageUrl = imageUrl;
