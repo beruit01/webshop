@@ -123,5 +123,14 @@ public class ProductBean implements Serializable {
 	public int getId() {
 		return id;
 	}
+
+	public String getEmbeddedcode() {
+		return embeddedcode;
+	}
+
+	public void setEmbeddedcode(String embeddedcode) {
+		this.embeddedcode = embeddedcode;
+	}
+	
 	
 }
