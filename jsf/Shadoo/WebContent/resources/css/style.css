@@ -1410,3 +1410,22 @@ padding-right: 1%;
 	width: 50%;
 	margin: 0 2% 5% 2%;
 }
+
+/*
+------------ rating ------ */
+.rating-hearts {
+	width: 256px;
+	margin: 1% auto 1% auto;
+}
+.rating-button.btn.btn-primary {
+	margin: 1% auto 1% auto;
+}
+.rating-product-value,
+.rating-rhetoric-value,
+.rating-materials-value,
+.rating-knowledge-value,
+.rating-commitment-value {
+	display: none;
+	width: 0px;
+	heigth: 0px;
+}

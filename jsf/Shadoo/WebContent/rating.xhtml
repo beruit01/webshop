@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+      
+      <ui:composition template="templates/shadoo.tpl.xhtml">
+      	<ui:define name="content">
+      		
+			
+			<h:form class="rating-group" id="ratingForm">
+			
+				<h1>Deine Bewertung für das Angebot</h1>
+				<div class="rating-hearts" id="rating-product"></div>
+				<h:inputText class="rating-product-value" id="rating-product-value" value="#{ratingBean.ratingProduct}"/>
+				<script>
+					$('#rating-product').raty({	path: null,
+												numberMax: 5,
+												starOff: 'resources/images/icons/grau/heart-black.png',
+												starOn: 'resources/images/icons/rot/heart-full.png',
+												starHalf: 'resources/images/icons/rot/heart-half.png',
+												click: function(score,evt) { $('.rating-product-value').val(score); }
+											});
+				</script>
+				
+				
+				<h1>Deine Bewertungen für den Anbieter</h1>
+			
+				<h3>Rhetorik</h3>
+				<div class="rating-hearts" id="rating-rhetoric"></div>
+				<h:inputText class="rating-rhetoric-value" id="rating-rhetoric-value" value="#{ratingBean.ratingRhetoric}"/>
+				<script>
+					$('#rating-rhetoric').raty({	path: null,
+												numberMax: 5,
+												starOff: 'resources/images/icons/grau/heart-black.png',
+												starOn: 'resources/images/icons/rot/heart-full.png',
+												starHalf: 'resources/images/icons/rot/heart-half.png',
+												click: function(score,evt) { $('.rating-rhetoric-value').val(score); }
+											});
+				</script>
+
+			
+				<h3>Materialien</h3>
+
+				<div class="rating-hearts" id="rating-materials"></div>
+				<h:inputText class="rating-materials-value" id="rating-materials-value" value="#{ratingBean.ratingMaterials}"/>
+				<script>
+					$('#rating-materials').raty({	path: null,
+												numberMax: 5,
+												starOff: 'resources/images/icons/grau/heart-black.png',
+												starOn: 'resources/images/icons/rot/heart-full.png',
+												starHalf: 'resources/images/icons/rot/heart-half.png',
+												click: function(score,evt) { $('.rating-materials-value').val(score); }
+											});
+				</script>
+			
+			
+			
+				<h3>Fachwissen</h3>
+			
+				<div class="rating-hearts" id="rating-knowledge"></div>
+				<h:inputText class="rating-knowledge-value" id="rating-knowledge-value" value="#{ratingBean.ratingKnowledge}"/>
+				<script>
+					$('#rating-knowledge').raty({	path: null,
+												numberMax: 5,
+												starOff: 'resources/images/icons/grau/heart-black.png',
+												starOn: 'resources/images/icons/rot/heart-full.png',
+												starHalf: 'resources/images/icons/rot/heart-half.png',
+												click: function(score,evt) { console.log(score+'\n');
+													$('.rating-knowledge-value').val(score); }
+											});
+				</script>
+			
+			
+			
+				<h3>Engagement</h3>
+			
+				<div class="rating-hearts" id="rating-commitment"></div>
+				<h:inputText class="rating-commitment-value" id="rating-commitment-value" value="#{ratingBean.ratingCommitment}"/>
+				<script>
+					$('#rating-commitment').raty({	path: null,
+												numberMax: 5,
+												starOff: 'resources/images/icons/grau/heart-black.png',
+												starOn: 'resources/images/icons/rot/heart-full.png',
+												starHalf: 'resources/images/icons/rot/heart-half.png',
+												click: function(score,evt) { console.log(score+'\n'); 
+													$('.rating-commitment-value').val(score); }
+											});
+				</script>
+			 
+				<h:commandButton class="rating-button btn btn-primary" value="Bewertungen abgeben" action="#{ratingBean.setRatings}"/>
+			</h:form>
+      		
+      	</ui:define>
+      </ui:composition>
+      
+</html>

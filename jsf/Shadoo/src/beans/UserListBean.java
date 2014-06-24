@@ -68,12 +68,36 @@ public class UserListBean {
 		
 		return allUsers;
 	}
+	
+//	public static void setAllUsers(ArrayList<UserBean> allUsers) {
+//		this.allUsers = allUsers;
+//	}
+	
 	public static void addUsertoAllUsers (UserBean newUser) {
 		
 		allUsers.add(newUser);
 	}
-	public void deleteUserFromAllUsers(UserBean userToDelete) {
-		allUsers.remove(userToDelete);
+	
+	public void deleteUserFromAllUsers(String userToDelete) {
+		
+		for(int j = 0; j < allUsers.size(); j++)
+		{
+		    UserBean obj = allUsers.get(j);
+
+		    if(obj.getUserName().equals(userToDelete)){
+		       //found, delete.
+		        allUsers.remove(j);
+		        return;
+		    }
+
+		}
+		
+//		
+//		for(UserBean curUser : allUsers) {
+//			if(userToDelete.equals(curUser.getUserName())) {
+//				allUsers.remove(curUser);
+//			}
+//		}
 	}
 			
 
