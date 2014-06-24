@@ -55,6 +55,15 @@ public class UserListBean {
 		
 	}
 	
+	public UserBean getUserByUserName(String userName) {
+		for(UserBean curUser : allUsers) {
+			if(userName.equals(curUser.getUserName())) {
+				return curUser;
+			}
+		}
+		return null;
+	}
+	
 	public static ArrayList<UserBean> getAllUsers () {
 		
 		return allUsers;
@@ -62,6 +71,9 @@ public class UserListBean {
 	public static void addUsertoAllUsers (UserBean newUser) {
 		
 		allUsers.add(newUser);
+	}
+	public void deleteUserFromAllUsers(UserBean userToDelete) {
+		allUsers.remove(userToDelete);
 	}
 			
 
