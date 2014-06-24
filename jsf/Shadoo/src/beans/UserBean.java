@@ -33,6 +33,17 @@ public class UserBean implements Serializable {
 		this.email = email;
 		this.password = password;
 		this.passwordConfirm = passwordConfirm;
+		
+		imageUrl = "";
+		ratingRhetoric = 0.0f;
+		ratingMaterials = 0.0f;
+		ratingKnowledge = 0.0f;
+		ratingCommitment = 0.0f;
+		ratingamount = 0;
+		description = "";
+		uploadedProducts = new ArrayList<Integer>();
+		
+		UserListBean.addUsertoAllUsers(this);
 	}
 
 	public UserBean(String userName, String email, String password,
