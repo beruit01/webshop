@@ -28,7 +28,7 @@ public class ListControllerBean implements Serializable {
 	private Comparator<ProductBean> compLatest;
 	private Comparator<ProductBean> compPopular;
 	private Map<Filter, Comparator<ProductBean>> compMap = new HashMap<ListControllerBean.Filter, Comparator<ProductBean>>();
-	//SimpleDateFormat test = new SimpleDateFormat()
+	private int rating = 0;
 	
 	public ListControllerBean()
 	{
@@ -119,6 +119,26 @@ public class ListControllerBean implements Serializable {
 	public void addProduct(ProductBean newProduct)
 	{
 		exampleProducts.add(newProduct);
+	}
+	
+	public void deleteProduct(int productToDelete) {
+
+		for(int j = 0; j < exampleProducts.size(); j++)
+		{
+		    ProductBean obj = exampleProducts.get(j);
+
+		    if(obj.getId() == productToDelete){
+		       //found, delete.
+		        exampleProducts.remove(j);
+		        return;
+		    }
+
+		}
+//		for(ProductBean curUser : exampleProducts) {
+//			if(productToDelete == curUser.getId()) {
+//				exampleProducts.remove(curUser);
+//			}
+//		}
 	}
 	
 	// search
@@ -242,9 +262,6 @@ public class ListControllerBean implements Serializable {
 		}
 	}
 	
-	
-	
-	
 	// getters and setters
 	public ArrayList<ProductBean> getExampleProducts() {
 		return exampleProducts;
@@ -269,6 +286,9 @@ public class ListControllerBean implements Serializable {
 	}
 	public void setCurrentFilter(Filter sortFilter) {
 		this.sortFilter = sortFilter;
+	}
+	public int getRating() {
+		return rating;
 	}
 	
 	
