@@ -35,7 +35,7 @@ public class ShareController implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	public enum MediaTypes { VIDEO, AUDIO, SCRIPT, SLIDES, EVENT };
-	private static MediaTypes type = MediaTypes.SCRIPT;
+	private static MediaTypes type = MediaTypes.VIDEO;
 	private String title = "";
 	private String description = "";
 	private String subjectArea = "";

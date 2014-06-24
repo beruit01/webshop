@@ -128,6 +128,29 @@ public class ListControllerBean implements Serializable {
 		return null;
 
 	}
+	
+	public ArrayList<ProductBean> getProductsBySubject(String subject) {
+
+		ArrayList<ProductBean> temp = new ArrayList<ProductBean>();
+		for (ProductBean curProduct : exampleProducts) {
+			if (curProduct.getCategory().toLowerCase().equals(subject.toLowerCase())) {
+				temp.add(curProduct);
+			}
+		}
+		return temp;
+
+	}
+	public boolean foundProductsBySubject(String subject) {
+
+		boolean temp = false;
+		for (ProductBean curProduct : exampleProducts) {
+			if (curProduct.getCategory().toLowerCase().equals(subject.toLowerCase())) {
+				temp = true;
+			}
+		}
+		return temp;
+
+	}
 
 	public ArrayList<ProductBean> getProductsByAuthor(String author) {
 		ArrayList<ProductBean> authorproducts = new ArrayList<ProductBean>();

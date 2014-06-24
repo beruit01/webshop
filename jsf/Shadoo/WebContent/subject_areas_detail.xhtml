@@ -13,8 +13,49 @@
 				<h1><h:outputText value="#{param['s']}"/></h1>
 				<h3>Wähle einen der Artikel aus dem Themenbereich aus.</h3>
 				
+			</div>	
+				
+				
+			<h:panelGroup id="sortedPreviewItems">
+	
+				<h:form>
+					<ui:repeat var="current" value="#{listControllerBean.getProductsBySubject(param['s'])}">
+				
+						<a href="product.xhtml?id=#{current.id}" class="sd-item">
+							<div class="sd-pic">
+								<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
+								<h:graphicImage class="sd-picBorder"
+									value="resources/images/picBorder.svg" />
+							</div>
+							<div class="sd-rating clearfix">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<div class="sd-title">
+								<h:outputText value="#{current.productName}" />
+							</div>
+						</a>
 			
-			</div>
+					</ui:repeat>
+				</h:form>
+			</h:panelGroup>
+			
+			
+			
+			<!-- no items found message -->
+			<h:panelGroup rendered="#{listControllerBean.foundProductsBySubject(param['s']) != true}">
+			    <div class="noSearchResult">
+			    	<br/><br/>
+			    	<h1>Sorry, derzeit gibt es noch keine Angebote in diesem Themenbereich.</h1>
+			    	<h3>Gehe <a href="subject_areas.xhtml">zurück zu den anderen Themen</a>.</h3>
+			    	
+			    </div>
+			</h:panelGroup>
+			
+			
       		
       	</ui:define>
       </ui:composition>
