@@ -1,0 +1,5 @@
+beige: #fffaf4	255 250 244
+rot #c0392b	192 57 43
+sand: #ffefda	255 239 218
+grau: #444444
+button-grau: #e5e0db
