@@ -702,8 +702,49 @@ padding-right: 1%;
 
 
 /*
--------------------- heartbeat stuff --------------- */
+-------------------- account--------------- */
 
+@media screen and (max-width: 768px) {
+	.sd-account-pic img {	
+		width: 300px;
+	}
+	.sd-pic-container {
+		width: 100% !important; 
+	}
+	.sd-account-rating,
+	.sd-account-rating {
+		width: 100% !important;
+	}	
+}
+@media screen and (min-width: 769px) {
+	.sd-account-pic img {	
+		width: 350px;
+	}
+	.sd-account-rating,
+	.sd-account-title {
+		width: 50% !important;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.sd-account-pic img {	
+		width: 450px;
+	}
+}
+@media screen and (min-width: 1160px) {
+	.sd-account-pic img {	
+		width: 500px;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.sd-account-pic img {	
+		width: 700px; 
+	}
+}
+
+
+.sd-account {
+	padding: 3%;
+}
 
 .sd-account-rating-container {
 	float:left;
@@ -711,12 +752,25 @@ padding-right: 1%;
 	padding:3%;
 	
 }
+.sd-account-rating,
 .sd-account-title {
-	width: 50%;
-	float:right;
+	float:right !important;
 }
 
+.sd-account-pic img {
+		max-width: none;
+		
+		/*margin-left: -200px;*/
+	}
+	
+	.sd-account-pic {
+		position: relative;
+		overflow:hidden
+	}
 
+.account-title-pic-container {
+	
+}
 
 
 /*

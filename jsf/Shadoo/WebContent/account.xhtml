@@ -7,45 +7,91 @@
 
 <ui:composition template="templates/shadoo.tpl.xhtml">
 	<ui:define name="content">
-		<div class="sd-product-background sd-product-author-detail clearfix sd-product-item">
+		<div class="sd-product-background sd-product-author-detail clearfix sd-product-item sd-account">
 			<!-- Author -->
 
-			<div class="sd-account-rating-container clearfix">
-				<div
-					class="sd-product-author-title-container sd-product-title clearfix">
-					<h:outputText value="#{login.login}"
-						class="sd-product-author-title "></h:outputText>
-				</div>
-
-
-				<div class="sd-pic-container">
-					<div class="sd-pic">
-						<h:graphicImage class="sd-picImg"
-							value="#{userListBean.getUserByUserName(login.login).imageUrl}" />
-						<h:graphicImage class="sd-picBorder"
-							value="resources/images/picBorder.svg" />
+				<div class="account-title-pic-container clearfix">
+					<div
+						class="sd-product-author-title-container sd-product-title sd-account-title clearfix">
+						<h:outputText value="#{login.login}"
+							class="sd-product-author-title "></h:outputText>
 					</div>
-				</div>
 
-				<div class="sd-product-author-info">
-					<div class="clearfix">
-						<div class="sd-rating  sd-product-author-rating-hearts">
-							<div class="heart10"></div>
-							<div class="heart10"></div>
-							<div class="heart10"></div>
-							<div class="heart05"></div>
-							<div class="heart00"></div>
+
+					<div class="sd-pic-container">
+						<div class="sd-account-pic">
+							<h:graphicImage class="sd-picImg"
+								value="#{userListBean.getUserByUserName(login.login).imageUrl}" />
+							<h:graphicImage class="sd-picBorder"
+								value="resources/images/picBorder.svg" />
 						</div>
-						<h:outputText value="Engagement"
-							class="sd-product-author-rating-text"></h:outputText>
+					</div>
+				
+			
+<div class="sd-product-background sd-product-author-detail sd-account-rating">
+					
+					
+
+
+					<div class="sd-product-author-info">
+						<div class="clearfix">
+							<div class="sd-rating  sd-product-author-rating-hearts">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<h:outputText value="Engagement"
+								class="sd-product-author-rating-text"></h:outputText>
+						</div>
+						<div class="clearfix">
+							<div class="sd-rating  sd-product-author-rating-hearts">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<h:outputText value="Engagement"
+								class="sd-product-author-rating-text"></h:outputText>
+						</div>
+						<div class="clearfix">
+							<div class="sd-rating  sd-product-author-rating-hearts">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<h:outputText value="Engagement"
+								class="sd-product-author-rating-text"></h:outputText>
+						</div>
+						<div class="clearfix">
+							<div class="sd-rating  sd-product-author-rating-hearts">
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart10"></div>
+								<div class="heart05"></div>
+								<div class="heart00"></div>
+							</div>
+							<h:outputText value="Engagement"
+								class="sd-product-author-rating-text"></h:outputText>
+						</div>
+
+
 					</div>
 
-
-				</div>
-
+					<!--Author rating -->
+					<div class="sd-product-author-rating"></div>
+					<div class="clearfix"></div>
+				</div>				
+				
+</div>
+		
 				<div class="sd-product-description-container">
 					<h:outputText class="sd-product-description"
-						value="tLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem  dsfd #{current.description}"></h:outputText>
+						value="#{userListBean.getUserByUserName(login.login).description}"></h:outputText>
 				</div>
 
 
@@ -71,7 +117,6 @@
 					</div>
 
 				</ui:repeat>
-			</div>
 
 
 		</div>
