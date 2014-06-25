@@ -109,7 +109,7 @@
 			</li>
 			
 			<li class="#{naviController.getCurrentPage('share')}">
-				<h:commandLink action="share">
+				<h:commandLink action="#{loginUIController.directLinkingAfterLogReg('share')}">
 					<h:outputText value="Teilen"/>
 				</h:commandLink>
 			</li>
@@ -140,7 +140,7 @@
 			</li>
 			
 			<li class="#{naviController.getCurrentPage('heartbox')}">
-				<h:commandLink action="heartbox" styleClass="custom-icon" title="gehe zu Deiner HeartBox">
+				<h:commandLink action="#{loginUIController.directLinkingAfterLogReg('heartbox')}" styleClass="custom-icon" title="gehe zu Deiner HeartBox">
 					<h:graphicImage value="/resources/images/icons/grau/heartbox.png" height="30"/>
 				</h:commandLink>
 			</li>

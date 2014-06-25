@@ -56,6 +56,7 @@ public class UserListBean {
 	}
 	
 	public UserBean getUserByUserName(String userName) {
+		System.out.println("userName: " + userName);
 		for(UserBean curUser : allUsers) {
 			if(userName.equals(curUser.getUserName())) {
 				return curUser;
