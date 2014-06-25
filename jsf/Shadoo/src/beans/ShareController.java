@@ -85,7 +85,6 @@ public class ShareController implements Serializable {
 		
 		System.out.println("share..");
 		
-		/*
 		System.out.println("titel: " + title);
 		System.out.println("beschreibung: " + description);
 		System.out.println("embedded: " + embeddedCode);
@@ -162,13 +161,6 @@ public class ShareController implements Serializable {
 		// store product in list
 		listControllerBean.addProduct( newProduct );
 		
-//		try {
-//			FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
-//		} catch (IOException e) {
-//			System.err.println("Redirect failed!");
-//			e.printStackTrace();
-//		}
-		
 		
 		// reset values
 		title = "";
@@ -179,7 +171,7 @@ public class ShareController implements Serializable {
 		imagePath = null;
 		
 		System.out.println("Share Controller return index...");
-		*/
+
 		return "index";
 	}
 	private String getFilename(Part part) {
