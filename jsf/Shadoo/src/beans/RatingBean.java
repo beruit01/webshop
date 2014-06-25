@@ -75,6 +75,45 @@ public class RatingBean implements Serializable {
 		float ratingValue = curProd.getRating();
 		//System.out.println(curProd.getProductName() + " ratingValue: " + ratingValue);
 //		String result ="<div class=\"sd-rating clearfix\">";
+//		String result = "";
+//		
+//		if (ratingValue < 0.25) result += "<div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+//		else if (ratingValue <= 0.75) result += "<div class=\"heart05\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+//		else if (ratingValue <= 1.25) result += "<div class=\"heart10\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+//		else if (ratingValue <= 1.75) result += "<div class=\"heart10\"></div><div class=\"heart05\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+//		else if (ratingValue <= 2.25) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+//		else if (ratingValue <= 2.75) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart05\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+//		else if (ratingValue <= 3.25) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+//		else if (ratingValue <= 3.75) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart05\"></div><div class=\"heart00\"></div>";
+//		else if (ratingValue <= 4.25) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart00\"></div>";
+//		else if (ratingValue <= 4.75) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart05\"></div>";
+//		else if (ratingValue <=  5.0) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div>";
+//		else result += "<div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+			
+//		return result;
+		
+		return getCurRating(ratingValue);
+		
+	}
+	
+	public String getCurAuthorRating(UserBean curUser, int type) {
+	
+		float ratingValue;
+		
+		switch(type) {
+		case 1:	ratingValue = curUser.getRatingRhetoric(); break;
+		case 2:	ratingValue = curUser.getRatingMaterials(); break;
+		case 3:	ratingValue = curUser.getRatingKnowledge(); break;
+		case 4:	ratingValue = curUser.getRatingCommitment(); break;
+		default:ratingValue = 0; break;
+		}
+		
+		return getCurRating(ratingValue);
+		
+	}
+	
+	public String getCurRating(float ratingValue) {
+		
 		String result = "";
 		
 		if (ratingValue < 0.25) result += "<div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";

@@ -36,44 +36,28 @@
 					<div class="sd-product-author-info">
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart05"></div>
-								<div class="heart00"></div>
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(login.login),1)}"></h:outputText>
 							</div>
-							<h:outputText value="Engagement"
+							<h:outputText value="Rhetorik"
 								class="sd-product-author-rating-text"></h:outputText>
 						</div>
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart05"></div>
-								<div class="heart00"></div>
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(login.login),2)}"></h:outputText>
 							</div>
-							<h:outputText value="Engagement"
+							<h:outputText value="Materialien"
 								class="sd-product-author-rating-text"></h:outputText>
 						</div>
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart05"></div>
-								<div class="heart00"></div>
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(login.login),3)}"></h:outputText>
 							</div>
-							<h:outputText value="Engagement"
+							<h:outputText value="Fachwissen"
 								class="sd-product-author-rating-text"></h:outputText>
 						</div>
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart05"></div>
-								<div class="heart00"></div>
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(login.login),4)}"></h:outputText>
 							</div>
 							<h:outputText value="Engagement"
 								class="sd-product-author-rating-text"></h:outputText>
@@ -105,11 +89,7 @@
 								value="resources/images/picBorder.svg" />
 						</div>
 						<div class="sd-rating clearfix">
-							<div class="heart10"></div>
-							<div class="heart10"></div>
-							<div class="heart10"></div>
-							<div class="heart05"></div>
-							<div class="heart00"></div>
+							<h:outputText escape="false" value="#{ratingBean.getCurProductRating(current)}"></h:outputText>
 						</div>
 						<div class="sd-title">
 							<h:outputText value="#{current.productName}" />
