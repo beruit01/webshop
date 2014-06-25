@@ -33,6 +33,9 @@ public class RatingBean implements Serializable {
 	
 	@Inject
 	UserBean userBean;
+	
+	@Inject
+	LoginUIController loginUIController;
 
 	@Inject
 	Login login;
@@ -58,6 +61,8 @@ public class RatingBean implements Serializable {
 		userListBean.deleteUserFromAllUsers(userBean.getUserName());
 		UserListBean.addUsertoAllUsers(userBean);
 		
+//		loginUIController.setCurUser(userBean);
+		
 //		ArrayList<UserBean> userList = UserListBean.getAllUsers();
 //		for(UserBean curUser : userList) {
 //			if(userBean.getUserName().equals(curUser.getUserName())) {
@@ -73,8 +78,8 @@ public class RatingBean implements Serializable {
 	public String initializeRating() {
 		
 		int id = Integer.parseInt( FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("id") );
-		if(login.isLoggedIn())
-		{
+//		if(login.isLoggedIn())
+//		{
 	
 		ProductBean curProd = listControllerBean.getProductsById( id );
 		
@@ -82,12 +87,14 @@ public class RatingBean implements Serializable {
 		System.out.println(curProd.getAuthor());
 		productBean = curProd;
 		userBean = curProd.getAuthor();
-		return "rating";
-		}
-		else
-		{
-			return "login";
-		}
+//		return "rating";
+//		}
+//		else
+//		{
+//			return "login";
+//		}
+		return loginUIController.directLinkingAfterLogReg("productRate");
+//		return "rating";
 	}
 	
 	public String getCurProductRating(ProductBean curProd) {
@@ -120,6 +127,8 @@ public class RatingBean implements Serializable {
 	public String getCurAuthorRating(UserBean curUser, int type) {
 	
 		float ratingValue;
+		System.out.println("UserBean:!!!!!!!! " + curUser);
+		System.out.println("UserBean:!!!!!!!! " + curUser.getUserName());
 		
 		switch(type) {
 		case 1:	ratingValue = curUser.getRatingRhetoric(); break;

@@ -13,7 +13,7 @@
 				<div class="account-title-pic-container clearfix">
 					<div
 						class="sd-product-author-title-container sd-product-title sd-account-title clearfix">
-						<h:outputText value="#{login.login}"
+						<h:outputText value="#{loginUIController.curUser.userName}"
 							class="sd-product-author-title "></h:outputText>
 					</div>
 
@@ -21,7 +21,7 @@
 					<div class="sd-pic-container">
 						<div class="sd-account-pic">
 							<h:graphicImage class="sd-picImg"
-								value="#{userListBean.getUserByUserName(login.login).imageUrl}" />
+								value="#{userListBean.getUserByUserName(loginUIController.curUser.userName).imageUrl}" />
 							<h:graphicImage class="sd-picBorder"
 								value="resources/images/picBorder.svg" />
 						</div>
@@ -36,28 +36,28 @@
 					<div class="sd-product-author-info">
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
-								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(login.login),1)}"></h:outputText>
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(loginUIController.curUser.userName),1)}"></h:outputText>
 							</div>
 							<h:outputText value="Rhetorik"
 								class="sd-product-author-rating-text"></h:outputText>
 						</div>
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
-								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(login.login),2)}"></h:outputText>
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(loginUIController.curUser.userName),2)}"></h:outputText>
 							</div>
 							<h:outputText value="Materialien"
 								class="sd-product-author-rating-text"></h:outputText>
 						</div>
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
-								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(login.login),3)}"></h:outputText>
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(loginUIController.curUser.userName),3)}"></h:outputText>
 							</div>
 							<h:outputText value="Fachwissen"
 								class="sd-product-author-rating-text"></h:outputText>
 						</div>
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
-								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(login.login),4)}"></h:outputText>
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(userListBean.getUserByUserName(loginUIController.curUser.userName),4)}"></h:outputText>
 							</div>
 							<h:outputText value="Engagement"
 								class="sd-product-author-rating-text"></h:outputText>
@@ -75,13 +75,13 @@
 		
 				<div class="sd-product-description-container">
 					<h:outputText class="sd-product-description"
-						value="#{userListBean.getUserByUserName(login.login).description}"></h:outputText>
+						value="#{userListBean.getUserByUserName(loginUIController.curUser.userName).description}"></h:outputText>
 				</div>
 
 
 
 				<ui:repeat var="current"
-					value="#{listControllerBean.getProductsByAuthor(login.login)}">
+					value="#{listControllerBean.getProductsByAuthor(loginUIController.curUser.userName)}">
 					<div class="sd-item">
 						<div class="sd-pic">
 							<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />

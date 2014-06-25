@@ -288,6 +288,9 @@ a:hover {
 		font-size: 1.6em;
 	
 	}
+	.sd-product-author-title:hover {
+		color: #444 !important;
+	}
 	.sd-product-pic img {
 		max-width: none;
 		width: 200px;

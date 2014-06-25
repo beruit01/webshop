@@ -74,6 +74,11 @@
 								</div>
 							</div>
 							<div class="sd-product-tag-container clearfix">
+								<ui:repeat var="current" value="#{listControllerBean.getProductsById(param['id']).tags}">
+									<div class="sd-product-tag">
+										<h:outputText value="#{current}"></h:outputText>
+									</div>
+								<!-- 
 								<div class="sd-product-tag">
 									<h:outputText value="Foto"></h:outputText>
 								</div>
@@ -83,6 +88,8 @@
 								<div class="sd-product-tag">
 									<h:outputText value="Modern"></h:outputText>
 								</div>
+								-->
+								</ui:repeat>
 							</div>
 
 
@@ -140,9 +147,14 @@
 			<div class="sd-product-background sd-product-author-detail">
 				<!-- Author -->
 
+				<h:form>
+				<h:commandLink action="#{loginUIController.setCurUser()}" class="sd-product-author-title">
+				<f:param name="id" value="#{param['id']}" />
 				<div class="sd-product-author-title-container clearfix">
 					<h:outputText value="#{listControllerBean.getProductsById(param['id']).author.userName}" class="sd-product-author-title"></h:outputText>
 				</div>
+				</h:commandLink>
+				<h:commandLink action="#{loginUIController.setCurUser()}">
 				<div class="sd-pic-container">
 					<div class="sd-pic">
 						<h:graphicImage class="sd-picImg"
@@ -153,6 +165,8 @@
 
 
 				</div>
+				</h:commandLink>
+				</h:form>
 
 
 				<div class="sd-product-author-info">

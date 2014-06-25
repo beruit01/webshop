@@ -12,12 +12,13 @@
 			<h:form class="rating-group" id="ratingForm">
 			
 				<h1>Deine Bewertung für das Angebot</h1>
-				<h2><h:outputText value="#{productBean.productName}"/></h2>
+				<!-- <h2><h:outputText value="#{productBean.productName}"/></h2> -->
 				<div class="rating-hearts" id="rating-product"></div>
 				<h:inputText class="rating-product-value" id="rating-product-value" value="#{ratingBean.ratingProduct}"/>
 				<script>
 					$('#rating-product').raty({	path: null,
 												numberMax: 5,
+												score: 1,
 												starOff: 'resources/images/icons/grau/heart-black.png',
 												starOn: 'resources/images/icons/rot/heart-full.png',
 												starHalf: 'resources/images/icons/rot/heart-half.png',
@@ -27,7 +28,7 @@
 				
 				
 				<h1>Deine Bewertungen für den Anbieter</h1>
-				<h2><h:outputText value="#{userBean.userName}"/></h2>
+				<!-- <h2><h:outputText value="#{loginUIController.curUser}"/></h2> -->
 			
 				<h3>Rhetorik</h3>
 				<div class="rating-hearts" id="rating-rhetoric"></div>
@@ -35,6 +36,7 @@
 				<script>
 					$('#rating-rhetoric').raty({	path: null,
 												numberMax: 5,
+												score: 1,
 												starOff: 'resources/images/icons/grau/heart-black.png',
 												starOn: 'resources/images/icons/rot/heart-full.png',
 												starHalf: 'resources/images/icons/rot/heart-half.png',
@@ -50,6 +52,7 @@
 				<script>
 					$('#rating-materials').raty({	path: null,
 												numberMax: 5,
+												score: 1,
 												starOff: 'resources/images/icons/grau/heart-black.png',
 												starOn: 'resources/images/icons/rot/heart-full.png',
 												starHalf: 'resources/images/icons/rot/heart-half.png',
@@ -66,6 +69,7 @@
 				<script>
 					$('#rating-knowledge').raty({	path: null,
 												numberMax: 5,
+												score: 1,
 												starOff: 'resources/images/icons/grau/heart-black.png',
 												starOn: 'resources/images/icons/rot/heart-full.png',
 												starHalf: 'resources/images/icons/rot/heart-half.png',
@@ -83,6 +87,7 @@
 				<script>
 					$('#rating-commitment').raty({	path: null,
 												numberMax: 5,
+												score: 1,
 												starOff: 'resources/images/icons/grau/heart-black.png',
 												starOn: 'resources/images/icons/rot/heart-full.png',
 												starHalf: 'resources/images/icons/rot/heart-half.png',

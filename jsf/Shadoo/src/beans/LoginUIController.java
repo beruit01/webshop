@@ -30,9 +30,15 @@ public class LoginUIController implements Serializable {
 	@Inject
 	private UserListBean userListBean;
 	
+	@Inject
+	private ListControllerBean listControllerBean;
+	
 	private String loginError = "";
 	private String registerError = "";
 	private String navbarLoginCaption = "Login";
+	private String pageAfterLogReg = "";
+	private UserBean curUser;
+	private int curUserId;
 	
 
 	public String checkPw() {
@@ -49,7 +55,7 @@ public class LoginUIController implements Serializable {
 					} else {
 						navbarLoginCaption = loginModel.getLogin().substring(0, 12) + "...";
 					}
-					return "index";
+					return pageAfterLogReg;
 				}
 			}
 		}
@@ -79,6 +85,7 @@ public class LoginUIController implements Serializable {
 		loginModel.setLogin(userBean.getUserName());
 		loginModel.setPassword(userBean.getPassword());
 		ArrayList<UserBean> tmpList = userListBean.getRegisteredUsers();
+		userBean.setImageUrl("resources/images/userPics/defaultuser.jpg");
 		tmpList.add(userBean);
 		userListBean.setRegisteredUsers(tmpList);
 		loginModel.setLoggedIn(true);
@@ -89,7 +96,8 @@ public class LoginUIController implements Serializable {
 			navbarLoginCaption = loginModel.getLogin().substring(0, 12) + "...";
 		}
 		
-		return "welcome";
+		return pageAfterLogReg;
+//		return "welcome";
 		
 	}
 	
@@ -147,12 +155,15 @@ public class LoginUIController implements Serializable {
 	public String navLogin() {
 		
 		if(loginModel.isLoggedIn()) {
+			curUser = userListBean.getUserByUserName(loginModel.getLogin());
+			System.out.println("hhhhhhhhhhhhhhhh " + curUser.getImageUrl());
 			return "account";
 		}
-		userBean = null;
+//		userBean = null;
 		loginModel.setLoggedIn(false);
 		loginModel.setLogin("");
 		loginModel.setPassword("");
+		directLinkingAfterLogReg("login");
 		return "login";
 		
 	}
@@ -164,6 +175,38 @@ public class LoginUIController implements Serializable {
 			return "loggedOut";
 		}
 		
+	}
+	
+	public String directLinkingAfterLogReg (String curPage) {
+		if(loginModel.isLoggedIn()) {
+			if(curPage.equals("login")) return "login";
+			else if(curPage.equals("productTake")) return "heartbox";
+			else if(curPage.equals("productRate")) return "rating";
+			else if(curPage.equals("heartbox")) return "heartbox";
+			else if(curPage.equals("share")) return "share";
+			else return "";
+		} else {
+			if(curPage.equals("login")) pageAfterLogReg = "welcome";
+			else if(curPage.equals("productTake")) pageAfterLogReg = "heartbox";
+			else if(curPage.equals("productRate")) pageAfterLogReg = "rating";
+			else if(curPage.equals("heartbox")) pageAfterLogReg = "heartbox";
+			else if(curPage.equals("share")) pageAfterLogReg = "share";
+			else pageAfterLogReg = "index";
+			return "login";
+		}
+	}
+	
+	public String setCurUser() {
+		
+		int id = Integer.parseInt( FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("id") );
+		System.out.println("ID: " + id);
+		ProductBean curProd = listControllerBean.getProductsById( id );
+		
+		userBean = curProd.getAuthor();
+		curUser = curProd.getAuthor();
+		System.out.println("curUser??????????? " + curUser);
+		System.out.println("userBean.getUserName(): " + userBean.getUserName());
+		return "account";
 	}
 
 	public String getNavbarLoginCaption() {
@@ -188,6 +231,30 @@ public class LoginUIController implements Serializable {
 
 	public void setRegisterError(String registerError) {
 		this.registerError = registerError;
+	}
+
+	public UserBean getCurUser() {
+		return curUser;
+	}
+
+	public void setCurUser(UserBean curUser) {
+		this.curUser = curUser;
+	}
+
+	public int getCurUserId() {
+		return curUserId;
+	}
+
+	public void setCurUserId(int curUserId) {
+		this.curUserId = curUserId;
+	}
+
+	public String getPageAfterLogReg() {
+		return pageAfterLogReg;
+	}
+
+	public void setPageAfterLogReg(String pageAfterLogReg) {
+		this.pageAfterLogReg = pageAfterLogReg;
 	}
 
 //	public void validateLogin(FacesContext context, UIComponent component,

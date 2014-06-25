@@ -14,7 +14,7 @@ public class UserBean implements Serializable {
 	private String email;
 	private String password;
 	private String passwordConfirm;
-	private String imageUrl = "";
+	private String imageUrl;
 	private float ratingRhetoric = 0.0f;
 	private float ratingMaterials = 0.0f;
 	private float ratingKnowledge = 0.0f;
@@ -34,7 +34,8 @@ public class UserBean implements Serializable {
 		this.password = password;
 		this.passwordConfirm = passwordConfirm;
 		
-		imageUrl = "";
+		imageUrl = "resources/images/userPics/defaultuser.jpg";
+		System.out.println("imageUrl: " + imageUrl);
 		ratingRhetoric = 0.0f;
 		ratingMaterials = 0.0f;
 		ratingKnowledge = 0.0f;
