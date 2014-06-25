@@ -27,7 +27,7 @@ public class UserListBean {
 		// dummy data
 		ArrayList<Integer> tmpList = new ArrayList<Integer>();
 		tmpList.add(2); tmpList.add(4); tmpList.add(5);
-		registeredUsers.add(new UserBean("Michael Faber","mfarber@gmail.com","123456","123456","resources/images/userPics/michaelfarber.jpg",2.0f,3.0f,4.5f,5f,3,
+		registeredUsers.add(new UserBean("Michael Faber","mfarber@gmail.com","123456","123456","resources/images/userPics/michaelfaber.jpg",2.0f,3.0f,4.5f,5f,3,
 				"Ich bin schon seit meiner Kindheit an Technik interessiert. Deshalb habe ich schon früh begonnen Websites zu entwerfen und hatte Spaß daran neue Technologien zu erlernen."+
 				"In meinem Studium konnte ich grundlegende Informatikkenntnisse erlenen und kann mein Wissen im Bereich Webdesign vertiefen.", tmpList ));
 		tmpList.clear();
