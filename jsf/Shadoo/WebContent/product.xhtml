@@ -46,11 +46,16 @@
 
 									<!-- Rating -->
 									<div class="sd-product-rating clearfix">
+									
+										<h:outputText escape="false" value="#{ratingBean.getCurProductRating(current)}"></h:outputText>
+									
+										<!-- 
 										<div class="heart10"></div>
 										<div class="heart10"></div>
 										<div class="heart10"></div>
 										<div class="heart05"></div>
 										<div class="heart00"></div>
+										-->
 									</div>
 
 									<div class="sd-rating-amount">
@@ -130,44 +135,61 @@
 					<div class="sd-product-author-info">
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
+							
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(current.author,1)}"></h:outputText>
+							
+								<!--  
 								<div class="heart10"></div>
 								<div class="heart10"></div>
 								<div class="heart10"></div>
 								<div class="heart05"></div>
 								<div class="heart00"></div>
+								-->
 							</div>
-							<h:outputText value="Engagement"
+							<h:outputText value="Rhetorik"
 								class="sd-product-author-rating-text"></h:outputText>
 						</div>
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
+							
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(current.author,2)}"></h:outputText>
+								<!--
 								<div class="heart10"></div>
 								<div class="heart10"></div>
 								<div class="heart10"></div>
 								<div class="heart05"></div>
 								<div class="heart00"></div>
+								-->
 							</div>
-							<h:outputText value="Engagement"
+							<h:outputText value="Materialien"
 								class="sd-product-author-rating-text"></h:outputText>
 						</div>
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
+							
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(current.author,3)}"></h:outputText>
+								<!-- 
 								<div class="heart10"></div>
 								<div class="heart10"></div>
 								<div class="heart10"></div>
 								<div class="heart05"></div>
 								<div class="heart00"></div>
+								-->
 							</div>
-							<h:outputText value="Engagement"
+							<h:outputText value="Fachwissen"
 								class="sd-product-author-rating-text"></h:outputText>
 						</div>
 						<div class="clearfix">
 							<div class="sd-rating  sd-product-author-rating-hearts">
+							
+								<h:outputText escape="false" value="#{ratingBean.getCurAuthorRating(current.author,4)}"></h:outputText>
+								<!--
 								<div class="heart10"></div>
 								<div class="heart10"></div>
 								<div class="heart10"></div>
 								<div class="heart05"></div>
 								<div class="heart00"></div>
+							 	-->
 							</div>
 							<h:outputText value="Engagement"
 								class="sd-product-author-rating-text"></h:outputText>

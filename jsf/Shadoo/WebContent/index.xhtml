@@ -41,6 +41,12 @@
 							<h:graphicImage class="sd-picBorder"
 								value="resources/images/picBorder.svg" />
 						</div>
+						
+						<div class="sd-rating clearfix">
+							<h:outputText escape="false" value="#{ratingBean.getCurProductRating(current)}"></h:outputText>
+						</div>
+						
+						<!-- 
 						<div class="sd-rating clearfix">
 							<div class="heart10"></div>
 							<div class="heart10"></div>
@@ -48,6 +54,8 @@
 							<div class="heart05"></div>
 							<div class="heart00"></div>
 						</div>
+						 -->
+						 
 						<div class="sd-title">
 							<h:outputText value="#{current.productName}" />
 						</div>
