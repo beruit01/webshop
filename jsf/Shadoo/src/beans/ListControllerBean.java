@@ -442,10 +442,10 @@ public class ListControllerBean implements Serializable {
 	/**
 	 * Sort product list with current sort filter.
 	 */
-	private void sortHandler() {
+	public void sortHandler() {
 
 		try {
-
+			System.out.println("Sorting products.... ");
 			Collections.sort(exampleProducts,
 					Collections.reverseOrder(compMap.get(sortFilter)));
 

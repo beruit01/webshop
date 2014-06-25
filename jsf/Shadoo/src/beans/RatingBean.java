@@ -34,6 +34,8 @@ public class RatingBean implements Serializable {
 	@Inject
 	UserBean userBean;
 
+	@Inject
+	Login login;
 
 	public String setRatings() {
 		
@@ -71,7 +73,9 @@ public class RatingBean implements Serializable {
 	public String initializeRating() {
 		
 		int id = Integer.parseInt( FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("id") );
-
+		if(login.isLoggedIn())
+		{
+	
 		ProductBean curProd = listControllerBean.getProductsById( id );
 		
 		System.out.println("curr: " + curProd);
@@ -79,6 +83,11 @@ public class RatingBean implements Serializable {
 		productBean = curProd;
 		userBean = curProd.getAuthor();
 		return "rating";
+		}
+		else
+		{
+			return "login";
+		}
 	}
 	
 	public String getCurProductRating(ProductBean curProd) {

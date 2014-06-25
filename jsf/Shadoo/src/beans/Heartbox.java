@@ -28,6 +28,7 @@ public class Heartbox implements Serializable {
 	 * @return Empty string for JSF command button.
 	 */
 	public String addItem(ProductBean item) {
+		if(!(items.contains(item)))
 		items.add(item);
 		return "";
 	}
