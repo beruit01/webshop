@@ -95,11 +95,13 @@ public class LoginUIController implements Serializable {
 	
 	public void validateUserName(AjaxBehaviorEvent ev) {
 		
-		ArrayList<UserBean> userList = userListBean.getRegisteredUsers();
-		for(UserBean curUser : userList) {
-			if(curUser.getUserName().equals(userBean.getUserName())) {
-				registerError = "Der angegebene Benutzername ist bereits vergeben!";
-				return;
+		if(userBean != null) {
+			ArrayList<UserBean> userList = userListBean.getRegisteredUsers();
+			for(UserBean curUser : userList) {
+				if(curUser.getUserName().equals(userBean.getUserName())) {
+					registerError = "Der angegebene Benutzername ist bereits vergeben!";
+					return;
+				}
 			}
 		}
 		registerError = "";
@@ -147,6 +149,10 @@ public class LoginUIController implements Serializable {
 		if(loginModel.isLoggedIn()) {
 			return "account";
 		}
+		userBean = null;
+		loginModel.setLoggedIn(false);
+		loginModel.setLogin("");
+		loginModel.setPassword("");
 		return "login";
 		
 	}
