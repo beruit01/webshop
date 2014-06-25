@@ -117,7 +117,7 @@ a:hover {
 	width: 35px;
 }
 @media screen and (min-width: 768px) {
-	.sd-media-type img { width: 60px; }
+	.sd-media-type img { width: 48px; }
 	.sd-media-type.previewMediaType img { width: 35px; }
 }
 

@@ -8,6 +8,8 @@ import java.util.GregorianCalendar;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
+import beans.ShareController.MediaTypes;
+
 @Named
 @SessionScoped
 public class ProductBean implements Serializable {
@@ -23,7 +25,7 @@ public class ProductBean implements Serializable {
 	private UserBean author;
 	private String subject;
 	private String embeddedcode;
-	private String mediatype;
+	private MediaTypes mediatype;
 
 
 	
@@ -35,7 +37,7 @@ public class ProductBean implements Serializable {
 	}
 	
 	public ProductBean(String productName, String imageUrl, float rating, int ratingamount, String [] tags,
-			String description, Calendar submissiondate, UserBean author, String subject,String embeddedcode,String mediatype)
+			String description, Calendar submissiondate, UserBean author, String subject,String embeddedcode,MediaTypes mediatype)
 	{
 		nProducts++;
 		this.id = nProducts;
@@ -57,10 +59,10 @@ public class ProductBean implements Serializable {
 		return (sdf.format(submissiondate.getTime()));
 	}
 	
-	public String getMediatype() {
+	public MediaTypes getMediatype() {
 		return mediatype;
 	}
-	public void setMediatype(String mediatype) {
+	public void setMediatype(MediaTypes mediatype) {
 		this.mediatype = mediatype;
 	}
 	public String getProductName() {

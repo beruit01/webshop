@@ -62,17 +62,18 @@
 					
 					
 					
-					<h:form enctype="multipart/form-data" action="share">
-					
+					<h:form enctype="multipart/form-data">
+							
 						<h3>Dein Name</h3>
 						<h4>Gebe Deinem Angebot einen sprechenden Namen.</h4>
 						<h:inputText class="shareTitle" id="shareTitleInput" value="#{shareController.title}" required="true"
 							requiredMessage="Du musst einen Titel angeben. Dafür kannst du max. 100 Zeichen verwenden."
 							validatorMessage="Der Titel darf nicht mehr als 100 Zeichen haben.">
 							<f:validateLength maximum="100"/>
-							<f:ajax execute="@this" render="validate_share_title" event="keyup" />
+							<f:ajax render="validate_share_title" event="keyup" />
 						</h:inputText>
 						<h:message for="shareTitleInput" id="validate_share_title" class="errorMsg"/>
+						
 						
 						<h3>Deine Kategorie</h3>
 						<h4>Wähle eine Kategorie, damit Dein Angebot von anderen eingeordnet werden kann.</h4>
@@ -89,24 +90,22 @@
 						<h3>Dein Video</h3>
 						<h4>Nutze dieses Feld, um deinen YouTube-, Vimeo- oder einen beliebigen Einbettungscode zu verwenden.</h4>
 						<h:inputTextarea required="true" class="shareEmbedded" id="shareEmbeddedInput" value="#{shareController.embeddedCode}" requiredMessage="Du musst einen Einbettungscode einfügen, sonst kann Dein Video nicht angezeigt werden">
-							<f:ajax execute="@this" render="validate_share_embedded" event="keyup" />
+							<f:ajax render="validate_share_embedded" event="keyup" />
 						</h:inputTextarea>
 						<h:message for="shareEmbeddedInput" id="validate_share_embedded" class="errorMsg"/>
 						
 						<h3>Dein Foto.</h3>
 						<h4>Gebe Deinem Angebot mit einem passenden Foto Deine persönliche Note.</h4>
 						<h:inputFile class="shareImg" id="shareImgInput" value="#{shareController.imagePath}" validator="#{shareController.validateFile}">
-							<f:ajax execute="@this" render="validate_share_image" />
+							<f:ajax render="validate_share_image" />
 						</h:inputFile>
 						<h:messages for="shareImgInput" id="validate_share_image" class="errorMsg"/>
 						
 						<h3>Deine Tags.</h3>
 						<h4>Vergebe für Dein Angebot Tags, so können es andere schneller finden.</h4>
 						<h:inputText class="shareTags" value="#{shareController.tags}"/>
-						
-						
+					
 						<h:commandButton class="shareSubmit" value="Teilen!" action="#{shareController.share}" />
-				
 							
 					
 					</h:form>

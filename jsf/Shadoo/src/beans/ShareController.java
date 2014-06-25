@@ -46,6 +46,12 @@ public class ShareController implements Serializable {
 	@Inject
 	private ListControllerBean listControllerBean;
 	
+	@Inject
+	private Login login;
+	
+	@Inject
+	private UserListBean userListBean;
+	
 	/**
 	 * @return Highlight class name if media type is equal to current media type.
 	 */
@@ -84,6 +90,7 @@ public class ShareController implements Serializable {
 		System.out.println("embedded: " + embeddedCode);
 		System.out.println("foto: " + imagePath);
 		System.out.println("subject: " + subjectArea);
+		System.out.println("media type: " + type);
 		
 		// create new product
 		ProductBean newProduct = new ProductBean();
@@ -92,7 +99,8 @@ public class ShareController implements Serializable {
 		newProduct.setCategory( subjectArea );
 		newProduct.setEmbeddedcode( embeddedCode );
 		newProduct.setSubmissiondate( new GregorianCalendar() );
-		
+		newProduct.setMediatype(type);
+		newProduct.setAuthor( userListBean.getUserByUserName( login.getLogin() ));
 		
 		// parse tags
 		if( tags.length() > 0 ) {
@@ -150,16 +158,8 @@ public class ShareController implements Serializable {
 			
 		}
 		
-		
-		// TODO: store product in list
+		// store product in list
 		listControllerBean.addProduct( newProduct );
-		
-		try {
-			FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
-		} catch (IOException e) {
-			System.err.println("Redirect failed!");
-			e.printStackTrace();
-		}
 		
 		
 		// reset values
@@ -170,6 +170,8 @@ public class ShareController implements Serializable {
 		tags = "";
 		imagePath = null;
 		
+		System.out.println("Share Controller return index...");
+
 		return "index";
 	}
 	private String getFilename(Part part) {
