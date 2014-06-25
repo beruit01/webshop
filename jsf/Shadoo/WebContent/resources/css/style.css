@@ -703,7 +703,14 @@ padding-right: 1%;
 .sd-product-author-pic {
 	float: left;
 }
-
+.sd-product-embedded-container {
+	margin: 10% 0 5% 0;
+	text-align: center;
+}
+.sd-product-embedded-container iframe,
+.sd-product-embedded-container object {
+	max-width: 100%;
+}
 
 
 

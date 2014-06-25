@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.enterprise.context.SessionScoped;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -17,6 +20,8 @@ public class RatingBean implements Serializable {
 	private float ratingKnowledge = 0.0f;
 	private float ratingCommitment = 0.0f;
 	
+	private ProductBean pb;
+	
 	@Inject
 	ListControllerBean listControllerBean;
 	
@@ -28,7 +33,7 @@ public class RatingBean implements Serializable {
 	
 	@Inject
 	UserBean userBean;
-	
+
 
 	public String setRatings() {
 		
@@ -64,7 +69,14 @@ public class RatingBean implements Serializable {
 		return "index";
 	}
 	
-	public String initializeRating(ProductBean curProd) {
+	public String initializeRating() {
+		
+		int id = Integer.parseInt( FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("id") );
+
+		ProductBean curProd = listControllerBean.getProductsById( id );
+		
+		System.out.println("curr: " + curProd);
+		System.out.println(curProd.getAuthor());
 		productBean = curProd;
 		userBean = curProd.getAuthor();
 		return "rating";
@@ -173,5 +185,14 @@ public class RatingBean implements Serializable {
 	public void setRatingCommitment(float ratingCommitment) {
 		this.ratingCommitment = ratingCommitment;
 	}
+
+	public ProductBean getProductBean() {
+		return productBean;
+	}
+
+	public void setProductBean(ProductBean productBean) {
+		this.productBean = productBean;
+	}
+	
 
 }

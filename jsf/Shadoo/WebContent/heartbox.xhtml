@@ -17,7 +17,7 @@
 				<h:panelGroup id="heartboxItems">
 					<ui:repeat var="current" value="#{heartbox.items}">
 	
-						<div class="sd-item">
+						<a href="product.xhtml?id=#{current.id}" class="sd-item">
 							
 							<h:commandButton action="#{heartbox.removeItem(current.productName)}"
 								title="Entferne diesen Artikel aus Deiner Heartbox." styleClass="sd-remove">
@@ -45,7 +45,7 @@
 								<h:outputText value="#{current.productName}" />
 							</div>
 							
-						</div>
+						</a>
 			
 					</ui:repeat>
 					
@@ -59,7 +59,7 @@
 					    						    	
 					    	<h3>
 					    		Das kannst Du ändern. Stöber doch mal durch unseren 
-						    	<h:commandLink action="share">Themenbereich</h:commandLink>.
+						    	<h:commandLink action="subject_areas">Themenbereich</h:commandLink>.
 						    	Dort könnte etwas Passendes für Dich dabei sein.
 					    	</h3>
 					    	

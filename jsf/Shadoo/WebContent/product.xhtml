@@ -8,8 +8,6 @@
 <ui:composition template="templates/shadoo.tpl.xhtml">
 	<ui:define name="content">
 
-		<ui:repeat var="current" value="#{listControllerBean.getProductsById(param['id'])}">
-
 			<div class="sd-item-product">
 
 				<div class="sd-product-background">
@@ -18,24 +16,24 @@
 							<div class="sd-pic-container sd-product-pic-container ">
 								<div class="sd-product-pic">
 									<h:graphicImage class="sd-picImg sd-product-pic-size"
-										value="#{current.imageUrl}" />
+										value="#{listControllerBean.getProductsById(param['id']).imageUrl}" />
 									<h:graphicImage class="sd-picBorder sd-product-pic-border "
 										value="resources/images/picBorder.svg" />
 								</div>
 							</div>
 							<div class="sd-product-info ">
 								<div class="sd-product-title">
-									<span> <h:outputText value="#{current.productName}" />
+									<span> <h:outputText value="#{listControllerBean.getProductsById(param['id']).productName}" />
 									</span>
 								</div>
 								<div class="sd-product-author">
-									<h:outputText value="von #{current.author.userName}" />
+									<h:outputText value="von #{listControllerBean.getProductsById(param['id']).author.userName}" />
 								</div>
 								<div class="sd-product-date">
-									<h:outputText value="am #{current.getFormatDate()}" />
+									<h:outputText value="am #{listControllerBean.getProductsById(param['id']).getFormatDate()}" />
 								</div>
 								<div class="sd-product-category">
-									<h:outputText value="in #{current.category}" />
+									<h:outputText value="in #{listControllerBean.getProductsById(param['id']).category}" />
 								</div>
 
 							</div>
@@ -59,7 +57,7 @@
 									</div>
 
 									<div class="sd-rating-amount">
-										<h:outputText value="#{current.ratingamount} Bewertungen"></h:outputText>
+										<h:outputText value="#{listControllerBean.getProductsById(param['id']).ratingamount} Bewertungen"></h:outputText>
 									</div>
 								</div>
 								<div class="sd-product-tag-container clearfix">
@@ -78,12 +76,17 @@
 								<!-- Buttons  -->
 								<div class="sd-product-button-container clearfix" align="center">
 
-
 									<div align="center">
+										
 										<h:form>
 											<h:commandButton
 												class="sd-product-button sd-product-button-take"
-												value="Nehmen"></h:commandButton>
+												value="Nehmen"
+												immediate="true"
+												action="#{controller.addToHeartbox()}">
+													<f:param name="id" value="#{param['id']}"/>
+											</h:commandButton>
+												
 										</h:form>
 									</div>
 
@@ -92,7 +95,9 @@
 											<h:commandButton
 												class="sd-product-button sd-product-button-rate"
 												value="Bewerten"
-												action="#{ratingBean.initializeRating(current)}"></h:commandButton>
+												action="#{ratingBean.initializeRating()}">
+													<f:param name="id" value="#{param['id']}"/>	
+											</h:commandButton>
 										</h:form>
 									</div>
 								</div>
@@ -108,7 +113,11 @@
 
 					<div class="sd-product-description-container">
 						<h:outputText class="sd-product-description"
-							value="#{current.description}"></h:outputText>
+							value="#{listControllerBean.getProductsById(param['id']).description}"></h:outputText>
+					</div>
+					
+					<div class="sd-product-embedded-container">
+						<h:outputText value="#{listControllerBean.getProductsById(param['id']).embeddedcode}" escape="false"/>
 					</div>
 
 
@@ -123,7 +132,7 @@
 					</div>
 					<div class="sd-pic-container">
 						<div class="sd-pic">
-							<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
+							<h:graphicImage class="sd-picImg" value="#{listControllerBean.getProductsById(param['id']).imageUrl}" />
 							<h:graphicImage class="sd-picBorder"
 								value="resources/images/picBorder.svg" />
 						</div>
@@ -203,10 +212,6 @@
 					<div class="clearfix"></div>
 				</div>
 			</div>
-
-
-
-		</ui:repeat>
 
 	</ui:define>
 </ui:composition>

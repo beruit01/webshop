@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.SessionScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
@@ -15,25 +16,9 @@ public class Heartbox implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private static List<ProductBean> items = new ArrayList<ProductBean>();
-	private static boolean init = false;
 
 	
-	public Heartbox() {
-		
-		// TODO: Remove this (testing only!).
-		if(!init) {
-			
-			init = true;
-			
-			ListControllerBean lcb = new ListControllerBean();
-			List<ProductBean> products = lcb.getExampleProducts();
-			
-			System.out.println("Add some demo products to heartbox..");
-			items.add(products.get(0));
-			items.add(products.get(2));
-			items.add(products.get(3));
-			items.add(products.get(5));
-		}		
+	public Heartbox() {	
 		
 	}
 	
