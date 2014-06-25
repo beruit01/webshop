@@ -74,20 +74,21 @@ public class RatingBean implements Serializable {
 		
 		float ratingValue = curProd.getRating();
 		//System.out.println(curProd.getProductName() + " ratingValue: " + ratingValue);
-		String result ="<div class=\"sd-rating clearfix\">";
+//		String result ="<div class=\"sd-rating clearfix\">";
+		String result = "";
 		
-		if (ratingValue < 0.25) result += "<div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div></div>";
-		else if (ratingValue <= 0.75) result += "<div class=\"heart05\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div></div>";
-		else if (ratingValue <= 1.25) result += "<div class=\"heart10\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div></div>";
-		else if (ratingValue <= 1.75) result += "<div class=\"heart10\"></div><div class=\"heart05\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div></div>";
-		else if (ratingValue <= 2.25) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div></div>";
-		else if (ratingValue <= 2.75) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart05\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div></div>";
-		else if (ratingValue <= 3.25) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div></div>";
-		else if (ratingValue <= 3.75) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart05\"></div><div class=\"heart00\"></div></div>";
-		else if (ratingValue <= 4.25) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart00\"></div></div>";
-		else if (ratingValue <= 4.75) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart05\"></div></div>";
-		else if (ratingValue <=  5.0) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div></div>";
-		else result += "<div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div></div>";
+		if (ratingValue < 0.25) result += "<div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+		else if (ratingValue <= 0.75) result += "<div class=\"heart05\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+		else if (ratingValue <= 1.25) result += "<div class=\"heart10\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+		else if (ratingValue <= 1.75) result += "<div class=\"heart10\"></div><div class=\"heart05\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+		else if (ratingValue <= 2.25) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+		else if (ratingValue <= 2.75) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart05\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+		else if (ratingValue <= 3.25) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
+		else if (ratingValue <= 3.75) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart05\"></div><div class=\"heart00\"></div>";
+		else if (ratingValue <= 4.25) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart00\"></div>";
+		else if (ratingValue <= 4.75) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart05\"></div>";
+		else if (ratingValue <=  5.0) result += "<div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div><div class=\"heart10\"></div>";
+		else result += "<div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div><div class=\"heart00\"></div>";
 			
 		return result;
 		
