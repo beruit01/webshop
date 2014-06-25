@@ -21,42 +21,17 @@
 				<h:panelGroup id="out">
 					<ui:repeat var="current" value="#{listControllerBean.getSearchProducts()}">
 	
-						<div class="sd-item">
+						<a href="product.xhtml?id=#{current.id}" class="sd-item">
 							<div class="sd-media-type">
-							
-							
 								<h:outputText escape="false" value="#{listControllerBean.getCurProductMediaType(current)}"></h:outputText>
 							</div>
+							
 							<div class="sd-pic">
 								<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
 								<h:graphicImage class="sd-picBorder"
 									value="resources/images/picBorder.svg" />
 							</div>
 							
-							<!-- 
-							<div class="rating-hearts9" id="rating-commitment9"></div>
-							<h:inputText class="rating-commitment-value" id="rating-commitment-value" value="#{ratingBean.ratingCommitment}"/>
-							<script>
-								$('#rating-commitment9').raty({	path: null,
-															numberMax: 5,
-															readOnly: true,
-															starOff: 'resources/images/icons/grau/heart-black.png',
-															starOn: 'resources/images/icons/rot/heart-full.png',
-															starHalf: 'resources/images/icons/rot/heart-half.png',
-															score: 3.4//function() {return }
-														});
-								//$('div').raty(score: 3.4);
-							</script>
-							 -->
-							<!-- 
-							<div class="sd-rating clearfix">
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart10"></div>
-								<div class="heart05"></div>
-								<div class="heart00"></div>
-							</div>
-							 -->
 							<div class="sd-rating clearfix">
 								<h:outputText escape="false" value="#{ratingBean.getCurProductRating(current)}"></h:outputText>
 							</div>
@@ -64,10 +39,11 @@
 							<div class="sd-title">
 								<h:outputText value="#{current.productName}" />
 							</div>
+							
 							<div class="sd-preview-date">
-							<h:outputText value="#{listControllerBean.getCurProductRelativeDate(current)}" />
-						</div>
-						</div>
+								<h:outputText value="#{listControllerBean.getCurProductRelativeDate(current)}" />
+							</div>
+						</a>
 			
 					</ui:repeat>
 					

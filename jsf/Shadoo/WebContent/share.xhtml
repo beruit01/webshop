@@ -62,8 +62,8 @@
 					
 					
 					
-					<h:form enctype="multipart/form-data" action="share">
-					
+					<h:form enctype="multipart/form-data">
+							
 						<h3>Dein Name</h3>
 						<h4>Gebe Deinem Angebot einen sprechenden Namen.</h4>
 						<h:inputText class="shareTitle" id="shareTitleInput" value="#{shareController.title}" required="true"
@@ -73,6 +73,7 @@
 							<f:ajax execute="@this" render="validate_share_title" event="keyup" />
 						</h:inputText>
 						<h:message for="shareTitleInput" id="validate_share_title" class="errorMsg"/>
+						
 						
 						<h3>Deine Kategorie</h3>
 						<h4>Wähle eine Kategorie, damit Dein Angebot von anderen eingeordnet werden kann.</h4>
@@ -103,10 +104,8 @@
 						<h3>Deine Tags.</h3>
 						<h4>Vergebe für Dein Angebot Tags, so können es andere schneller finden.</h4>
 						<h:inputText class="shareTags" value="#{shareController.tags}"/>
-						
-						
+					
 						<h:commandButton class="shareSubmit" value="Teilen!" action="#{shareController.share}" />
-				
 							
 					
 					</h:form>

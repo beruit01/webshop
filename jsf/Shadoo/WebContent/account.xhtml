@@ -82,7 +82,8 @@
 
 				<ui:repeat var="current"
 					value="#{listControllerBean.getProductsByAuthor(login.login)}">
-					<div class="sd-item">
+					
+					<a href="product.xhtml?id=#{current.id}" class="sd-item">
 						<div class="sd-pic">
 							<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
 							<h:graphicImage class="sd-picBorder"
@@ -94,7 +95,7 @@
 						<div class="sd-title">
 							<h:outputText value="#{current.productName}" />
 						</div>
-					</div>
+					</a>
 
 				</ui:repeat>
 

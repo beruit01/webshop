@@ -70,13 +70,6 @@ public class SubjectAreas implements Serializable{
 			areas.add("Digitales");
 			areas.add("Motorrad");
 			areas.add("Kleidung");
-			
-			areas.add("Aeins");
-			areas.add("AlleJahreWieder");
-			areas.add("AbisZ");
-			areas.add("AchNochWas");
-			areas.add("Aenderung");
-			areas.add("Aeehm");
 					
 		}
 		
