@@ -21,16 +21,17 @@
 		<a name="content" class="anchor" id="content"/>
 		<h:form class="filter-group" id="filterForm">
 			<h:commandButton action="#{listControllerBean.setSortFilter('0')}" styleClass="filter-popular #{listControllerBean.isFilterSelected(0)}">
-				 <f:ajax execute="@form" render=":filterForm :sortedPreviewItems" />
+				 <f:ajax execute="@form" render=":filterForm :sortedPreviewItems :sortedPreviewForm" />
 			</h:commandButton>
 			<h:commandButton action="#{listControllerBean.setSortFilter('1')}" styleClass="filter-latest #{listControllerBean.isFilterSelected(1)}">
-				 <f:ajax execute="@form" render=":filterForm :sortedPreviewItems" />
+				 <f:ajax execute="@form" render=":filterForm :sortedPreviewItems :sortedPreviewForm" />
 			</h:commandButton>
 		</h:form>
 
 		<h:panelGroup id="sortedPreviewItems">
 		
-			<h:form>
+			<h:form id="sortedPreviewForm">
+			
 				<ui:repeat var="current" value="#{listControllerBean.exampleProducts}">
 		
 					<h:commandLink action="product" class="sd-item">
