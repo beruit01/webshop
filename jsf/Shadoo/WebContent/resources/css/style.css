@@ -108,6 +108,14 @@ a:hover {
 }
 
 
+/*
+-------------------- media type icon  -----------------------*/
+
+.sd-media-type img{
+	position: absolute;
+	z-index: 13;
+	width: 35px;
+}
 
 /*
 -------------------- preview product layout -----------------*/

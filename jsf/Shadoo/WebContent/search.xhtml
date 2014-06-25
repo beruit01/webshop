@@ -22,7 +22,11 @@
 					<ui:repeat var="current" value="#{listControllerBean.getSearchProducts()}">
 	
 						<div class="sd-item">
-			
+							<div class="sd-media-type">
+							
+							
+								<h:outputText escape="false" value="#{listControllerBean.getCurProductMediaType(current)}"></h:outputText>
+							</div>
 							<div class="sd-pic">
 								<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
 								<h:graphicImage class="sd-picBorder"

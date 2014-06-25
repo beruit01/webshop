@@ -23,8 +23,10 @@ public class ProductBean implements Serializable {
 	private UserBean author;
 	private String subject;
 	private String embeddedcode;
+	private String mediatype;
 
 
+	
 	private static int nProducts = 0;
 	
 	public ProductBean() {
@@ -33,7 +35,7 @@ public class ProductBean implements Serializable {
 	}
 	
 	public ProductBean(String productName, String imageUrl, float rating, int ratingamount, String [] tags,
-			String description, Calendar submissiondate, UserBean author, String subject,String embeddedcode)
+			String description, Calendar submissiondate, UserBean author, String subject,String embeddedcode,String mediatype)
 	{
 		nProducts++;
 		this.id = nProducts;
@@ -47,6 +49,7 @@ public class ProductBean implements Serializable {
 		this.author = author;
 		this.subject = subject;
 		this.embeddedcode = embeddedcode;
+		this.mediatype = mediatype;
 	}
 	
 	public String getFormatDate() {
@@ -54,7 +57,12 @@ public class ProductBean implements Serializable {
 		return (sdf.format(submissiondate.getTime()));
 	}
 	
-	
+	public String getMediatype() {
+		return mediatype;
+	}
+	public void setMediatype(String mediatype) {
+		this.mediatype = mediatype;
+	}
 	public String getProductName() {
 		return productName;
 	}
