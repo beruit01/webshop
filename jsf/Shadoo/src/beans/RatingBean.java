@@ -43,7 +43,6 @@ public class RatingBean implements Serializable {
 		productBean.setratingamount(productBean.getratingamount() + 1);
 		productBean.setRating(((productBean.getratingamount()-1)*productBean.getRating() + ratingProduct) / productBean.getratingamount());
 		System.out.println("Rating nachher: " + productBean.getRating());
-		//TODO: set product in listControllerBean
 		
 		listControllerBean.deleteProduct(productBean.getId());
 		listControllerBean.addProduct(productBean);
@@ -84,6 +83,7 @@ public class RatingBean implements Serializable {
 	
 	public String getCurProductRating(ProductBean curProd) {
 		
+		System.out.println("curProd: " + curProd);
 		float ratingValue = curProd.getRating();
 		//System.out.println(curProd.getProductName() + " ratingValue: " + ratingValue);
 //		String result ="<div class=\"sd-rating clearfix\">";

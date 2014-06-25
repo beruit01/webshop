@@ -40,7 +40,7 @@
 								
 								<div class="form-group">
 									<div class="col-lg-12">
-										<h:inputText class="form-control email" name="email" type="email" value="#{userBean.email}" id="reg_email" validatorMessage="Die eingegebene E-Mail Adresse ist nicht gültig!">
+										<h:inputText class="form-control email" name="email" type="email" value="#{userBean.email}" id="reg_email" validatorMessage="Die eingegebene E-Mail Adresse ist nicht gültig!" required="true" requiredMessage="Es wird eine E-Mail Adresse für die Registrierung benötigt!">
 											<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"/>
 											<f:ajax execute="@this" render="reg_email_msg" event="keyup" />
 										</h:inputText>
@@ -48,7 +48,7 @@
 									</div>
 									
 									<div class="col-lg-12">
-										<h:inputText type="text" class="form-control username" name="username" value="#{userBean.userName}" id="reg_user" validatorMessage="Der eingegebene Benutzername muss zwischen 4 und 30 Zeichen haben!">
+										<h:inputText type="text" class="form-control username" name="username" value="#{userBean.userName}" id="reg_user" validatorMessage="Der eingegebene Benutzername muss zwischen 4 und 30 Zeichen haben!" required="true" requiredMessage="Es wird ein Benutzername für die Registrierung benötigt!">
 											<f:validateLength minimum="4" maximum="30"/>
 											<f:ajax execute="@this" render="reg_username_msg username_already_in_use_msg" event="keyup" listener="#{loginUIController.validateUserName}"/>
 										</h:inputText>
@@ -59,7 +59,7 @@
 								
 								<div class="form-group">
 									<div class="col-lg-12">
-										<h:inputSecret type="password" class="form-control pw" name="password" value="#{userBean.password}" id="reg_pw" validatorMessage="Das eingegebene Passwort muss mindestens 6 Zeichen haben!">
+										<h:inputSecret type="password" class="form-control pw" name="password" value="#{userBean.password}" id="reg_pw" validatorMessage="Das eingegebene Passwort muss mindestens 6 Zeichen haben!" required="true" requiredMessage="Es wird ein Passwort für die Registrierung benötigt!">
 											<f:validateLength minimum="6"/>
 											<f:ajax execute="@this" render="reg_pw_msg" event="keyup" />
 										</h:inputSecret>
@@ -67,7 +67,7 @@
 									</div>
 									
 									<div class="col-lg-12">
-										<h:inputSecret type="password" class="form-control pw_conf" name="confirmPassword" value="#{userBean.passwordConfirm}" id="reg_conf_pw" validator="#{loginUIController.passwordValidator}">
+										<h:inputSecret type="password" class="form-control pw_conf" name="confirmPassword" value="#{userBean.passwordConfirm}" id="reg_conf_pw" validator="#{loginUIController.passwordValidator}" required="true" requiredMessage="Es wird eine Passwortbestätigung für die Registrierung benötigt!">
 											
 											<f:ajax execute="@this" render="reg_conf_pw_msg" event="keyup"/>
 										</h:inputSecret>

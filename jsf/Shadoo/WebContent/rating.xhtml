@@ -12,6 +12,7 @@
 			<h:form class="rating-group" id="ratingForm">
 			
 				<h1>Deine Bewertung für das Angebot</h1>
+				<h2><h:outputText value="#{productBean.productName}"/></h2>
 				<div class="rating-hearts" id="rating-product"></div>
 				<h:inputText class="rating-product-value" id="rating-product-value" value="#{ratingBean.ratingProduct}"/>
 				<script>
@@ -26,6 +27,7 @@
 				
 				
 				<h1>Deine Bewertungen für den Anbieter</h1>
+				<h2><h:outputText value="#{userBean.userName}"/></h2>
 			
 				<h3>Rhetorik</h3>
 				<div class="rating-hearts" id="rating-rhetoric"></div>
@@ -89,7 +91,9 @@
 											});
 				</script>
 			 
-				<h:commandButton class="rating-button btn btn-primary" value="Bewertungen abgeben" action="#{ratingBean.setRatings}"/>
+				<h:commandButton class="rating-button btn btn-default" value="Bewertungen abgeben" action="#{ratingBean.setRatings}">
+					<!-- <f:param name="id" value="12"/> -->
+				</h:commandButton>
 			</h:form>
       		
       	</ui:define>
