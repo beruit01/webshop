@@ -178,6 +178,7 @@ a:hover {
 	margin-top: 1px;
 }
 
+.sd-preview-date,
 .sd-rating,
 .sd-title {
 	margin-right: 10%;
@@ -198,6 +199,14 @@ a:hover {
 	overflow: hidden;
 	line-height: 1.6em;
 	height: 3.2em;
+}
+
+.sd-preview-date {
+	
+	clear: both;
+	font-size: 1.3em;
+	text-align: right;
+	height: 1.4em;
 }
 
 .sd-rating .heart10,
@@ -223,7 +232,8 @@ a:hover {
 @media screen and (min-width: 500px) {
 	/* 3 columns */
 	.sd-item { width: 31%; margin: 1%; }
-
+	
+	.sd-preview-date,
 	.sd-rating,
 	.sd-title { margin-right: 5%; }
 }
@@ -465,6 +475,7 @@ a:hover {
 		max-width: none;
 		width: 700px;
 		margin-left: -200px;
+		margin-top: -6px;
 	}
 	.sd-product-pic-size {
 		

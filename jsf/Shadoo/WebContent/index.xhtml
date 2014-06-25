@@ -35,6 +35,12 @@
 		
 					<h:commandLink action="product" class="sd-item">
 						<f:param name="id" value="#{current.id}" />
+						
+						<div class="sd-media-type">						
+							
+								<h:outputText escape="false" value="#{listControllerBean.getCurProductMediaType(current)}"></h:outputText>
+							</div>
+						
 						<div class="sd-pic">
 							<h:graphicImage class="sd-picImg" value="#{current.imageUrl}" />
 							<h:graphicImage class="sd-picBorder"
@@ -57,6 +63,10 @@
 						 
 						<div class="sd-title">
 							<h:outputText value="#{current.productName}" />
+						</div>
+						
+							<div class="sd-preview-date">
+							<h:outputText value="#{listControllerBean.getCurProductRelativeDate(current)}" />
 						</div>
 					</h:commandLink>
 		
