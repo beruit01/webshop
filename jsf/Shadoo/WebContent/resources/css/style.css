@@ -178,6 +178,7 @@ a:hover {
 	margin-top: 1px;
 }
 
+.sd-preview-date,
 .sd-rating,
 .sd-title {
 	margin-right: 10%;
@@ -198,6 +199,14 @@ a:hover {
 	overflow: hidden;
 	line-height: 1.6em;
 	height: 3.2em;
+}
+
+.sd-preview-date {
+	
+	clear: both;
+	font-size: 1.3em;
+	text-align: right;
+	height: 1.4em;
 }
 
 .sd-rating .heart10,
@@ -223,7 +232,8 @@ a:hover {
 @media screen and (min-width: 500px) {
 	/* 3 columns */
 	.sd-item { width: 31%; margin: 1%; }
-
+	
+	.sd-preview-date,
 	.sd-rating,
 	.sd-title { margin-right: 5%; }
 }
@@ -465,6 +475,7 @@ a:hover {
 		max-width: none;
 		width: 700px;
 		margin-left: -200px;
+		margin-top: -6px;
 	}
 	.sd-product-pic-size {
 		
@@ -1432,8 +1443,16 @@ padding-right: 1%;
 	width: 256px;
 	margin: 1% auto 1% auto;
 }
-.rating-button.btn.btn-primary {
-	margin: 1% auto 1% auto;
+.rating-button {
+	margin: 5% 25% 5% 25%;
+	width: 50%;
+	border: 0px solid !important;
+	color: #444 !important;
+	background-color: #e5e0db !important;
+	font-size: 1.2em;
+}
+.rating-button:hover {
+	background-color: rgba(192,57,43, 0.51) !important;
 }
 .rating-product-value,
 .rating-rhetoric-value,
@@ -1443,4 +1462,8 @@ padding-right: 1%;
 	display: none;
 	width: 0px;
 	heigth: 0px;
+}
+
+@media screen and (max-width: 768px) {
+	.rating-button { width: 100%; margin: 5% auto 1% auto }
 }

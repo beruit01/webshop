@@ -27,19 +27,19 @@ public class UserListBean {
 		// dummy data
 		ArrayList<Integer> tmpList = new ArrayList<Integer>();
 		tmpList.add(2); tmpList.add(4); tmpList.add(5);
-		registeredUsers.add(new UserBean("Michael Faber","mfarber@gmail.com","123456","123456","resources/images/userPics/michaelfarber.jpg",2.0f,3.0f,4.5f,5f,3,
-				"Ich bin schon seit meiner Kindheit an Technik interessiert. Deshalb begann ich schon früh Websites zu entwerfen und hatte Spaß daran neue Technologien zu erlernen."+
+		registeredUsers.add(new UserBean("Michael Faber","mfarber@gmail.com","123456","123456","resources/images/userPics/michaelfaber.jpg",2.0f,3.0f,4.5f,5f,3,
+				"Ich bin schon seit meiner Kindheit an Technik interessiert. Deshalb habe ich schon früh begonnen Websites zu entwerfen und hatte Spaß daran neue Technologien zu erlernen."+
 				"In meinem Studium konnte ich grundlegende Informatikkenntnisse erlenen und kann mein Wissen im Bereich Webdesign vertiefen.", tmpList ));
 		tmpList.clear();
 		tmpList.add(1); tmpList.add(9); tmpList.add(10); tmpList.add(11);tmpList.add(6);
 		registeredUsers.add(new UserBean("Maria Herzog","mariaherzog@gmx.de","123456","123456","resources/images/userPics/mariaherzog.jpg",3.0f,2.5f,4.5f,2.5f,4,
-				"Hey :). Ich bin begeisterte Hobby-Designerin und führt meinen eigenen Blog. Besonders die Farbenlehre und die Bedeutung von Kleidung für den Menschen interessiert mich sehr!",
+				"Hey :). Ich bin begeisterte Hobby-Designerin und führe meinen eigenen Blog. Besonders die Farbenlehre und die Bedeutung von Kleidung für den Menschen interessiert mich sehr!",
 				tmpList				
 				));
 		tmpList.clear();
 		tmpList.add(3); tmpList.add(7); tmpList.add(8);
 		registeredUsers.add(new UserBean("Sven Austerlitz","austerlitz.s@gmail.com","123456","123456","resources/images/userPics/svenausterlitz.jpg",4.0f,1.5f,3.0f,5.0f,6,
-				"Zurzeit studiere ich Physik, was mir sehr viel Spaß bereitet. Aber auch außerhalb des Studiums bilde ich mich sehr gerne weiter und teile dieses Wissen mit Allen die es interessiert.",
+				"Zurzeit studiere ich Physik, was mir sehr viel Spaß bereitet. Aber auch außerhalb des Studiums bilde ich mich sehr gerne weiter und teile dieses Wissen mit allen, die es interessiert.",
 				tmpList));
 		
 		/*

@@ -3,6 +3,7 @@ package beans;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.GregorianCalendar;
@@ -206,6 +207,52 @@ public class ListControllerBean implements Serializable {
 		sortHandler();
 
 	}
+	public String getCurProductRelativeDate (ProductBean curProd)
+	{
+		Calendar submissiondate= curProd.getSubmissiondate();
+		
+
+		    int subyear = submissiondate.get(Calendar.YEAR);
+		    int submonth = submissiondate.get(Calendar.MONTH);
+		    int subday = submissiondate.get(Calendar.DAY_OF_MONTH);
+		    
+		    
+		    Calendar cal = Calendar.getInstance();
+		    int curday = cal.get(Calendar.DAY_OF_MONTH);
+		    int curmonth = cal.get(Calendar.MONTH);
+		    int curyear = cal.get(Calendar.YEAR) -2000;
+		    
+		    
+		   
+
+		    if(subyear == curyear)
+		    {
+		       	if(submonth==curmonth)
+		    	{
+		      		if(subday==curday)
+		    		{
+		    			return "heute";
+		    		}
+		    		if (curday-subday == 1)
+		    		{
+		    			return "vor "+ (curday-subday) + " Tag";
+		    		}
+		    		return "vor " + (curday-subday) + " Tagen";
+		    	}
+				if (curmonth-submonth == 1)
+	    		{
+					return "vor " + (curmonth-submonth) + " Monat";
+	    		}
+		    	return "vor " + (curmonth-submonth) + " Monaten";
+		    }
+		    if (curyear-subyear == 1)
+    		{
+				return "vor " + (curyear-subyear) + " Jahr";
+    		}
+		    return "vor " + (curyear-subyear) + " Jahren";
+
+	}
+	
 
 	public String getCurProductMediaType(ProductBean curProd) {
 
@@ -395,10 +442,10 @@ public class ListControllerBean implements Serializable {
 	/**
 	 * Sort product list with current sort filter.
 	 */
-	private void sortHandler() {
+	public void sortHandler() {
 
 		try {
-
+			System.out.println("Sorting products.... ");
 			Collections.sort(exampleProducts,
 					Collections.reverseOrder(compMap.get(sortFilter)));
 

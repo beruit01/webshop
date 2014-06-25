@@ -64,6 +64,9 @@
 							<div class="sd-title">
 								<h:outputText value="#{current.productName}" />
 							</div>
+							<div class="sd-preview-date">
+							<h:outputText value="#{listControllerBean.getCurProductRelativeDate(current)}" />
+						</div>
 						</div>
 			
 					</ui:repeat>
@@ -78,7 +81,7 @@
 					    						    	
 					    	<h3>
 					    		Vielleicht findest Du in unserem 
-						    	<h:commandLink action="share">Themenbereich</h:commandLink>
+						    	<h:commandLink action="subject_areas">Themenbereich</h:commandLink>
 						    	etwas Passendes.
 					    	</h3>
 					    	
