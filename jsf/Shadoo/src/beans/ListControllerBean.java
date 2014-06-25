@@ -309,7 +309,28 @@ public class ListControllerBean implements Serializable {
 		return temp;
 
 	}
+	
+	public boolean existsProduct(String id) {
+		
+		boolean temp = false;
+		int intId = 0;
+		
+		try {
+			intId = Integer.parseInt(id);
+		}catch(NumberFormatException nfe) {
+			return false;
+		}
+		
+		for (ProductBean curProduct : exampleProducts) {
+			if (curProduct.getId() == intId) {
+				temp = true;
+			}
+		}
+		return temp;
 
+	}
+
+	
 	public ArrayList<ProductBean> getProductsByAuthor(String author) {
 		ArrayList<ProductBean> authorproducts = new ArrayList<ProductBean>();
 		for (ProductBean curProduct : exampleProducts) {

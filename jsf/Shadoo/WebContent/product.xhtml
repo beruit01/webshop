@@ -8,7 +8,7 @@
 <ui:composition template="templates/shadoo.tpl.xhtml">
 	<ui:define name="content">
 
-		<div class="sd-item-product">
+		<h:panelGroup styleClass="sd-item-product" rendered="#{listControllerBean.existsProduct(param['id'])}">
 
 			<div class="sd-product-background">
 				<div class="sd-product-container clearfix">
@@ -17,7 +17,7 @@
 
 							<div class="sd-media-type">
 								<h:outputText escape="false"
-									value="#{listControllerBean.getCurProductMediaType(current)}"></h:outputText>
+									value="#{listControllerBean.getCurProductMediaType(listControllerBean.getProductsById(param['id']))}"></h:outputText>
 							</div>
 
 
@@ -57,7 +57,7 @@
 								<div class="sd-product-rating clearfix">
 
 									<h:outputText escape="false"
-										value="#{ratingBean.getCurProductRating(current)}"></h:outputText>
+										value="#{ratingBean.getCurProductRating(listControllerBean.getProductsById(param['id']))}"></h:outputText>
 
 									<!-- 
 										<div class="heart10"></div>
@@ -160,7 +160,7 @@
 						<div class="sd-rating  sd-product-author-rating-hearts">
 
 							<h:outputText escape="false"
-								value="#{ratingBean.getCurAuthorRating(current.author,1)}"></h:outputText>
+								value="#{ratingBean.getCurAuthorRating(listControllerBean.getProductsById(param['id']).author,1)}"></h:outputText>
 
 							<!--  
 								<div class="heart10"></div>
@@ -177,7 +177,7 @@
 						<div class="sd-rating  sd-product-author-rating-hearts">
 
 							<h:outputText escape="false"
-								value="#{ratingBean.getCurAuthorRating(current.author,2)}"></h:outputText>
+								value="#{ratingBean.getCurAuthorRating(listControllerBean.getProductsById(param['id']).author,2)}"></h:outputText>
 							<!--
 								<div class="heart10"></div>
 								<div class="heart10"></div>
@@ -193,7 +193,7 @@
 						<div class="sd-rating  sd-product-author-rating-hearts">
 
 							<h:outputText escape="false"
-								value="#{ratingBean.getCurAuthorRating(current.author,3)}"></h:outputText>
+								value="#{ratingBean.getCurAuthorRating(listControllerBean.getProductsById(param['id']).author,3)}"></h:outputText>
 							<!-- 
 								<div class="heart10"></div>
 								<div class="heart10"></div>
@@ -209,7 +209,7 @@
 						<div class="sd-rating  sd-product-author-rating-hearts">
 
 							<h:outputText escape="false"
-								value="#{ratingBean.getCurAuthorRating(current.author,4)}"></h:outputText>
+								value="#{ratingBean.getCurAuthorRating(listControllerBean.getProductsById(param['id']).author,4)}"></h:outputText>
 							<!--
 								<div class="heart10"></div>
 								<div class="heart10"></div>
@@ -229,7 +229,15 @@
 				<div class="sd-product-author-rating"></div>
 				<div class="clearfix"></div>
 			</div>
-		</div>
+		</h:panelGroup>
+
+
+		<h:panelGroup rendered="#{listControllerBean.existsProduct(param['id']) == false}">
+			<h:form>
+				<h1>Sorry, ein Produkt mit der ID <h:outputText value="#{param['id']}"/> existiert nicht!</h1>
+				<h3>Nutze unsere <h:commandLink value="Suche" action="search"/> um einen passenden Artikel für Dich zu finden.</h3>
+			</h:form>
+		</h:panelGroup>
 
 	</ui:define>
 </ui:composition>
